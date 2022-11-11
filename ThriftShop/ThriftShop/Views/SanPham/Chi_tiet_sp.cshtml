@@ -1,0 +1,289 @@
+﻿@using ThriftShop.Models
+@model San_pham
+@using ThriftShop.Controllers.User;
+@{
+    ViewBag.Title = "Chi_tiet_sp";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+
+<section class="product">
+    <div class="container">
+        <div class="product-top row">
+            @{
+                var brand = "";
+                if (Model.id_hangsx == 1)
+                {
+                    brand = "Nike";
+                }
+                else if (Model.id_hangsx == 2)
+                {
+                    brand = "Adidas";
+                }
+                else if (Model.id_hangsx == 3)
+                {
+                    brand = "Converse";
+                }
+                else if (Model.id_hangsx == 4)
+                {
+                    brand = "New Balance";
+                }
+
+            }
+            <p>Trang chủ</p><span>&#8594;</span><p>SanPham</p><span>&#8594;</span><p>@brand</p><span>&#8594;</span><p>@Model.ten_sp</p>
+            <div class="product-content row">
+                <div class="product-content-left row">
+                    <div class="product-content-left-big-img">
+                        @{
+                            string brands = "";
+                            if (Model.id_hangsx == 1)
+                            {
+                                brands = "Nike/";
+                            }
+                            else if (Model.id_hangsx == 2)
+                            {
+                                brands = "Adidas/";
+                            }
+                            else if (Model.id_hangsx == 3)
+                            {
+                                brands = "Converse/";
+                            }
+                            else
+                            {
+                                brands = "NEW BALANCE/";
+                            }
+                        }
+                        <img src=" ~/Content/anh/productList/@brand/@Model.anh_sp/big_image.jpg" alt="">
+                    </div>
+                    <div class="product-content-left-small-img">
+                        <img src=" ~/Content/anh/productList/@brands/@Model.anh_sp/sm_image1.jpg" alt="">
+                        <img src=" ~/Content/anh/productList/@brands/@Model.anh_sp/sm_image2.jpg" alt="">
+                        <img src=" ~/Content/anh/productList/@brands/@Model.anh_sp/sm_image3.jpg" alt="">
+                        <img src=" ~/Content/anh/productList/@brands/@Model.anh_sp/sm_image4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="product-content-right ">
+                    <div style="padding: 5px 0;" class="product-content-right-product-name">
+                        <h1 style="padding-bottom:5px;">@Model.ten_sp</h1>
+                        <p>MSP: @Model.id_sp</p>
+                    </div>
+                    <div style="padding:5px 0" class="product-content-right-product-price">
+                        <p style="padding-bottom:5px;">Giá:</p>
+                        <p style="color:red;">@Model.gia_ban<sup>đ</sup></u></p>
+                    </div>
+                    <div style="padding:5px 0;" class="product-content-right-color">
+                        <p><span style="font-weight: bold;">Màu sắc</span>:Đỏ <span style="color: red;">*</span></p>
+                        <div class="product-content-right-color-img">
+                            <img style="width:50px;" src="~/Content/anh/Red_flag.svg.png" alt="">
+                        </div>
+                    </div>
+                    <div style="padding: 5px 0" class="quantity">
+                        <p style="font-weight: bold;">Số lượng:</p>
+                        <input type="number" min="1" value="1" name="" id="">
+                    </div>
+                    @*@using (Html.BeginForm("Chi_tiet_sp","SanPham",new {@id_sp=Model.id_sp}))
+                {*@
+                    <div>
+                        <div style="padding:5px 0;" class="product-content-right-product-size">
+                            <p style="font-weight: bold;padding-bottom:10px;padding-top:10px">Size:</p>
+                            <div style="padding-left:12px; padding-bottom:10px" class="size">
+                                <select id="size_value" name="size_value">
+                                    <option style="font-family:Arial, Helvetica, sans-serif;font-size:15px">Chọn size</option>
+                                    @foreach (var item in ViewBag.SizeS)
+                                    {
+                                        <option style="font-family:Arial, Helvetica, sans-serif;font-size:15px">@item.size</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div style="padding:5px 0;" class="product-content-right-product-button">
+                            @using (Html.BeginForm("addCart", "GioHang", new { @id_sp = Model.id_sp, @url = Request.Url.ToString() }))
+                            {
+                                <button type="submit"><i class="fa-solid fa-cart-shopping"></i><p>MUA HÀNG</p></button>
+                            }
+                            <a href="@Url.Action("")">
+                                <button>
+                                    <p>TÌM TẠI CỬA HÀNG</p>
+                                    @*<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7838.684254869503!2d106.70676642475235!3d10.785086936675276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1547181657956" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>*@
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    @*}*@
+                    <div style="padding:5px 0;" class="product-content-right-product-icon">
+                        <div class="product-content-right-product-icon-item">
+                            <i class="fa-solid fa-phone"></i><p>Hotline</p>
+                        </div>
+                        <div class="product-content-right-product-icon-item">
+                            <i class="fa-brands fa-rocketchat"></i><p>Chat</p>
+                        </div>
+                        <div class="product-content-right-product-icon-item">
+                            <i class="fa-solid fa-envelope"></i><p>Mail</p>
+                        </div>
+                    </div>
+                    <div style="padding:5px 0;" class="product-content-right-product-QR">
+                        <img src="~/Content/anh/QR_code_for_mobile_English_Wikipedia.svg.png" alt="">
+                    </div>
+                    <div style="padding:5px 0;" class="product-content-right-bottom">
+                        <div class="product-content-right-bottom-top">
+                            &#8744;
+                        </div>
+                        <div class="product-content-right-bottom-content-big">
+                            <div class="product-content-right-bottom-content-title row">
+                                <div class="product-content-right-bottom-content-title-item chitiet">
+                                    <p style="font-weight:bold;">Chi tiết</p>
+                                </div>
+                                <div class="product-content-right-bottom-content-title-item baoquan">
+                                    <p style="font-weight:bold;">Bảo quản</p>
+                                </div>
+                                <div class="product-content-right-bottom-content-title-item thamkhaosize">
+                                    <p style="font-weight:bold;">Tham khảo size</p>
+                                </div>
+                            </div>
+                            <div class="product-right-bottom-content">
+                                <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:18px"> @Model.mo_ta_sp <br /></p>
+
+                                <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:18px">Màu sắc: @Model.color</p>
+                            </div>
+                            <div class="product-right-bottom-content-baoquan">
+                                Hãy đảm bảo giày hoàn toàn khô và được phơi tránh ánh nắng mặt trời để tránh giày bị ố vàng.<br>
+                                1. Thường xuyên lau sạch giày trắng, giày sneaker, giày thể thao. <br>
+                                2. Phân loại giày theo mùa và mục đích sử dụng.<br>
+                                3. Dùng giấy báo trong giày để bảo quản form giày.<br>
+                                4. Sử dụng bình xịt Nano.<br>
+                                5. Dán sole bảo vệ đế giày.<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ----------------------------------------------------------SP THAM KHẢO -->
+<section class="product-related">
+    <div class="product-related-title">
+        <p>SẢN PHẨM LIÊN QUAN</p>
+    </div>
+    <div>
+        <div class="row product-content container">
+            <div class="product-content-item ">
+                <img src="~/Content/anh/SanPham/MAU1.jpeg" alt="">
+                <h1>JORDAN 1 TROPHICO ROOM</h1>
+                <p>60000000<sup>đ</sup></p>
+            </div>
+            <div class="product-content-item">
+                <img src="~/Content/anh/SanPham/MAU1.jpeg" alt="">
+                <h1>JORDAN 1 TROPHICO ROOM</h1>
+                <p>60000000<sup>đ</sup></p>
+            </div>
+            <div class="product-content-item">
+                <img src="~/Content/anh/SanPham/MAU1.jpeg" alt="">
+                <h1>JORDAN 1 TROPHICO ROOM</h1>
+                <p>60000000<sup>đ</sup></p>
+            </div>
+            <div class="product-content-item">
+                <img src="~/Content/anh/SanPham/MAU1.jpeg" alt="">
+                <h1>JORDAN 1 TROPHICO ROOM</h1>
+                <p>60000000<sup>đ</sup></p>
+            </div>
+            <div class="product-content-item">
+                <img src="~/Content/anh/SanPham/MAU1.jpeg" alt="">
+                <h1>JORDAN 1 TROPHICO ROOM</h1>
+                <p>60000000<sup>đ</sup></p>
+            </div>
+        </div>
+    </div>
+    <p></p>
+</section>
+<script>
+        const itemsliderbar= document.querySelectorAll(".cartegory-left-li")
+itemsliderbar.forEach(function(menu, index){
+   menu.addEventListener("click",function(){
+        menu.classList.toggle("block")
+   })
+})
+        const header= document.querySelector("header")
+        window.addEventListener("scroll",function(){
+            x = window.pageYOffset
+            if(x>0){
+                header.classList.add("sticky")
+            }
+            else{
+                header.classList.remove("sticky")
+            }
+        })
+        const imgPosition  = document.querySelectorAll(".aspect-ratio-169 img")
+        const imgContainer  = document.querySelector('.aspect-ratio-169 ')
+        const dotItem  = document.querySelectorAll(".dot")
+        let index=0
+        let imgNumber =imgPosition.length
+        let dotNumber= dotItem.length
+
+
+        imgPosition.forEach(function (image, index){
+            image.style.left = index*100 + "%"
+            dotItem[index].addEventListener("click",function(){
+                slider(index)
+            })
+        })
+
+        function imgSlide(){
+            index++
+            if(index>=imgNumber){index=0}
+            slider(index)
+        }
+        function slider(index){
+            imgContainer.style.left="-" + index*100 + "%"
+           const dotActive = document.querySelector(".active")
+           dotActive.classList.remove("active")
+           dotItem[index].classList.add("active")
+        }
+        setInterval(imgSlide,5000)
+
+
+        /**------------------- PRODUCT_CONTENT_BOTTOM*/
+
+        const bigImg= document.querySelector(".product-content-left-big-img img")
+        const smallImg= document.querySelectorAll(".product-content-left-small-img img")
+        smallImg.forEach(function(imgItem,X){
+            imgItem.addEventListener("click",function(){
+                bigImg.src=imgItem.src
+            })
+        })
+
+        const baoquan= document.querySelector(".baoquan")
+const chitiet= document.querySelector(".chitiet")
+if(baoquan){
+   baoquan.addEventListener("click",function(){
+      document.querySelector(".product-right-bottom-content").style.display="none"
+      document.querySelector(".product-right-bottom-content-baoquan").style.display="block"
+   })
+}
+
+if(chitiet){
+   chitiet.addEventListener("click",function(){
+      document.querySelector(".product-right-bottom-content").style.display="block"
+      document.querySelector(".product-right-bottom-content-baoquan").style.display="none"
+   })
+}
+
+
+const button36 = document.querySelector('.button_36')
+function randomColor(array){
+    return Math.floor(Math.random()*array.length);
+}
+
+//Đổi màu
+function changeColor(){
+    const background = document.querySelector('.button_36');
+    background.style.backgroundColor = 'red';
+}
+button36.addEventListener('click',changeColor);
+
+const butTon = document.querySelector(".product-content-right-bottom-top")
+if(butTon){
+   butTon.addEventListener("click",function(){
+      document.querySelector(".product-content-right-bottom-content-big").classList.toggle("activeB")
+   })
+}
+</script>

@@ -1,0 +1,38 @@
+.all-spham-all{
+
+}
+.title-allspham-main{
+    font-size: 30px;
+    padding: 15px;
+    background-color: #ee4d2d;
+    margin-top: 150px;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    color: wheat;
+}
+.right2{
+    width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+    padding: 10px;
+    padding-bottom: 30px;
+
+    
+}
+.behon{
+    width: 180px;
+    border:1px solid #ccc;
+   
+}
+.all-right2-sp{
+   
+}
+.all-spham{
+    background-color: #ccc;
+}
+.container2{
+    padding-bottom: 30px;
+}

@@ -1,0 +1,73 @@
+﻿@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Web;
+@using System.Web.Mvc;
+@using ThriftShop.Models;
+@using ThriftShop.Controllers.User;
+@{ 
+    SneakerThriffEntities db = new SneakerThriffEntities();
+    var user = db.Nguoi_dung.SingleOrDefault(x => x.id_user == LoginRegisterController.id_user);
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Settings UI Design</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/CSS/UserProfile/css/style.css">
+    <script src="~/Scripts/Chart.min.js"></script>
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ">
+    <section class="py-5 my-5">
+        <div class="container">
+            <h1 class="mb-5" style="color:aliceblue">Account Settings</h1>
+            <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+                <div class="profile-tab-nav border-right">
+                    <div class="p-4">
+                        <div class="img-circle text-center mb-3">
+                            <img src="~/Content/anh/images.png" alt="Image" class="shadow">
+                        </div>
+                        <h4 class="text-center">@LoginRegisterController.userName</h4>
+                    </div>
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="account-tab" href="@Url.Action("UserProfile","UserProfile", new {@id=LoginRegisterController.id_user})">
+                            <i class="fa fa-home text-center mr-1"></i>
+                            Thông tin cá nhân
+                        </a>
+                        <a class="nav-link" id="password-tab" href="@Url.Action("changePass","UserProfile")" target="_blank" >
+                            <i class="fa fa-key text-center mr-1"></i>
+                            Đổi mật khẩu
+                        </a>
+                        <a class="nav-link" id="security-tab" href="@Url.Action("quanLyDon","UserProfile")" target="_blank">
+                            <i class="fa fa-user text-center mr-1"></i>
+                            Quản lý đơn hàng
+                        </a>
+                        <a class="nav-link" id="security-tab" href="@Url.Action("ThongKe","UserProfile")" target="_blank">
+                            <i class="fa fa-tv text-center mr-1"></i>
+                            Thống kê
+                        </a>
+                        <a class="nav-link" id="notification-tab" href="@Url.Action("productsList","SanPham")" role="tab" >
+                            <i class="fa mr-1 fa-backward"></i>
+                            Back
+                        </a>
+                    </div>
+                </div>
+                @* Content *@
+                @RenderBody()
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

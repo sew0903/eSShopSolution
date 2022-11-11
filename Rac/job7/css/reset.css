@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+   
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Regular', sans-serif !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+p{
+    color:#150303;
+    font-size: 14px;
+}
+span{
+    font-size: 12px;
+    color:#606060;
+}
+a{
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+ 
+    font-size: 14px;
+}
+ul,li{
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+    display: block;
+    
+}
+p,h1{
+    z-index: 1 !important;
+}

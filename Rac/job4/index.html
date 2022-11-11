@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./media1.css">
+
+    
+
+    
+
+
+</head>
+<body>
+    <body>
+        <div class="wrapper">
+            <div class="header1">
+                <div class="header1-content">
+                    <div class="header-1-content-logo">
+                        <img src="./image/image/logo.png" alt="">
+                    </div>
+                    <div class="header1-content-center">
+                        <div class="header1-content-center1">
+                            <div class="header1-content-center1-item">
+                                <a href="#" class="header1-content-center1-item-link">
+                                    <i class="fas fa-edit"> </i> Tra cứu đơn hàng
+                                </a>
+                            </div>
+                            <div class="header1-content-center1-item">
+                                <a href="#" class="header1-content-center1-item-link">
+                                    <i class="fas fa-question-circle"> </i> Câu hỏi thường gặp
+                                </a>
+                            </div>
+                            <div class="header1-content-center1-item">
+                                <a href="#" class="header1-content-center1-item-link">
+                                    <i class="fas fa-minus-square"> </i> Tin Tức
+                                </a>
+                            </div>
+                            <div class="header1-content-center1-item">
+                                <a href="#" class="header1-content-center1-item-link">
+                                    <i class="fas fa-cube"> </i> Khuyến mãi
+                                </a>
+                            </div>
+                            <div class="header1-content-center1-item">
+                                <a href="#" class="header1-content-center1-item-link">
+                                    <i class="fas fa-map-marker-alt"> </i> Liên hệ
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header1-content-center2">
+                            <div class="header1-content-center2-item">
+                                <p class="time">Giờ Làm Việc (08:00 - 22:00)</p>
+                            </div>
+                            <div class="header1-content-center2-item">
+                                <h1 class="phone"><i class="fas fa-mobile-alt"></i>1800 6750</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="header2-content">
+                <div class="header2-content1">
+                    
+                    <button onclick="openNav()" class="btn2"><i class="fas fa-stream"></i> <p>DANH MỤC</p>  </button>
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                         <div class="slidenav-item mode">Đăng kí | Đăng Nhập</div>
+                         <div class="slidenav-item mode">Kiểm Tra Đơn hàng</div>
+                         <div class="slidenav-item">Sản Phẩm nổi bật</div>
+                         <div class="slidenav-item">Sản Phẩm Khuyến Mãi</div>
+                         <div class="slidenav-item">Phòng Bếp</div>
+                         <div class="slidenav-item">Phòng Ngủ</div>
+                         <div class="slidenav-item">Phòng Khách</div>
+                      </div>
+                    <div class="dropdown-content">
+                        <div class="dropdown-content-item">Sản Phẩm nổi bật</div>
+                        <div class="dropdown-content-item">Sản Phẩm Khuyến Mãi</div>
+                        <div class="dropdownlv2">
+                           <div class="dropdown-content-item">Bếp Ngủ <i class="fas fa-caret-right"></i>
+                        </div>
+                         <div class="dropdownlv2-content">
+                             <div class="dropdown-content-item2">Bàn ăn </div>
+                             <div class="dropdown-content-item2">Bàn Trang Trí </div>
+                         </div>
+                    </div>
+                    <div class="dropdownlv2">
+                        <div class="dropdown-content-item">Phòng Ngủ <i class="fas fa-caret-right"></i>
+                     </div>
+                      <div class="dropdownlv2-content">
+                          <div class="dropdown-content-item2">Tủ Ngăn Kéo </div>
+                          <div class="dropdown-content-item2">Giường Ngủ </div>
+                          <div class="dropdown-content-item2">Đèn Ngủ </div>
+                      </div>
+                 </div>
+                 <div class="dropdownlv2">
+                    <div class="dropdown-content-item">Phòng Khách <i class="fas fa-caret-right"></i>
+                 </div>
+                  <div class="dropdownlv2-content">
+                      <div class="dropdown-content-item2">Tủ Tivi </div>
+                      <div class="dropdown-content-item2">Bàn Trang Trí </div>
+                      
+                  </div>
+             </div>
+                        
+                    </div>
+    
+                </div>
+                <div class="header2-content2">
+                    <div class="header2-content2-1">
+                        <input type="text" placeholder="Tìm Kiếm">
+                        <div class="seclction">
+                            <select>
+                                <option value="0">Tất cả sản phẩm</option>
+                                <option value="1">Đèn Ngủ</option>
+                                <option value="2">Giường Ngủ</option>
+                                <option value="3">Bàn Trang Trí</option>
+                                <option value="4">Phòng Khách</option> 
+                                
+                              </select>
+                        </div>
+                        <div class="btn-search"><i class="fas fa-search"></i></div>
+                    </div>
+                    <div class="header2-content2-2">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Giỏ Hàng</p>
+                        <div class="span">1</div>
+                    </div>
+                    <div class="header2-content2-3">
+                        <div class="login">
+                            <p class="dang-ki"> <i class="fas fa-user"></i>Đăng Kí</p>
+                            <p class="dang-nhap">Đăng Nhập</p>
+                        </div>
+                        <div class="check">
+                            <i class="fas fa-check-circle"></i> Kiểm tra đơn hàng
+                        </div>
+                    </div>
+                    
+    
+                </div>
+            </div>
+            </div>
+            <div class="header1 content3">
+                <div class="header1-content ">
+                    <div class="header3-content-item " >
+                        <i class="fas fa-cog"></i>
+                        <div class="header3-content1">
+                            <h1 class="header3-title">Giao Hàng Lắp đặt Miễn Phí</h1>
+                            <p class="header3-text">Với đơn hàng nội thành Hà Nội</p>
+                        </div>
+                    </div>
+                    <div class="header3-content-item " >
+                        <i class="fas fa-star"></i>
+                        <div class="header3-content1">
+                            <h1 class="header3-title">Tích lũy nhận quà</h1>
+                            <p class="header3-text">Áp dụng với khách hàng thân thiết</p>
+                        </div>
+                    </div>
+                    <div class="header3-content-item " >
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="header3-content1">
+                            <h1 class="header3-title">Hỗ Trợ 24/7</h1>
+                            <p class="header3-text">Hãy Gọi chúng tôi để được tư vấn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+<div class="main3">
+       <div class="main-sp-title">
+           <p><a href="#">Trang Chủ</a> | <a href="#">Phòng Khách</a> | <span>Ghế Đơn Jonah</span></p>
+       </div>
+       <div class="main-sp">
+           <div class="main-sp-content">
+           <div class="main-sp-left">
+            <div class="product_detail_image">
+                <script type="text/javascript" src="js/modernizr.custom.js"></script>
+                <link href="css/glasscase.min.css" rel="stylesheet"/>
+                <script type="text/javascript" src="js/jquery.glasscase.min.js"></script>
+                <input type="hidden" id="__VIEWxSTATE"/>
+                <ul id='zoom_detail' class='gc-start' >
+                    <li><img  src="img/detail.jpg" alt='' /></li>
+                    <li><img src="img/detail1.jpg" alt='' /></li>
+                    
+                    
+                </ul><div class="some-icon"><i class="fas fa-chevron-left"></i></div>
+                </ul><div class="some-icon some-icon2"><i class="fas fa-chevron-right"></i></i></div>
+                
+            </div>
+<div class="clear"></div>
+           </div>
+           <div class="main-sp-right">
+               <h1 class="main-sp-right-title">
+                   Ghế Đơn Jonah
+               </h1>
+               <div class="main-sp-right-TT">
+                   (còn Hàng)
+               </div>
+               <div class="main-sp-right-price">
+                   <div class="main-sp-right-price-new">1.000.000đ</div>
+                   <div class="main-sp-right-price-old">1.200.000đ</div>
+               </div>
+               <div class="main-sp-right-content">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Error commodi molestiae recusandae assumenda doloremque quia quod odit sint dignissimos, quasi dolor ratione repellat sapiente et totam animi ex. Ut, aspernatur.
+               </div>
+               <h1 class="main-sp-right-button-title">
+                 Màu Sắc
+               </h1>
+               <div class="main-sp-right-button">
+                   <button class="main-sp-right-button-white"></button>
+                   <button class="main-sp-right-button-red"></button>
+               </div>
+               <div class="number_order">
+                <div class="d-flex">
+                    <div class="value-button decreaseValue" onclick="decreaseValue('product')"><p>-</p> </div>
+                    <input class="input-value-button text-center" size="1" id="product" name="product" value="1" min="1" max="99" readonly/>
+                    <div class="value-button increaseValue" onclick="increaseValue('product')"><p>+</p></div>
+                </div>
+            </div>
+            <div class="main-sp-right-button2">
+                <button class="main-sp-right-button2-1"><i class="fas fa-shopping-cart"></i>THÊM VÀO GIỎ HÀNG</button>
+                 <div class="main-sp-right-button2-2"><i class="fas fa-file-alt"></i>Hướng Dẫn Mua Hàng</div>
+            </div>
+            <div class="main-sp-right-call">
+                <div class="main-sp-right-call-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="main-sp-right-call-text">
+                    <p class="main-sp-right-call-text-phone1">Đặt mua qua điện thoại (8h - 12h)</p>
+                    <h1 class="main-sp-right-call-text-phone2">1800 6750</h1>
+                </div>
+            </div>
+            <div class="main-sp-right-text2">Miễn phí lắp đặt vận chuyển | Bảo hành: Đang cập nhật</div>
+
+               
+
+           </div>
+        </div>
+       </div>
+       <div class="main-sp2">
+           <div class="main-sp2-content">
+            <div id="code1" class="tabcontent">
+                
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur iste pariatur consequatur nostrum consequuntur. Vel debitis maiores explicabo quaerat at commodi. Incidunt recusandae nobis dolorum? Velit, debitis nam! Inventore, minus.</p>
+              </div>
+              
+              <div id="code2" class="tabcontent">
+               
+                <p>Chưa cập nhật</p> 
+              </div>
+              
+              <div id="code3" class="tabcontent">
+               
+                <p>Chưa Cập Nhật</p>
+              </div>
+              
+              
+              <div class="main-sp2-content-btn">
+              <button class="tablink" onclick="openCity('code1', this,'#ffc107')" id="defaultOpen">Mô tả Sản Phẩm</button>
+              <button class="tablink" onclick="openCity('code2', this,'#ffc107')">Tab Tùy Chỉnh</button>
+              <button class="tablink" onclick="openCity('code3', this,'#ffc107')">Đánh Giá</button>
+              </div>
+              <div class="a-line"></div>
+           </div>
+       </div>
+       <div class="clear"></div>
+       <div class="main4">
+           <div class="main4-title">
+               <h1>SẢN PHẨM LIÊN QUAN</h1>
+           </div>
+           <div class="main4-content">
+            
+         <div class="main-content1-main-item item-has-margin two that-item-show">
+                <div class="item-content">
+                    <div class="sale-band">
+                        SALE
+                    </div>
+                <div class="item-img">
+                    <img src="./image/item/prd (1).jpg" alt="">
+                </div>
+                <div class="item-name">
+                    Ghế Sofa 3 chỗ phòng khách
+                </div>
+                <div class="item-price">
+                    <div class="new-price">2.200.000đ</div>
+                    <div class="old-price">2.500.000đ</div>
+                    <div class="item-sale">-12%</div>
+                </div>
+                <div class="item-btn">
+                    <button class="item-btn1 "> <p class="boder-btn"><i class="far fa-eye"></i> Xem chi tiết</p></button>
+                    <button class="item-btn1"><i class="fas fa-shopping-cart"></i>Giỏ Hàng</button>
+                    <div class="ngang"></div>
+                </div>
+            </div>
+            </div><div class="main-content1-main-item item-has-margin two that-item-show">
+                <div class="item-content">
+                    <div class="sale-band">
+                        SALE
+                    </div>
+                <div class="item-img">
+                    <img src="./image/item/prd (1).jpg" alt="">
+                </div>
+                <div class="item-name">
+                    Ghế Sofa 3 chỗ phòng khách
+                </div>
+                <div class="item-price">
+                    <div class="new-price">2.200.000đ</div>
+                    <div class="old-price">2.500.000đ</div>
+                    <div class="item-sale">-12%</div>
+                </div>
+                <div class="item-btn">
+                    <button class="item-btn1 "> <p class="boder-btn"><i class="far fa-eye"></i> Xem chi tiết</p></button>
+                    <button class="item-btn1"><i class="fas fa-shopping-cart"></i>Giỏ Hàng</button>
+                    <div class="ngang"></div>
+                </div>
+            </div>
+            </div><div class="main-content1-main-item item-has-margin two that-item-show">
+                <div class="item-content">
+                    <div class="sale-band">
+                        SALE
+                    </div>
+                <div class="item-img">
+                    <img src="./image/item/prd (1).jpg" alt="">
+                </div>
+                <div class="item-name">
+                    Ghế Sofa 3 chỗ phòng khách
+                </div>
+                <div class="item-price">
+                    <div class="new-price">2.200.000đ</div>
+                    <div class="old-price">2.500.000đ</div>
+                    <div class="item-sale">-12%</div>
+                </div>
+                <div class="item-btn">
+                    <button class="item-btn1 "> <p class="boder-btn"><i class="far fa-eye"></i> Xem chi tiết</p></button>
+                    <button class="item-btn1"><i class="fas fa-shopping-cart"></i>Giỏ Hàng</button>
+                    <div class="ngang"></div>
+                </div>
+            </div>
+            </div><div class="main-content1-main-item item-has-margin two that-item-show">
+                <div class="item-content">
+                    <div class="sale-band">
+                        SALE
+                    </div>
+                <div class="item-img">
+                    <img src="./image/item/prd (1).jpg" alt="">
+                </div>
+                <div class="item-name">
+                    Ghế Sofa 3 chỗ phòng khách
+                </div>
+                <div class="item-price">
+                    <div class="new-price">2.200.000đ</div>
+                    <div class="old-price">2.500.000đ</div>
+                    <div class="item-sale">-12%</div>
+                </div>
+                <div class="item-btn">
+                    <button class="item-btn1 "> <p class="boder-btn"><i class="far fa-eye"></i> Xem chi tiết</p></button>
+                    <button class="item-btn1"><i class="fas fa-shopping-cart"></i>Giỏ Hàng</button>
+                    <div class="ngang"></div>
+                </div>
+            </div>
+            </div>
+           </div>
+       </div>
+       
+        
+        <div class="footer">
+            <div class="footer-content">
+                <div class="col1">
+                    <div class="col1-title">
+                        <img src="./image/image/logoft.png" alt="">
+                    </div>
+                    <div class="col1-item">
+                        <i class="fas fa-map-marker-alt"></i> Địa chỉ : Tằng 6 tòa nhà Ladeco -266 , Đội Cấn, Hà Nội , VietNam
+                    </div>
+                    <div class="col1-item">
+                        <i class="fas fa-phone-alt"></i> 1800 6750
+                    </div>
+                    <div class="col1-item">
+                        <i class="fas fa-envelope"></i>support@sapo.vn
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.4888069901344!2d105.81572866522352!3d21.03626859166933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa3eca85d1bc5ef8f!2zQ8O0bmcgVHkgQ-G7lSBQaOG6p24gQ8O0bmcgTmdo4buHIFNhcG8!5e0!3m2!1svi!2s!4v1629961762217!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="col2-1">
+                        <div class="col2-1-title">
+                            Thông Tin và Hướng Dẫn
+                        </div>
+                        <div class="col2-1-content">
+                        <div class="col2-1-item">
+                            <i class="fas fa-chevron-right"></i>Trang Chủ
+                        </div>
+                        <div class="col2-1-item">
+                            <i class="fas fa-chevron-right"></i>Sản Phẩm
+                        </div>
+                        <div class="col2-1-item">
+                            <i class="fas fa-chevron-right"></i>Giới Thiệu
+                        </div>
+                        <div class="col2-1-item">
+                            <i class="fas fa-chevron-right"></i>Tin Tức
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col2-2">
+                        <div class="col2-1-title ter1">Kết nối với chúng tôi</div>
+                        <div class="col-2-content">
+                        <div class="col2-item">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="col2-item">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="col2-item be-mode">
+                            <i class="fab fa-behance"></i>
+                        </div>
+                        <div class="col2-item">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+                <div class="col3">
+                    <div class="col2-1-title">Dòng Sản Phẩm yêu thích</div>
+                    <div class="col3-content">
+                        <div class="col3-item">
+                            <span>Trẻ em: </span> <a href="#">Giường ngủ trẻ em</a> - <a href="#">giường tầng đẹp</a> - <a href="#">Giường Tầng trẻ em</a>- <a href="#">Giường Tầng nhập Khẩu</a>
+                        </div>
+                        <div class="col3-item">
+                            <span>Trẻ em: </span> <a href="#">Giường ngủ trẻ em</a> - <a href="#">giường tầng đẹp</a> - <a href="#">Giường Tầng trẻ em</a>- <a href="#">Giường Tầng nhập Khẩu</a>
+                        </div>
+                        <div class="col3-item">
+                            <span>Trẻ em: </span> <a href="#">Giường ngủ trẻ em</a> - <a href="#">giường tầng đẹp</a> - <a href="#">Giường Tầng trẻ em</a>- <a href="#">Giường Tầng nhập Khẩu</a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="end">
+            <div class="end-content">
+            <div class="end-item">
+                <img src="./image/pay/maestro.png" alt="">
+                <img src="./image/pay/mastercard.png" alt="">
+                <img src="./image/pay/paypal.png" alt="">
+                <img src="./image/pay/visa.png" alt="">
+    
+            </div>
+        </div></div>
+    <script src="./js.js"></script>
+    <script src="./js2.js"></script>
+    <script src="./js3.js"></script>
+    <script src="./js4.js"> </script>
+    <script>
+        $("#zoom_detail").glassCase({
+            'widthDisplay': 545,
+            'heightDisplay': 600,
+            'nrThumbsPerRow':6,
+            'isSlowZoom': true,
+            'thumbsPosition': 'left',
+            'colorIcons': '#dd9825',
+            'colorActiveThumb': '#dd9825'
+        });
+    </script>
+    <script>
+        function increaseValue(id) {
+    var value = +document.getElementById(id).value || 0;
+    value++;
+    document.getElementById(id).value = value;
+}
+
+function decreaseValue(id) {
+    var value = +document.getElementById(id).value || 0;
+    value--;
+    if (value < 1) {
+        value = '1';
+    }
+    document.getElementById(id).value = value;
+}
+    </script>
+    <script src="./js.js"></script>
+    <script src="./js3.js"></script>
+    </body>
+</body>
+</html>

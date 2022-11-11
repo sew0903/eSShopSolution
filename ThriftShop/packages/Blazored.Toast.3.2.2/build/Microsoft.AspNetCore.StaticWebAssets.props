@@ -1,0 +1,18 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$(MSBuildThisFileDirectory)..\staticwebassets\blazored-toast.css">
+      <SourceType>Package</SourceType>
+      <SourceId>Blazored.Toast</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Blazored.Toast</BasePath>
+      <RelativePath>blazored-toast.css</RelativePath>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$(MSBuildThisFileDirectory)..\staticwebassets\blazored-toast.min.css">
+      <SourceType>Package</SourceType>
+      <SourceId>Blazored.Toast</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Blazored.Toast</BasePath>
+      <RelativePath>blazored-toast.min.css</RelativePath>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

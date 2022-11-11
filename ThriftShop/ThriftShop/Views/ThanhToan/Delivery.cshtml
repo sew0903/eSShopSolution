@@ -1,0 +1,434 @@
+﻿@using ThriftShop.Controllers.User
+@using ThriftShop.Models
+@using ThriftShop.Controllers
+@model List<GioHang>
+@{
+    ViewBag.Title = "Delivery";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+
+
+@{
+
+    if (LoginRegisterController.login_user_name == null)
+    {
+        using (Html.BeginForm())
+        {
+            <section class="delivery">
+                <div class="container">
+                    <div class="delivery-top-wrap">
+                        <div class="delivery-top ">
+                            <div class="delivery-top-statuss delivery-top-item">
+                                <i class="fa-solid fa-cart-shopping "></i>
+                            </div>
+                            <div class="delivery-top-address delivery-top-item">
+                                <i class="fa-solid fa-lightbulb "></i>
+                            </div>
+                            <div class="delivery-top-payment delivery-top-item">
+                                <i class="fa-solid fa-money-check-dollar "></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="delivery-content row">
+                        <div class="delivery-content-left">
+                            <p>Vui lòng nhập địa chỉ giao hàng</p>
+                            @if (LoginRegisterController.id_user == 0)
+                            {
+                                <div class="delivery-content-left-dangnhap row">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    <p><a style="color:blue; font-weight:bold" href="@Url.Action("Login","LoginRegister")">Đăng nhập</a>( Nếu bạn đã có tài khoản)</p>
+                                </div>
+                                <div class="delivery-content-left-khachle row">
+                                    <input checked name="LoaiKhach" id="" type="radio">
+                                    <p><span style="font-weight: bold;">Khách lẻ</span>(Nếu bạn muốn lưu lại thông tin)</p>
+                                </div>
+                                <div class="delivery-content-left-dangky row">
+                                    <input name="LoaiKhach" id="" type="radio">
+                                    <p><span style="font-weight: bold;"><a style="font-weight:bold; color:blue" href="@Url.Action("Register","LoginRegister")">Đăng kí</a></span>(Nếu bạn chưa có tài khoản)</p>
+                                </div>
+                            }
+                            <div class="delivery-content-left-input-top row">
+                                <div class="delivery-content-left-input-top-item">
+                                    <label for="">Họ tên<span style="color: red;">*</span></label>
+                                    <input type="text" name="delivery_hoten" id="delivery_hoten">
+                                </div>
+                                <div class="delivery-content-left-input-top-item">
+                                    <label for="">Điện thoại<span style="color: red;">*</span></label>
+                                    <input type="text" name="delivery_dienthoai" id="delivery_dienthoai ">
+                                </div>
+                                @*<div class="delivery-content-left-input-top-item">
+                                        <label for="">Tỉnh/Thành phố<span style="color: red;">*</span></label>
+                                        <input type="text" name="delivery_tinh" id="delivery_tinh ">
+                                    </div>
+                                    <div class="delivery-content-left-input-top-item">
+                                        <label for="">Quận/huyện<span style="color: red;">*</span></label>
+                                        <input type="text" name="delivery_quanhuyen" id="delivery_quanhuyen ">
+                                    </div>*@
+                                <div class="delivery-content-left-input-top-item">
+                                    <select name="calc_shipping_provinces" required="">
+                                        <option value="">Tỉnh / Thành phố</option>
+                                    </select>
+                                    <select name="calc_shipping_district" required="">
+                                        <option value="">Quận / Huyện</option>
+                                    </select>
+                                    <input class="billing_address_1" name="" type="hidden" value="">
+                                    <input class="billing_address_2" name="" type="hidden" value="">
+                                </div>
+                            </div>
+                            <div class="delivery-content-left-input-bottom">
+                                <label for="">Email<span style="color: red;">*</span></label>
+                                <input type="email" name="delivery_email" id="delivery_email">
+                            </div>
+                            <div class="delivery-content-left-input-bottom">
+                                <label for="">Địa chỉ<span style="color: red;">*</span></label>
+                                <input type="text" name="delivery_diachi" id="delivery_diachi ">
+                            </div>
+                            <div class="delivery-content-left-button row">
+                                <a href=""><span>&#8920;</span> Quay lại giỏ hàng</a>
+                                <button type="submit"><p style="font-weight: bold;">THANH TOÁN VÀ GIAO HÀNG</p></button>
+                            </div>
+                        </div>
+                        <div class="delivery-content-right">
+                            <table>
+                                <tr>
+                                    <th>TÊN SẢN PHẨM</th>
+                                    <th>GIẢM GIÁ</th>
+                                    <th>SÓ LƯỢNG</th>
+                                    <th>THÀNH TIỀN</th>
+                                </tr>
+                                @{
+                                    foreach (var item in GioHangController.listGh)
+                                    {
+                                        <tr>
+                                            <td>@item.s_ten_sp <br> 39/ Red <br>EB232B/@item.s_don_gia <sup>đ</sup></td>
+                                            <td>-30%</td>
+                                            <td>@item.s_so_luong</td>
+                                            <td>@item.ThanhTien() <sup>đ</sup></td>
+                                        </tr>
+                                    }
+                                }
+                                <tr>
+                                    <td colspan="3" style="font-weight: bold">TỔNG </td>
+                                    <td colspan="3" style="font-weight: bold">@ViewBag.TT <sup>đ</sup> </td>
+                                </tr>
+                                @{
+                                    int tien = 0;
+                                    foreach (var item in Model)
+                                    {
+                                        tien += item.ThanhTien();
+                                    }
+                                    int tienSauThue = tien + (tien * 8 / 100);
+                                    <tr>
+                                        <td colspan="3" style="font-weight: bold">THUẾ VAT </td>
+                                        <td colspan="3" style="font-weight: bold">@tienSauThue<sup>đ</sup> </td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td colspan="3" style="font-weight: bold">TỔNG TIỀN THANH TOÁN </td>
+                                    <td colspan="3" style="font-weight: bold">@tienSauThue <sup>đ</sup> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+    }
+    else
+    {
+        using (Html.BeginForm())
+        {
+            <section class="delivery">
+                <div class="container">
+                    <div class="delivery-top-wrap">
+                        <div class="delivery-top ">
+                            <div class="delivery-top-statuss delivery-top-item">
+                                <i class="fa-solid fa-cart-shopping "></i>
+                            </div>
+                            <div class="delivery-top-address delivery-top-item">
+                                <i class="fa-solid fa-lightbulb "></i>
+                            </div>
+                            <div class="delivery-top-payment delivery-top-item">
+                                <i class="fa-solid fa-money-check-dollar "></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="delivery-content row">
+                        <div class="delivery-content-left">
+                            @*<div class="delivery-content-left-dangnhap row">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    <p>Đăng nhập( Nếu bạn đã có tài khoản)</p>
+                                </div>
+                                <div class="delivery-content-left-khachle row">
+                                    <input checked name="LoaiKhach" id="" type="radio">
+                                    <p><span style="font-weight: bold;">Khách lẻ</span>(Nếu bạn muốn lưu lại thông tin)</p>
+                                </div>*@
+                            <div class="delivery-content-left-dangky row">
+                                <input checked name="LoaiKhach" id="" type="radio">
+                                <p><span style="font-weight: bold;">Mời khách hàng xác nhận thông tin giao hàng của mình: @LoginRegisterController.userName</span></p> <br />
+                            </div>
+                            @{
+                                if (LoginRegisterController.login_user_name == null)
+                                {
+                                    <div class="delivery-content-left-input-top row">
+                                        <div class="delivery-content-left-input-top-item">
+                                            <label for="">Họ tên<span style="color: red;">*</span></label>
+                                            <input type="text" name="delivery_hoten" id="delivery_hoten">
+                                        </div>
+                                        <div class="delivery-content-left-input-top-item">
+                                            <label for="">Điện thoại<span style="color: red;">*</span></label>
+                                            <input type="text" name="delivery_dienthoai" id="delivery_dienthoai ">
+                                        </div>
+                                        @*<div class="delivery-content-left-input-top-item">
+                                                <label for="">Tỉnh/Thành phố<span style="color: red;">*</span></label>
+                                                <input type="text" name="delivery_tinh" id="delivery_tinh ">
+                                            </div>
+                                            <div class="delivery-content-left-input-top-item">
+                                                <label for="">Quận/huyện<span style="color: red;">*</span></label>
+                                                <input type="text" name="delivery_quanhuyen" id="delivery_quanhuyen ">
+                                            </div>*@
+                                        <div class="delivery-content-left-input-top-item">
+                                            <select name="calc_shipping_provinces" required="">
+                                                <option value="">Tỉnh / Thành phố</option>
+                                            </select>
+                                            <select name="calc_shipping_district" required="">
+                                                <option value="">Quận / Huyện</option>
+                                            </select>
+                                            <input class="billing_address_1" name="" type="hidden" value="">
+                                            <input class="billing_address_2" name="" type="hidden" value="">
+                                        </div>
+                                    </div>
+                                    <div class="delivery-content-left-input-bottom">
+                                        <label for="">Địa chỉ<span style="color: red;">*</span></label>
+                                        <input type="text" name="delivery_diachi" id="delivery_diachi ">
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="delivery-content-left-input-top row">
+                                        <div class="delivery-content-left-input-top-item">
+                                            <label for="">Họ tên<span style="color: red;">*</span></label>
+                                            <input type="text" value="@LoginRegisterController.userName" name="delivery_hoten" id="delivery_hoten2">
+                                        </div>
+                                        <div class="delivery-content-left-input-top-item">
+                                            <label for="">Điện thoại<span style="color: red;">*</span></label>
+                                            <input type="text" name="delivery_dienthoai" value="@LoginRegisterController.soDienThoai" id="delivery_dienthoai2 ">
+                                        </div>
+
+                                        @*<div class="delivery-content-left-input-top-item">
+                                                <label for="">Tỉnh/Thành phố<span style="color: red;">*</span></label>
+                                                <input type="text" name="delivery_tinh" id="delivery_tinh ">
+                                            </div>
+                                            <div class="delivery-content-left-input-top-item">
+                                                <label for="">Quận/huyện<span style="color: red;">*</span></label>
+                                                <input type="text" name="delivery_quanhuyen" id="delivery_quanhuyen ">
+                                            </div>*@
+                                    </div>
+                                    <div class="delivery-content-left-input-top row">
+                                        <div class="delivery-content-left-input-top-item">
+                                            <label for="">Tỉnh/ Thành phố<span style="color: red;">*</span></label>
+                                            <select style="width:100%; height:30px" name="calc_shipping_provinces" required="">
+                                                <option value="">Tỉnh / Thành phố</option>
+                                            </select>
+                                            <input style="width:100%; height:30px" class="billing_address_1" name="" type="hidden" value="">
+                                        </div>
+                                        <div class="delivery-content-left-input-top-item">
+                                            <div class="delivery-content-left-input-top-item">
+                                                <label for="">Quận/Huyện<span style="color: red;">*</span></label>
+                                                <select style="width:209%; height:30px" name="calc_shipping_district" required="">
+                                                    <option value="">Quận / Huyện</option>
+                                                </select>
+                                                <input style="width:100%; height:30px" class="billing_address_2" name="" type="hidden" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-content-left-input-bottom">
+                                        <label for="">Địa chỉ<span style="color: red;">*</span></label>
+                                        <input type="text" name="delivery_diachi" value="@LoginRegisterController.diaChi" id="delivery_diachi2">
+                                    </div>
+                                }
+                            }
+                            <div class="delivery-content-left-button row">
+                                <a href=""><span>&#8920;</span> Quay lại giỏ hàng</a>
+                                <button><p style="font-weight: bold;">THANH TOÁN VÀ GIAO HÀNG</p></button>
+                            </div>
+                        </div>
+                        <div class="delivery-content-right">
+                            <table>
+                                <tr>
+                                    <th>TÊN SẢN PHẨM</th>
+                                    <th>GIẢM GIÁ</th>
+                                    <th>SÓ LƯỢNG</th>
+                                    <th>THÀNH TIỀN</th>
+                                </tr>
+                                @{
+                                    foreach (var item in GioHangController.listGh)
+                                    {
+                                        <tr>
+                                            <td>@item.s_ten_sp <br> @item.size/ @item.s_color <br>@item.s_don_gia <sup>đ</sup></td>
+                                            <td>
+                                                0%
+                                            </td>
+                                            <td>@item.s_so_luong</td>
+                                            <td>@item.ThanhTien() <sup>đ</sup></td>
+                                        </tr>
+                                    }
+                                }
+                                <tr>
+                                    <td colspan="3" style="font-weight: bold">TỔNG </td>
+                                    <td colspan="3" style="font-weight: bold">@ViewBag.TT <sup>đ</sup> </td>
+                                </tr>
+                                @{
+                                    int tien = 0;
+                                    foreach (var item in Model)
+                                    {
+                                        tien += item.ThanhTien();
+                                    }
+                                    int tienSauThue = tien + (tien * 8 / 100);
+                                    <tr>
+                                        <td colspan="3" style="font-weight: bold">THUẾ VAT </td>
+                                        <td colspan="3" style="font-weight: bold">@tienSauThue<sup>đ</sup> </td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td colspan="3" style="font-weight: bold">TỔNG TIỀN THANH TOÁN </td>
+                                    <td colspan="3" style="font-weight: bold">
+                                        @{
+                                            int tongtien = tienSauThue - ThanhToanController.diem_sd * 1000;
+                                        } @tongtien <sup>đ</sup>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+    }
+}
+
+<script>
+    const itemsliderbar = document.querySelectorAll(".cartegory-left-li")
+    itemsliderbar.forEach(function (menu, index) {
+        menu.addEventListener("click", function () {
+            menu.classList.toggle("block")
+        })
+    })
+    const header = document.querySelector("header")
+    window.addEventListener("scroll", function () {
+        x = window.pageYOffset
+        if (x > 0) {
+            header.classList.add("sticky")
+        }
+        else {
+            header.classList.remove("sticky")
+        }
+    })
+    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+    const imgContainer = document.querySelector('.aspect-ratio-169 ')
+    const dotItem = document.querySelectorAll(".dot")
+    let index = 0
+    let imgNumber = imgPosition.length
+    let dotNumber = dotItem.length
+
+
+    imgPosition.forEach(function (image, index) {
+        image.style.left = index * 100 + "%"
+        dotItem[index].addEventListener("click", function () {
+            slider(index)
+        })
+    })
+
+    function imgSlide() {
+        index++
+        if (index >= imgNumber) { index = 0 }
+        slider(index)
+    }
+    function slider(index) {
+        imgContainer.style.left = "-" + index * 100 + "%"
+        const dotActive = document.querySelector(".active")
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+    }
+    setInterval(imgSlide, 5000)
+</script>
+<script>
+    //<![CDATA[
+    if (address_2 = localStorage.getItem('address_2_saved')) {
+        $('select[name="calc_shipping_district"] option').each(function () {
+            if ($(this).text() == address_2) {
+                $(this).attr('selected', '')
+            }
+        })
+        $('input.billing_address_2').attr('value', address_2)
+    }
+    if (district = localStorage.getItem('district')) {
+        $('select[name="calc_shipping_district"]').html(district)
+        $('select[name="calc_shipping_district"]').on('change', function () {
+            var target = $(this).children('option:selected')
+            target.attr('selected', '')
+            $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+            address_2 = target.text()
+            $('input.billing_address_2').attr('value', address_2)
+            district = $('select[name="calc_shipping_district"]').html()
+            localStorage.setItem('district', district)
+            localStorage.setItem('address_2_saved', address_2)
+        })
+    }
+    $('select[name="calc_shipping_provinces"]').each(function () {
+        var $this = $(this),
+            stc = ''
+        c.forEach(function (i, e) {
+            e += +1
+            stc += '<option value=' + e + '>' + i + '</option>'
+            $this.html('<option value="">Tỉnh / Thành phố</option>' + stc)
+            if (address_1 = localStorage.getItem('address_1_saved')) {
+                $('select[name="calc_shipping_provinces"] option').each(function () {
+                    if ($(this).text() == address_1) {
+                        $(this).attr('selected', '')
+                    }
+                })
+                $('input.billing_address_1').attr('value', address_1)
+            }
+            $this.on('change', function (i) {
+                i = $this.children('option:selected').index() - 1
+                var str = '',
+                    r = $this.val()
+                if (r != '') {
+                    arr[i].forEach(function (el) {
+                        str += '<option value="' + el + '">' + el + '</option>'
+                        $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>' + str)
+                    })
+                    var address_1 = $this.children('option:selected').text()
+                    var district = $('select[name="calc_shipping_district"]').html()
+                    localStorage.setItem('address_1_saved', address_1)
+                    localStorage.setItem('district', district)
+                    $('select[name="calc_shipping_district"]').on('change', function () {
+                        var target = $(this).children('option:selected')
+                        target.attr('selected', '')
+                        $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+                        var address_2 = target.text()
+                        $('input.billing_address_2').attr('value', address_2)
+                        district = $('select[name="calc_shipping_district"]').html()
+                        localStorage.setItem('district', district)
+                        localStorage.setItem('address_2_saved', address_2)
+                    })
+                } else {
+                    $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>')
+                    district = $('select[name="calc_shipping_district"]').html()
+                    localStorage.setItem('district', district)
+                    localStorage.removeItem('address_1_saved', address_1)
+                }
+            })
+        })
+    })
+//]]></script>
+</html>
+
+
+
+

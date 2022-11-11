@@ -1,0 +1,212 @@
+﻿@using ThriftShop.Controllers.User
+@using ThriftShop.Controllers
+@using ThriftShop.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>
+    <link href="~/Content/toastr.min.css" rel="stylesheet" />
+    <script src="~/Scripts/toastr.min.js"></script>
+</head>
+<body>
+    <section class="top">
+        <header>
+            <div class="logo">
+                <a href="@Url.Action("Index","Home")"> <img width="250px" height="250px" src="~/Content/anh/TIỆM__1_-removebg-preview.png"></a>
+            </div>
+            <div class="menu">
+                <li>
+                    <a href="@Url.Action("tim_sp","SanPham",new {@id=1})">NIKE</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="@Url.Action("getName", "SanPham",new {@name="Jordan"})">Jordan</a>
+                            <ul>
+                                <li> <a style="font-size:16px; font-weight:normal" href="@Url.Action("getName", "SanPham",new {@name="Jordan 1"})">Jordan 1</a></li>
+                                <li> <a style="font-size:16px; font-weight:normal" href="@Url.Action("getName", "SanPham",new {@name="Jordan 3"})">Jordan 3</a></li>
+                                <li> <a style="font-size:16px; font-weight:normal" href="@Url.Action("getName", "SanPham",new {@name="Jordan 4"})">Jordan 4</a></li>
+                                <li> <a style="font-size:16px; font-weight:normal" href="@Url.Action("getName", "SanPham",new {@name="Jordan 5"})">Jordan 5</a></li>
+                                <li> <a style="font-size:16px; font-weight:normal" href="@Url.Action("getName", "SanPham",new {@name="Jordan 6"})">Jordan 6</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Air Force 1"})">Air Force 1</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Air Max"})">Air Max</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Flyknit"})">Flyknit</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Air Huarache"})">Air Huarache</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="@Url.Action("tim_sp","SanPham",new {@id=2})">ADIDAS</a>
+                    <ul class="sub-menu">
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Stan Smith"})">Stan Smith</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Superstar"})">Superstar</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="EQT"})">EQT</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Ultra Boost"})">Ultra Boost</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="NMD"})">NMD</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="@Url.Action("tim_sp","SanPham",new {@id=3})">CONVERSE</a>
+                    <ul class="sub-menu">
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Classic"})">Classic</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="1970s"})">1970s</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="Jack Purcell"})">Jack Purcell</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="One Star"})">One Star</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="All Star"})">Chuck Taylor All Star</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="II"})">Chuck Taylor II</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="@Url.Action("tim_sp","SanPham",new {@id=4})">NEW BALANCE</a>
+                    <ul class="sub-menu">
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="New Balance 327"})">New Balance 327</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="New Balance 574"})">New Balance 574</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="New Balance 576"})">New Balance 576</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="New Balance 577"})">New Balance 577</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="New Balance 996"})">New Balance 996</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="New Balance 997"})">New Balance 997</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="New Balance 998"})">New Balance 998</a></li>
+                        <li><a href="@Url.Action("getName", "SanPham",new {@name="New Balance 999"})">New Balance 999</a></li>
+                    </ul>
+                </li>
+                <li><a href="">SALE</a></li>
+                <li>
+                    <a>VARSITY</a>
+                    <ul class="sub-menu">
+                        <li><a href="">T-Redx</a></li>
+                        <li><a href="">Clouwz</a></li>
+                        <li><a href="">Snazzy Clothing</a></li>
+                        <li><a href="">HNBMG</a></li>
+                        <li><a href="">GONZ</a></li>
+                    </ul>
+                </li>
+                <li><a href="">2HAND</a></li>
+                <li><a href="">THÔNG TIN</a></li>
+            </div>
+            <div class="other">
+                <li>
+                    <form action="@Url.Action("getName","SanPham")" method="get">
+                        <input name="name" placeholder="Tìm kiếm" type="text"> <i><i class="fa-solid fa-magnifying-glass"></i></i>
+                    </form>
+                </li>
+                @{
+                    if (Session["Cart"] != null)
+                    {
+                        <li><a href="@Url.Action("Cart","GioHang")"><i class="fa-solid fa-cart-arrow-down"></i><sup style="font-size:13px;padding-left:15px">@GioHangController.cart_numbers</sup></a></li>
+                    }
+                    else
+                    {
+                        <li><a href=""><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+                    }
+                }
+                @if (LoginRegisterController.login_user_name != null)
+                {
+                    <div class="menu">
+                        <li>
+                            <a style="font-size:13px"><p></p><i class="fa-solid fa-gears" style="padding-right:10p; font-size:20px;padding-top:5px"></i><span style=" padding-left:10px">@*Hello @LoginRegisterController.login_user_name*@</span></a>
+                            <ul style="width:150px" class="sub-menu">
+                                <li>
+                                    <a href="@Url.Action("UserProfile","UserProfile",new {@id=LoginRegisterController.id_user})"><span style="font-size:13px">Thông tin cá nhân</span></a>
+                                </li>
+                                <li><a href="@Url.Action("DangXuat","LoginRegister")"><span style="font-size:13px">Đăng xuất</span></a></li>
+                            </ul>
+                        </li>
+                    </div>
+                }
+                else
+                {
+                    <li><a href="@Url.Action("Login","LoginRegister")"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="@Url.Action("Login","UserManagerment")"><i class="fa-solid fa-user-tie"></i></a></li>
+                }
+            </div>
+        </header>
+    </section>
+
+    <!-- --------------------------------------app-container -------------------------------------->
+    @RenderBody()
+    <section class="app-container">
+        <p>TẢI ỨNG DỤNG</p>
+        <div class="app-google">
+            <img src="~/Content/anh/App/256x256.png">
+            <img src="~/Content/anh/App/google-play-png-logo-3802.png">
+            <p>Nhận bản tin COCO Sneaker</p>
+            <input type="text" placeholder="Nhập email của bạn...">
+    </section>
+    <!-- --------------------------------------footer -------------------------------------->
+    <section class="footer">
+        <div class="footer-top">
+            <li> <a href=""><img src="~/Content/anh/App/logoSaleNoti.png" alt=""></a></li>
+            <li><a href="">Liên hệ</a></li>
+            <li><a href=""> Tuyển dụng</a></li>
+            <li><a href="">Giới thiệu </a></li>
+            <li>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+        </div>
+        <div class="footer-midle">
+            <p> Be the first to know about our secret sample sales and special events. <br></p>
+            <p> -------------------------------------------------------------<br> </p>
+            <p>Đặt hàng online <br> </p>
+        </div>
+        <div class="footer-bottom">
+            ©Coco Sneakers All rights reserved
+        </div>
+        </div>
+    </section>
+</body>
+<script>
+        const itemsliderbar= document.querySelectorAll(".cartegory-left-li")
+itemsliderbar.forEach(function(menu, index){
+   menu.addEventListener("click",function(){
+        menu.classList.toggle("block")
+   })
+})
+        const header= document.querySelector("header")
+        window.addEventListener("scroll",function(){
+            x = window.pageYOffset
+            if(x>0){
+                header.classList.add("sticky")
+            }
+            else{
+                header.classList.remove("sticky")
+            }
+        })
+        const imgPosition  = document.querySelectorAll(".aspect-ratio-169 img")
+        const imgContainer  = document.querySelector('.aspect-ratio-169 ')
+        const dotItem  = document.querySelectorAll(".dot")
+        let index=0
+        let imgNumber =imgPosition.length
+        let dotNumber= dotItem.length
+
+
+        imgPosition.forEach(function (image, index){
+            image.style.left = index*100 + "%"
+            dotItem[index].addEventListener("click",function(){
+                slider(index)
+            })
+        })
+
+        function imgSlide(){
+            index++
+            if(index>=imgNumber){index=0}
+            slider(index)
+        }
+        function slider(index){
+            imgContainer.style.left="-" + index*100 + "%"
+           const dotActive = document.querySelector(".active")
+           dotActive.classList.remove("active")
+           dotItem[index].classList.add("active")
+        }
+        setInterval(imgSlide,5000)
+</script>
+</html>

@@ -1,0 +1,173 @@
+﻿@using ThriftShop.Controllers
+@using ThriftShop.Models
+@using ThriftShop.Controllers.User
+@{
+    ViewBag.Title = "Payment";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+@model List<Voucher>
+
+@using (Html.BeginForm("Payment", "ThanhToan"))
+{
+    <section class="payment">
+        <div class="container">
+            <div class="payment-top-wrap">
+                <div class="payment-top ">
+                    <div class="payment-top-status payment-top-item">
+                        <i class="fa-solid fa-cart-shopping "></i>
+                    </div>
+                    <div class="payment-top-address payment-top-item">
+                        <i class="fa-solid fa-lightbulb "></i>
+                    </div>
+                    <div class="payment-top-payment payment-top-item">
+                        <i class="fa-solid fa-money-check-dollar "></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div style="padding-left: 290px" class="payment-content row">
+                <div class="payment-content-left">
+                    <div class="payment-content-left-method-delivery">
+                        <p style="font-weight: bold;padding-bottom:10px">Phương thức giao hàng</p>
+                        <div class="payment-content-left-method-delivery-item">
+                            <input checked type="radio">
+                            <label for="">Giao hàng chuyển phát nhanh</label>
+                        </div>
+                    </div>
+                    <div class="payment-content-left-method-payment">
+                        <p style="font-weight: bold;padding-top:15px;padding-bottom:10px">Phước thức thanh toán</p>
+                        <p style="padding-bottom:10px">Mọi giao dịch được bảo mật và mã hóa. Thông tin thẻ tín dụng sẽ không bao giờ được lưu lại.</p>
+                        <div style="padding-bottom:10px" class="payment-content-left-method-payment-item">
+                            <input disabled type="radio" name="method-payment" id="">
+                            <label for="">Thanh toán bằng thẻ tín dụng (OnePay)</label>
+                        </div>
+                        <div style="padding-bottom:10px;" class="payment-content-left-method-payment-item-img">
+                            <img height="30px" width="150px" src="~/Content/anh/visa.png" alt="">
+                        </div>
+                        <div class="payment-content-left-method-payment-item">
+                            <input disabled type="radio" name="method-payment" id="">
+                            <label for="">Thanh toán bằng thẻ ATM(OnePay)</label>
+                        </div>
+                        <div class="payment-content-left-method-payment-item-img">
+                            <img height="80px" width="100px" src="~/Content/anh/Agribank Logo-01.png" alt="">
+                        </div>
+                        <div style="padding-bottom:10px" class="payment-content-left-method-payment-item">
+                            <input disabled type="radio" name="method-payment" id="">
+                            <label for="">Thanh toán Momo</label>
+                        </div>
+                        <div style="padding-bottom:10px" class="payment-content-left-method-payment-item-img">
+                            <img height="50px" width="70px" src="~/Content/anh/MoMo_Logo.png" alt="">
+                        </div>
+                        <div style="padding-bottom:15px" class="payment-content-left-method-payment-item">
+                            <input checked type="radio" name="method-payment" id="">
+                            <label for="">Thu tiền tận nơi</label>
+                        </div>
+                    </div>
+                </div>
+                @if (LoginRegisterController.userName == null)
+                {
+                    <div class="payment-content-right">
+                        <div style="padding-bottom:15px" class="payment-content-right-button">
+                            <input disabled value="0" type="text" name="" id="" placeholder="Sử dụng điểm">
+                            <button><i class="fa-solid fa-square-check"></i></button>
+                            <p style="font-size:12px;padding-top:5px">Bạn chưa có tài khoản điểm tích lũy</p>
+                        </div>
+                        <div style="padding-bottom:15px" class="payment-content-right-button">
+                            <input disabled type="text" name="" id="" placeholder=" Nhập mã giảm giá">
+                            <button><i class="fa-solid fa-square-check"></i></button>
+                        </div>
+                        <div class="payment-content-right-mnv">
+                            <select name="" id="">
+                                <option value="">Voucher của bạn</option>
+                                @foreach (var item in Model)
+                                {
+                                    <option disabled value="">@item.code_voucher (@item.sale%)</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="payment-content-right">
+                        <div style="padding-bottom:15px" class="payment-content-right-button">
+                            <input value="0" type="text" name="diem_tich_luy" id="diem_tich_luy">
+                            <button><i class="fa-solid fa-square-check"></i></button>
+                            <p style="font-size:12px;padding-top:5px">Bạn có: <span style="color:red">@ThanhToanController.diem_tich_luy</span> điểm tích lũy</p>
+                        </div>
+                        <div style="padding-bottom:15px" class="payment-content-right-button">
+                            <input type="text" name="" id="" placeholder=" Nhập mã giảm giá">
+                            <button><i class="fa-solid fa-square-check"></i></button>
+                        </div>
+                        <div class="payment-content-right-mnv">
+                            <select name="" id="">
+                                <option value="">Voucher của bạn</option>
+                                @foreach (var item in Model)
+                                {
+                                    <option value="">@item.code_voucher (@item.sale%)</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <div style="padding-left: 290px" class="payment-content-right-payment">
+                <a href="@Url.Action("Delivery","ThanhToan")">
+                    <button>Tiếp tục thanh toán</button>
+                </a>
+            </div>
+        </div>
+    </section>
+}
+<script>
+    const itemsliderbar = document.querySelectorAll(".cartegory-left-li")
+    itemsliderbar.forEach(function (menu, index) {
+        menu.addEventListener("click", function () {
+            menu.classList.toggle("block")
+        })
+    })
+    const header = document.querySelector("header")
+    window.addEventListener("scroll", function () {
+        x = window.pageYOffset
+        if (x > 0) {
+            header.classList.add("sticky")
+        }
+        else {
+            header.classList.remove("sticky")
+        }
+    })
+    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+    const imgContainer = document.querySelector('.aspect-ratio-169 ')
+    const dotItem = document.querySelectorAll(".dot")
+    let index = 0
+    let imgNumber = imgPosition.length
+    let dotNumber = dotItem.length
+
+
+    imgPosition.forEach(function (image, index) {
+        image.style.left = index * 100 + "%"
+        dotItem[index].addEventListener("click", function () {
+            slider(index)
+        })
+    })
+
+    function imgSlide() {
+        index++
+        if (index >= imgNumber) { index = 0 }
+        slider(index)
+    }
+    function slider(index) {
+        imgContainer.style.left = "-" + index * 100 + "%"
+        const dotActive = document.querySelector(".active")
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+    }
+    setInterval(imgSlide, 5000)
+</script>
+</html>
+
+
+
+

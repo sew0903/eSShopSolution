@@ -1,0 +1,54 @@
+﻿@using ThriftShop.Controllers.User;
+
+@{
+    ViewBag.Title = "ThongKe";
+    Layout = "~/Views/Layout/ProfileUserLayout.cshtml";
+}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        This chart shows how data labels can be added to the data series. This
+        can increase readability and comprehension for small datasets.
+    </p>
+</figure>
+
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Biểu đồ thống kê chi tiêu'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'VNĐ'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: '2021',
+            data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        }, {
+            name: '2022',
+            data: [@ViewBag.T1, @ViewBag.T2, @ViewBag.T3, @ViewBag.T4, @ViewBag.T5, @ViewBag.T6, @ViewBag.T7, @ViewBag.T8, @ViewBag.T9, @ViewBag.T10, @ViewBag.T11, @ViewBag.T12]
+        }]
+    });
+</script>

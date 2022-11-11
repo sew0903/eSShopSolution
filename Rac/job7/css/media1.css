@@ -1,0 +1,380 @@
+@media only screen and (max-width:650px){
+    .header-top{
+        width: 100% !important;
+    }
+    .header-top-left{
+        display: none !important;
+    }
+    .header-top-right{
+        width: 100%;
+        padding: 0 10px !important;
+    }
+    .header-media{
+        display: flex !important;
+        justify-content: space-between !important;
+        padding: 10px !important;
+    }
+    .header-top-center-logo{
+        display: none !important;
+    }
+    .header-top-center-left{
+        display: none !important;
+    }
+    .header-media-right .header-top-center-left-item{
+        margin-top: 20px !important;
+        
+    }
+    .menu{
+        display: none !important;
+    }
+    .header-top-center{
+        width: 100% !important;
+    }
+    .btn-media-open{
+        display: block !important;
+    }
+    .header-top-center-search{
+        width: 300px !important;
+        margin: 0 auto;
+    }
+    .search-icon{
+        margin-left: 253px !important; 
+    }
+    .title-banner1{
+        width: 100% !important;
+        display: block !important;
+        height: auto;
+        
+    }
+    .title-banner1-item{
+        width: 100% !important;
+        padding: 10px 50px !important;
+        margin-top: 10px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ccc;
+    }
+    .title-banner1-item-logo{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .title-banner1-item-logo img{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .main-content1{
+        width: 100% !important;
+    }
+    .main-content1-content{
+        display: block !important;
+    }
+    .main-content1-item{
+        float: left !important;
+        margin-left: 0 !important;
+        width: 185px !important;
+    }
+    .media-item{
+        display: block !important;
+    }
+    .banner-content1{
+        width: 100% !important;
+        display: block !important;
+        margin-top: 0px;
+    }
+    .banner-content1-img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .banner-content1-img img{
+        width: 100%;
+        height: auto;
+    }
+    .banner-content2{
+        width: 100% !important;
+    }
+    .banner-content2-content-right{
+        display: none !important;
+    }
+    .banner-content2-header-item{
+        display: none !important;
+    }
+    .node-item2{
+        display: block !important;
+    }
+    .banner-content2-content-left{
+        width: 100% !important;
+    }
+    .main-content1-item{
+        float: left !important;
+    }
+    .item2{
+        width: 180px !important;
+        margin-right: 0 !important;
+    }
+    .banner-content3{
+        width: 100% !important;
+    }
+    .new-feed-content{
+        width: 100% !important;
+        margin-top: -120px !important;
+    }
+    .new-feed-content-list{
+        display: block !important;
+        margin-top: -30px;
+    }
+    .main-brand{
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+    .footer1-content{
+        width: 100% !important;
+        display: none !important;
+    }
+    .footer2-content1{
+        width: 100% !important;
+        display: block !important;
+    }
+    .footer2-content2{
+        width: 100% !important;
+        display: block;
+        padding:  10px;
+    }
+    .footer2-content3{
+        width: 100% !important;
+        display: none !important;
+    }
+    .footer2-content4{
+        width: 100% !important;
+    }
+    .new-feed-content-item{
+        margin: 20px 13% !important
+    }
+    .col1-2{
+        width: 100% !important; 
+        text-align: center !important;
+        
+    }
+    .col1{
+        padding-right: 0 !important;
+        margin-top: 30px !important;
+    }
+    .col2{
+        margin-top: 20px !important;
+    }
+    .footer2-content2{
+        padding-bottom: 20px !important;
+        border-bottom: 1px solid #ccc !important;
+    }
+    .footer2-content4{
+        padding: 10px !important;
+    }
+    .page-link{
+        width: 100% !important;
+        padding: 10px;
+    }
+    .sanpham_banner{
+        width: 100% !important;
+        height: auto;
+    }
+    .main_sanpham{
+        width: 100% !important;
+    }
+    .main-sp-list{
+        display: none;
+    }
+    .main_sanpham-content{
+        display: block !important;
+    }
+    .main_sanpham-right-content{
+        width: 100% !important;
+        margin-left: 10px !important; 
+    }
+    .main-sp-view{
+        width: 100% !important;
+        height: 1000px !important;
+        border: none !important;
+        margin-top: 10px;
+    }
+    .item3{
+        width: 169px !important;
+        float: left !important;
+        padding: 0 !important;
+        border: none !important;
+        margin-top: 30px !important;
+        height: auto !important;
+        
+       
+    }
+    .main_sanpham-left{
+        margin:  0 auto !important;
+    }
+    .footer1-media{
+        
+    }
+    .main_sanpham-content{
+        margin-top: 20px  !important;
+    }
+    .main_sp-title{
+        padding: 10px !important; 
+    }
+    .main-ctiet-sp{
+        width: 100% !important;
+        display: block;
+    }
+    .main-ctiet-sp-left{
+        width: 100% !important;
+    }
+    .ctietsp-1{
+        display: block !important;
+    }
+    .ctietsp-1-left{
+        width: 100% !important;
+    }
+    .mySlides{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .ctietsp-1-right{
+        width: 100% !important;
+    }
+    .ctietsp-1-right-title-2{
+        width: 100% !important;
+        margin:  0 !important;
+    }
+    .ctietsp-1-right-content{
+        padding: 2px 0 !important;
+    }
+    .ctietsp-1-right-content1{
+        margin-left: 0;
+        padding: 20px!important;
+    }
+    .ctietsp-1-right-content3{
+        width: 100%;
+        margin-left: 0 !important;
+    }
+    .send-btn{
+        margin-left: 79% !important;
+    }
+    .ctietsp-1-right-content4{
+        width: 100% !important;
+        margin-left:  0 !important;
+    }
+    .ctietsp-1-right-content4-text{
+        padding: 5px;
+    }
+    .main-ctiet-sp-right{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1200px !important;
+        width: 100% !important;
+    }
+    .tabcontent{
+        width: 100% !important;
+    }
+    .a-line{
+        width: 100% !important;
+    }
+    .patch1-item{
+        width: 100%;
+    }
+    .patch1-item img{
+        width: 100%;
+        height: auto;
+    }
+    .comment{
+        width: 100%;
+        padding: 10px;
+        margin-top: 100px;
+    }
+    .comment-number{
+        width: 100%;
+    }
+    /* .comment{
+        display: none;
+    } */
+    .cmt-user input{
+        width: 80%;
+    }
+    .ctietsp-1-right-content-text{
+        width: 100% !important;
+    }
+    .header-media-item i{
+        font-size: 30px;
+        color:  #fff;
+        margin-top: 25px;
+        
+    }
+    .btn-media{
+        margin-top: 20px;
+    }
+    header{
+        position: fixed !important;
+        z-index:1000 ;
+    }
+    .banner1{
+        padding-top: 210px;
+    }
+    .main-content1-item-img{
+        width: 80%;
+        height: auto;
+        margin:  0 auto;
+    }
+    .banner-content2-header-right{
+        display: none;
+    }
+    .banner-content2-header-media{
+        display: block !important;
+    }
+    .page-link{
+        padding-top: 230px !important;
+    }
+    .ctietsp-1-left-title{
+        padding: 0 10px !important;
+    }
+    .main-ctiet-sp-right-title{
+        margin-top: -60px;
+        text-align: center;
+    }
+    .right{
+        margin-left: 350px !important;
+    }
+    .col_sanpham-list{
+        padding: 0 20% !important;
+    }
+    .main-ctiet-sp-right-content1-title{
+    text-align: center !important;
+    }
+    .main-ctiet-sp-right-content1-list2-news{
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .news-img{
+        margin:  0 auto !important;
+    }
+    .comment-title{
+        margin-top: -70px;
+    }
+    .main-sp-view-content{
+        margin-top: -30px;
+    }
+    .media1-footer{
+        margin-top: -120px;
+    }
+    .news-content{
+        margin-top: 10px;
+    }
+    .col-icon{
+        margin-left: 140px !important;
+    }
+    .col_sanpham-list{
+        display: none ;
+    }
+    .col_sanpham2-title-content{
+        display: none;
+    }
+    .col_sanpham2{
+        margin-top: 30px;
+    }
+
+}

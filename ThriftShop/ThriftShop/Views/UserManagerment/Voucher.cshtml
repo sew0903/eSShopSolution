@@ -1,0 +1,80 @@
+﻿@using ThriftShop.Models;
+@model List<Voucher>
+@{
+    ViewBag.Title = "DetailOrder";
+    Layout = "~/Views/Layout/AdminLayoutcshtml.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="top-title row">
+            <div>
+                <h5 class="card-title">Basic Table</h5>
+            </div>
+            <span style="padding-left:1500px; font:30px"><i class="fa-solid fa-circle-plus"></i></span>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID_Voucher</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Expiry</th>
+                        <th scope="col">Sale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.id_voucher</th>
+                            <td>@item.code_voucher</td>
+                            <td>@item.han_sd</td>
+                            <td>@item.sale</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- jQuery -->
+<script src="~/CSS/Admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/CSS/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="~/CSS/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="~/CSS/Admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/CSS/Admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/CSS/Admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="~/CSS/Admin/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="~/CSS/Admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="~/CSS/Admin/plugins/jszip/jszip.min.js"></script>
+<script src="~/CSS/Admin/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="~/CSS/Admin/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="~/CSS/Admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="~/CSS/Admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="~/CSS/Admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="~/CSS/Admin/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="~/CSS/Admin/dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });</script>
+
+

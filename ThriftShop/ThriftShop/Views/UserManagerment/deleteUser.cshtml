@@ -1,0 +1,54 @@
+﻿@using System.Web.Mvc;
+@using ThriftShop.Models;
+@model Nguoi_dung
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Layout/AdminLayoutcshtml.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div style="padding-left:30%" class="container-fluid">
+
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Delete User</div>
+                        <hr>
+                        <form>
+                            <div class="form-group">
+                                <label for="input-1">Name</label>
+                                <input value="@Model.ho_ten" type="text" class="form-control" name="name" id="name" placeholder="Tên">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-2">Color</label>
+                                <input value="@Model.so_dien_thoai" type="text" class="form-control" name="numberphone" id="numberphone" placeholder="Số điện thoại">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-3">ImportDate</label>
+                                <input value="@Model.ngay_sinh" type="date" class="form-control" id="birthday" name="birthday" placeholder="Ngày sinh">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-5">Size</label>
+                                <input value="@Model.dia_chi" type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-6">Describe</label>
+                                <input value="@Model.email" type="text" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div style="padding-top:10px" class="form-group">
+                                <button id="add_submit" type="submit" class="btn btn-light px-5"><i class="fa-solid fa-plus"></i> Delete</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--End Row-->
+        <!--start overlay-->
+        <div class="overlay toggle-menu"></div>
+        <!--end overlay-->
+
+    </div>
+}

@@ -1,0 +1,89 @@
+﻿@using ThriftShop.Models;
+@model San_pham
+@{
+    ViewBag.Title = "deleteProduct";
+    Layout = "~/Views/Layout/AdminLayoutcshtml.cshtml";
+}
+@using (Html.BeginForm())
+{
+    <div style="padding-left:30%" class="container-fluid">
+
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">delete Product</div>
+                        <hr>
+                        <form>
+                            <div class="form-group">
+                                <label for="input-1">Name</label>
+                                <input value="@Model.ten_sp" type="text" class="form-control" name="u_name" id="u_name" placeholder="Tên sản phẩm">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-2">Color</label>
+                                <input value="@Model.color" type="text" class="form-control" name="u_color" id="u_color" placeholder="Màu">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-4">Brand</label><br />
+                                @{
+                                    if (Model.id_hangsx == 1)
+                                    {
+                                        <input disabled value="Nike" type="text" class="form-control" name="brand" id="input-3" placeholder="Hãng sản xuất">
+                                    }
+                                    else if (@Model.id_hangsx == 2)
+                                    {
+                                        <input disabled value="Adidas" type="text" class="form-control" name="brand" id="input-3" placeholder="Hãng sản xuất">
+                                    }
+                                    else if (Model.id_hangsx == 3)
+                                    {
+                                        <input disabled value="Converse" type="text" class="form-control" name="brand" id="input-3" placeholder="Hãng sản xuất">
+                                    }
+                                    else
+                                    {
+                                        <input disabled value="New Balence" type="text" class="form-control" name="brand" id="input-3" placeholder="Hãng sản xuất">
+                                    }
+                                }
+                                @*<input disabled value="@Model.Hang_sx" type="text" class="form-control" name="brand" id="input-3" placeholder="Hãng sản xuất">*@
+                            </div>
+                            <div class="form-group">
+                                <label for="input-4">Describe</label>
+                                <input value="@Model.mo_ta_sp" type="text" class="form-control" name="u_describe" id="u_describe" placeholder="Mô tả">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-4">Image</label><br />
+                                @{
+                                    var brand = "";
+                                    if (Model.id_hangsx == 1)
+                                    {
+                                        brand = "Nike/";
+                                    }
+                                    else if (Model.id_hangsx == 2)
+                                    {
+                                        brand = "Adidas/";
+                                    }
+                                    else if (Model.id_hangsx == 3)
+                                    {
+                                        brand = "Converse/";
+                                    }
+                                    else
+                                    {
+                                        brand = "NEW BALANCE/";
+                                    }
+                                }
+                                <img style="width:100px; height:100px;padding-bottom:20px" src=" ~/Content/anh/productList/@brand/@Model.anh_sp/big_image.jpeg" alt="">
+                            </div>
+                            <div style="padding-top:10px" class="form-group">
+                                <button type="submit" class="btn btn-light px-5"> Xóa</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--End Row-->
+        <!--start overlay-->
+        <div class="overlay toggle-menu"></div>
+        <!--end overlay-->
+
+    </div>
+}

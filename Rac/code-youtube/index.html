@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fa-ke Youtube</title>
+    <!-- link icon && font-->
+    <link rel="stylesheet" href="icon/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap">
+    <!-- link css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/center.css">
+
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="header-list">
+                <ul class="header-left">
+                    <li><i class="fas fa-bars btn-sidebar1 btn-click" onclick="openNav()"></i></li>
+                    <li><a href="index.html"><img src="image/logo.png" alt="" class="logo-img"></a></li>
+                </ul>
+                <ul class="header-center">
+                    <li><input type="text" placeholder="Tìm Kiếm . . ." class="header-search">
+                     <div class="input-dropdown">
+                         <ul class="input-dropdown-list">
+                             <li class="input-dropdown-list-item">
+                                 <a class="input-dropdown-list-item-heading history" href="#">Code with Quân</a>
+                                 <a href="#" class="input-dropdown-list-item-delete">Xóa</a>
+                             </li>
+                             <li class="input-dropdown-list-item">
+                                <a class="input-dropdown-list-item-heading history" href="#">How to make a Website like Facebook</a>
+                                <a href="#" class="input-dropdown-list-item-delete">Xóa</a>
+                            </li>
+                            <li class="input-dropdown-list-item">
+                                <a class="input-dropdown-list-item-heading history" href="#">How to make a website like Youtube</a>
+                                <a href="#" class="input-dropdown-list-item-delete">Xóa</a>
+                            </li>
+                            <li class="input-dropdown-list-item">
+                                <a class="input-dropdown-list-item-heading " href="#">Top 12 EDM Việt Nam quên lối vè</a>
+                                <a href="#" class="input-dropdown-list-item-delete">Xóa</a>
+                            </li>
+                            <li class="input-dropdown-list-item">
+                                <a class="input-dropdown-list-item-heading " href="#">Top 12 gobal soccer in the World</a>
+                                <a href="#" class="input-dropdown-list-item-delete">Xóa</a>
+                            </li>
+                            <li class="input-dropdown-list-item">
+                                <a class="input-dropdown-list-item-heading " href="#">HTML / CSS / Javascript cơ bản</a>
+                                <a href="#" class="input-dropdown-list-item-delete">Xóa</a>
+                            </li>
+                            <li class="input-dropdown-list-item">
+                                <a class="input-dropdown-list-item-heading " href="#">Cách học code của 1 sinh Viên</a>
+                                <a href="#" class="input-dropdown-list-item-delete">Xóa</a>
+                            </li>
+                         </ul>
+                     </div>
+                    </li>
+                    <li class="keyboard-search"><i class="fas fa-keyboard"></i></li>
+                    <li ><i class="fas fa-search icon-search"></i></li>
+                    <li class="micro-search"><i class="fas fa-microphone btn-click btn-mic-colorFix" > </i>
+                        <div class="modal-microphone " id="id01">
+                           <div class="mic-sub"></div>
+                            <div class="mic-content">
+                                <i class="fas fa-times" ></i>
+                                <h3 class="mic-content-title">Đang nghe...</h3>
+                                <div class="mix-content-box ">
+                                    <i class="fas fa-microphone "></i>
+                                </div>
+                                <p class="mic-noti">Nhấn vào micro để thử lại</p>
+                            </div>
+                        </div>
+                   </li>
+                </ul>
+                <ul class="header-right">
+                    <li><i class="fas fa-video btn-click video-dropdown-btn" onclick="Video_dropdown_Function()"></i>
+                         <ul class="video-dropdown-list" id="VideoDropdown">
+                             <li class="video-dropdown-content">
+                                <i class="fas fa-photo-video red-icon"></i>
+                                <p>Tải video lên</p>
+                             </li>
+                             <li class="video-dropdown-content">
+                                <i class="fas fa-broadcast-tower red-icon"></i>
+                                <p>Phát trực tiếp</p>
+                             </li>
+                         </ul>
+                    </li>
+
+                    <li><i class="fas fa-bars btn-click  menu-drowdown-btn" onclick="Menu_dropdown_Function()"></i>
+                        <ul class="menu-dropdown-list" id="MenuDropdown">
+                            <li class="menu-dropdown-content  has-border">
+                                <i class="fas fa-tv red-icon"></i>
+                                <p>YouTube TV</p>
+                            </li>
+                            <li class="menu-dropdown-content">
+                                <i class="fas fa-play-circle red-icon"></i>
+                                <p>Play Music</p>
+                            </li>
+                            <li class="menu-dropdown-content has-border">
+                                <i class="fab fa-youtube red-icon"></i>
+                                <p>YouTube KID</p>
+                            </li>
+                            <li class="menu-dropdown-content">
+                                <i class="fab fa-youtube red-icon"></i>
+                                <p>Học Viện Sáng Tạo</p>
+                            </li>
+                            <li class="menu-dropdown-content">
+                                <i class="fab fa-youtube red-icon"></i>
+                                <p>YouTube Dành Cho nghệ sĩ</p>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li><i class="fas fa-bell btn-click bell-dropdown-btn" onclick="Bell_dropdown_Function()"></i>
+                        <ul class="bell-dropdown-list" id="BellDropdown">
+                            <li class="bell-dropdown-content-header">
+                                <h4>Thông báo</h4>
+                                <i class="fas fa-cog"></i>
+                            </li>
+                        <div class="bell-dropdown-content-box">
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li><li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="bell-dropdown-content">
+                                <div class="bell-dropdown-content-user">
+                                    <img src="image/admin-avatar.png" alt="">
+                                </div>
+                                <div class="bell-dropdown-content-text">
+                                    <div class="bell-dropdown-content-text-content">Code with Quan đã đăng 1 video  trong thư viện mới</div>
+                                    <div class="bell-dropdown-content-text-time">2 giờ trước</div>
+                                </div>
+                                <div class="bell-dropdown-content-img">
+                                    <img src="image/hinh-nen-anime-dep-min.jpg" alt="">
+                                </div>
+                            </li>
+                            
+                        </div>
+ 
+                        </ul>
+                        
+                    </li>
+                    <li><i><img src="image/admin-avatar.png" alt="" class="image-user" onclick="User_dropdown_btn()"></i>
+                          <ul class="image-dropdown-content" id="Image_dropdown">
+                               <li class="image-dropdown-content-user">
+                                   <div class="image-dropdown-content-user-image">
+                                       <img src="image/admin-avatar.png" alt="">
+                                   </div>
+                                   <div class="image-dropdown-content-user-content">
+                                      <h1>Code with Quan</h1> 
+                                      <p>Quản lí tài Khoản Google . . .</p>
+                                   </div>
+                               </li>
+                               <ul class="image-dropdown-content-1">
+                               <li class="image-dropdown-content-item">
+                                 <i class="fas fa-user"></i>
+                                 <p>Kênh của bạn</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                 <p> &nbsp; Quản lí tài chính</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fab fa-youtube"></i>
+                                 <p>Youtube Studio</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-user-circle"></i>
+                                 <p>Chuyển đổi tài khoản</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-sign-out-alt"></i>
+                                 <p>Đăng xuất</p>
+                               </li>
+                          </ul>
+                           <ul class="image-dropdown-content-2">
+                            <li class="image-dropdown-content-item">
+                                <i class="fas fa-adjust"></i>
+                                 <p>Chuyển đổi giao diện</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-font"></i>
+                                 <p>Ngôn ngữ : Tiếng Việt</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-globe-asia"></i>
+                                 <p>Địa Điểm : Việt Nam</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-cog"></i>
+                                 <p>Cài đặt</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-shield-alt"></i>
+                                 <p>Bảo Mật</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-question-circle"></i>
+                                 <p>Trợ Giúp</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-exclamation-circle"></i>
+                                 <p>Gửi Phản Hồi</p>
+                               </li>
+                               <li class="image-dropdown-content-item">
+                                <i class="fas fa-keyboard"></i>
+                                 <p>Phím Tắt</p>
+                               </li>
+                               
+
+                           </ul>
+                           <ul class="image-dropdown-content-3">
+                              <li class="image-dropdown-content-item">Chế Độ hạn chế : đã tắt</li> 
+                           </ul>
+                        </ul> 
+                    </li>
+                   
+                </ul>
+            </div>
+        </header>
+        <div class="sidebar sidebar-active" id="mySidenav">
+            <div class="header-list sidebar-header-list">
+                <ul class="header-left">
+                    <li><i class="fas fa-bars btn-click  btn-sidebar2" onclick="closeNav()"></i></li>
+                    <li><a href="#"><img src="image/logo.png" alt="" class="logo-img sidebar-logo-img"></a></li>
+                </ul>
+            </div>
+            <div class="sidebar-content">
+                <div class="sidebar-content_top">
+                    <ul class="sidebar-content_top-list">
+                        <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-home"></i>
+                            <p>Trang chủ</p>
+                        </li>
+                        <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-compass"></i>
+                            <p>Khám phá</p>
+                        </li>
+                        <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-clone"></i>
+                            <p>Kênh đăng kí</p>
+                        </li>
+                    </ul>
+                    <div class="sidebar-top-list sidebar-center-list-more" >
+                        <ul>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-folder-plus"></i> 
+                                <p>Thư Viện</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-history"></i>
+                                <p>Video đã xem</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Video  của bạn</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-clock"></i>
+                                <p>Xem sau</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-thumbs-up"></i>
+                                <p>Video đã thích</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-list-ul"></i>
+                                <p>Code with Quân</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item sidebar-top-item-fix btn-add">
+                                <i class="fas fa-chevron-down btn_more_down"></i>
+                                <p class="sidebar_more_title">Hiển  thị thêm</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-list-ul"></i>
+                                <p>Tự Học Web</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-list-ul"></i>
+                                <p>Tự học JS</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <i class="fas fa-list-ul"></i>
+                                <p>Code web</p>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                               
+                                <p></p>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="sidebar-top-list sidebar-center2-list-more">
+                        <h4 class=" sidebar-center2-title">
+                            KÊNH ĐĂNG KÍ
+                        </h4>
+                        <ul>
+                            <li class="sidebar-content_top-list-item">
+                               <img src="image/admin-avatar.png" alt="" class="sidebar-channel-avt">
+                                <p>Code With Quân</p>
+                                <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                            </li>
+                            <li class="sidebar-content_top-list-item">
+                                <img src="image/admin-avatar.png" alt="" class="sidebar-channel-avt">
+                                 <p>Code With Quân</p>
+                                 <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                             </li>
+                             <li class="sidebar-content_top-list-item">
+                                <img src="image/admin-avatar.png" alt=""  class="sidebar-channel-avt">
+                                 <p>Code With Quân</p>
+                                 <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                             </li>
+                             <li class="sidebar-content_top-list-item">
+                                <img src="image/admin-avatar.png" alt="" class="sidebar-channel-avt">
+                                 <p>Code With Quân</p>
+                                 <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                             </li>
+                             <li class="sidebar-content_top-list-item sidebar-top-item-fix btn-add-hai">
+                                <i class="fas fa-chevron-down btn_more_down2"></i>
+                                <p class="sidebar_more_title2">Hiển Thị Thêm</p>
+                            </li>
+                             <li class="sidebar-content_top-list-item">
+                                <img src="image/admin-avatar.png" alt="" class="sidebar-channel-avt">
+                                 <p>Code With Quân</p>
+                                 <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                             </li>
+                             <li class="sidebar-content_top-list-item">
+                                <img src="image/admin-avatar.png" alt="" class="sidebar-channel-avt">
+                                 <p>Code With Quân</p>
+                                 <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                             </li>
+                             
+                             <li class="sidebar-content_top-list-item">
+                                <img src="image/admin-avatar.png" alt="" class="sidebar-channel-avt">
+                                 <p>Code With Quân</p>
+                                 <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                             </li>
+                             <li class="sidebar-content_top-list-item">
+                                <img src="image/admin-avatar.png" alt="" class="sidebar-channel-avt">
+                                 <p>Code With Quân</p>
+                                 <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                             </li>
+                             <li class="sidebar-content_top-list-item">
+                                <img src="image/admin-avatar.png" alt="" class="sidebar-channel-avt">
+                                 <p>Code With Quân</p>
+                                 <div class="btn-live active"><i class="fas fa-satellite-dish"></i></div>
+                             </li>
+                        </ul>
+                        
+                    </div>
+                    <ul class="sidebar-top-list sidebar-center3-list-more">
+                        <h4 class=" sidebar-center2-title">
+                           DỊCH VỤ KHÁC CỦA YOUTUBE
+                        </h4>
+                        <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-code"></i>
+                             <p>Lập trình</p>
+                         </li>
+                         <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-code"></i>
+                             <p>Lập trình</p>
+                         </li>
+                         <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-code"></i>
+                             <p>Lập trình</p>
+                         </li>
+                    </ul>
+                    <ul class="sidebar-top-list sidebar-center4-list-more">
+                        <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-code"></i>
+                             <p>Lập trình</p>
+                         </li>
+                         <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-code"></i>
+                             <p>Lập trình</p>
+                         </li>
+                         <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-code"></i>
+                             <p>Lập trình</p>
+                         </li>
+                         <li class="sidebar-content_top-list-item">
+                            <i class="fas fa-code"></i>
+                             <p>Lập trình</p>
+                         </li>
+
+                    </ul>
+                    <ul class="sidebar-top-list sidebar-center5-list-more">
+                        <li>
+                            <a> Giới thiệu </a> <a> Báo chí </a> <a> Bản quyền </a>
+                            <a> Liên hệ với chúng tôi </a> <a>Người sáng tạo </a> <a> Quảng cáo </a>
+                            <a> Nhà phát triển </a>
+                            <div class="spaceeeeee"></div>
+                            <a> Giới thiệu </a> <a> Báo chí </a> <a> Bản quyền </a>
+                            <a> Liên hệ với chúng tôi </a> <a>Người sáng tạo </a> <a> Quảng cáo </a>
+                            <a> Nhà phát triển </a>
+                            <span><i class='bx bx-copyright'></i>Code with Quân</span>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+        <div class="sidebar-sub " id="s-sub"></div>
+        <nav>
+            <div class="content">
+                <div class="content-left">
+                    <div class="content-video">
+                        <iframe width="100%" height="720" src="https://www.youtube.com/embed/DQOdxK4_vV4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="content-title">
+                        <h3 class="content-heading">[抖音] Trào lưu Slow Motion "Counting Stars" (Violin Ver.) || Nhạc Hot Tik Tok Trung Quốc | Douyin</h3>
+                        <div class="content-info">
+                            <div class="content-info-view">
+                                <span class="content-info-viewer">1.824.164 lượt xem</span>
+                                <i class="fas fa-circle"></i>
+                                <span class="content-info-day">27 thg 2, 2020</span>
+                            </div>
+                            <div class="content-info-social">
+                                <ul class="content-info-social-list">
+                                    <li class="content-info-social-list-item like1">
+                                        <i class="fas fa-thumbs-up" ></i>
+                                        <a>41N</a>
+                                        <div class="like-li_item"></div>
+                                    </li>
+                                    <li class="content-info-social-list-item dislike1">
+                                        <i class="fas fa-thumbs-down"></i>
+                                        <a>354</a>
+                                    </li>
+                                    <li class="content-info-social-list-item">
+                                        <i class="fas fa-share" onclick="open_share()"></i>
+                                        <a>Chia sẻ</a>
+                                        <div class="content-share-box" id="share-content">
+                                            <div class="content-share-box-content-shadow">
+                                                <ul class="content-share-box-content">
+                                                    <div class="content-share-box-content-header">
+                                                        <p>chia sẻ</p>
+                                                        <div class="content-share-box-content-header-icon"><i class="fas fa-times" onclick="close_share()"></i></div>
+                                                        
+                                                    </div>
+                                                    <ul class="content-share-box-content-main">
+                                                        <li class="content-share-box-content-main-item code-icon">
+                                                            <i class="fas fa-code code-icon-item"></i>
+                                                            <p>Nhúng</p>
+                                                        </li>
+                                                        <li class="content-share-box-content-main-item facebook-icon">
+                                                            <i class="fab fa-facebook-f facebook-icon-item"></i>
+                                                            <p>Facebook</p>
+                                                        </li>
+                                                        <li class="content-share-box-content-main-item Whatapp-icon">
+                                                            <i class="fab fa-whatsapp Whatapp-icon-item"></i>
+                                                            <p>Whatsapp</p>
+                                                        </li>
+                                                        <li class="content-share-box-content-main-item twitter-icon">
+                                                            <i class="fab fa-twitter twitter-icon-item"></i>
+                                                            <p>Twitter</p>
+                                                        </li>
+                                                        <li class="content-share-box-content-main-item email-icon">
+                                                            <i class="far fa-envelope email-icon-item"></i>
+                                                            <p>Email</p>
+                                                        </li>
+                                                        <li class="content-share-box-content-main-item github-icon">
+                                                            <i class="fab fa-github github-icon-item"></i>
+                                                            <p>GitHub</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="content-share-box-content-main2">
+                                                        <p>https://youtu.be/rjNZlorVzTo</p>
+                                                        <h1>Sao chép</h1>
+                                                    </div>
+                                                    <div class="content-share-box-content-footer">
+                                                        <input type="checkbox">
+                                                        <p>Bắt đầu tại</p>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="content-info-social-list-item" >
+                                        <i class="fas fa-download" onclick="open_save()"></i>
+                                        <a>Lưu</a>
+                                        <div class="save-content" id="save_content">
+                                            <ul class="save-content-box">
+                                                <li class="save-content-box-header">
+                                                    <p>Lưu vào . . .</p>
+                                                    <i class="fas fa-times" onclick="close_save()"></i>
+                                                </li>
+                                                <ul class="save-content-box-center">
+                                                <li class="save-content-box-item">
+                                                    <input type="checkbox">
+                                                    <p>Xem sau</p>
+                                                    <i class="fas fa-lock"></i>
+              
+                                                </li>
+                                                <li class="save-content-box-item">
+                                                    <input type="checkbox">
+                                                    <p>Code with Quân</p>
+                                                    <i class="fas fa-globe-asia"></i>
+              
+                                                </li>
+                                            </ul>
+                                            <ul class="save-content-box-footer">
+                                               <p>Tạo danh sách mới</p>  <i class="fas fa-plus"></i>
+                                               
+                                            </ul>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <li class="content-info-social-list-item">
+                                        <i class="fas fa-ellipsis-h" onclick="open_more()"></i>
+                                        <!-- <div class="more_content" id="more_content">
+                                            <ul class="more-content-box">
+                                            <li class="more_content-item">
+                                                <i class="fas fa-flag"></i>
+                                                <p>Báo cáo vi phạm</p>
+                                            </li>
+                                            <i class="fas fa-times more-content-icon-x" onclick="close_more()"></i>
+                                        </ul></div> -->
+                                       
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    </div>
+                    <div class="content_info">
+                        <ul class="content_info-channel">
+                            <li class="content_info-channel-list">
+                                <img src="image/admin-avatar.png" alt="" class="content_info-channel-list-user" >
+                            </li>
+                            <li class="content_info-channel-list2">
+                                <h2>Code with Quan</h2>
+                                <p>3 Tr người đăng kí</p>
+                            </li>
+                        </ul>
+                        <div class="btn-channel-box">
+                            <button class="btn-channel btn-channel-active">ĐĂNG KÍ</button>
+                            <div class="icon-bell">
+                                <i class='fas fa-bell' ></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="content-info2">
+                        <div class="content-desc">
+                            <p class="content-desc-text">[抖音] Trào lưu Slow Motion "Counting Stars" (Violin Ver.) || Nhạc Hot Tik Tok Trung Quốc | Douyin Music
+                            </p>
+                            <p class="content-desc-text tag_link ">#edm #codewithQuan #nocopyright</p>
+                            <p class="content-desc-text">Mail: qquannguyentrong123@gmail.com</p>
+                            <p class="content-desc-text">© Nếu có bất cứ thắc mắc, khiếu nại nào về bản quyền hình ảnh cũng như âm nhạc có trong video, mong chủ sở hữu liên hệ trực tiếp với tôi qua địa chỉ G-mail: le2971997@gmail.com hoặc Facebook: https://www.facebook.com/LiKiller .Xin cảm ơn! Chúng tôi sẽ xóa ngay sau khi nhận thông báo!
+                            <br>
+                            <br>
+                            © If you have any questions, complaints about the copyright of the image or music included in the video, please contact the owner directly at G-mail: le2971997@gmail.com or Facebook: https : //www.facebook.com/LiKiller .Thanks! We will delete immediately after receiving the notification!</p>
+                            <br>
+                            <p class="content-desc-text">--------------------------------------------</p>
+                            <p class="content-desc-text">Facebook cá nhân: <a href="https://www.facebook.com/quan.nguyentrong.35325/" class="tag_link">https://www.facebook.com/quan.nguyentrong.35325/</a></p>
+                            <p class="content-desc-text">Github: <a  href="https://github.com/quandarius-pfp"class="tag_link">https://github.com/quandarius-pfp</a></p>
+                            <p class="content-desc-text">--------------------------------------------</p>
+                            <p class="content-desc-text">If you have a copyright issue feel free to message me on twitter and we can get it resolved: qquannguyentrong123@gmail.com</p>
+                            <br>
+
+                            <div class="content-desc-copyright">
+                                <p class="content-copyright-title">Nhạc trong video này</p>
+                                <p class="content-copyright-title">Tìm hiểu thêm</p>
+                                <p class="content-copyright-content">
+                                    <span>Bài hát</span>
+                                    <a class="content-copyright-text">Code /  Noob coder</a>
+                                </a>
+                                <p class="content-copyright-content">
+                                    <span>Coder</span>
+                                    <a class="content-copyright-text">Code with Quan</a>
+                                </a>
+                                <p class="content-copyright-content">
+                                    <span>Bên cấp phép cho YouTube</span>
+                                    <a class="content-copyright-text">Code With Quân</a>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="content-desc-more ">HIỂN THỊ THÊM</p>
+                    </div>
+                    <div class="content-comments">
+                        <div class="comments-header">
+                            <a class="comments-header_num">291 bình luận</a>
+                            <span class="comments-header_sort"><i class='bx bx-menu-alt-left'></i>SẮP XẾP THEO </span>
+                        </div>
+                        <div class="comments-user">
+                            <img src="./image/admin-avatar.png" alt="" class="comments-user-avt">
+                            <div class="comments-user-input">
+                                <input type="text" placeholder="Bình luận công khai...">
+                                <div class="comments-user-btn">
+                                    <button class="comments_btn-cancel color_main">HỦY</button>
+                                    <button class="comments_btn-cmt">BÌNH LUẬN</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments-user comments-user_rep">
+                            <img src="./image/hinh-nen-anime-dep-min.jpg" alt="" class="comments-user-avt comments-user-avt2">
+                            <div class="comments-user-input">
+                                <a href="#" class="comments-name">That Code inline</a><span class="comments-time">1 tháng trước</span>
+                                <div class="comments-user_text">
+                                    <p class="comments-user_text_text2">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, voluptatum. Dignissimos totam omnis iusto quas, voluptates illum consequatur sunt quis.
+                                    </p>
+                                    <i class=' comments-user_text_icon  bx bx-dots-vertical-rounded'></i>
+                                    
+                                </div>
+                                <ul class="comments-action">
+                                    <li class="comments-action-item  ">
+                                        <i class="fas fa-thumbs-up"></i>
+                                    </li>
+                                    <li class="comments-action-item">
+                                        <p class="like_number" >130</p>
+                                    </li>
+                                    <li class="comments-action-item">
+                                        <i class="fas fa-thumbs-down"></i>
+                                    </li>
+                                    <li class="comments-action-item">
+                                        <p class="dislike_number">1</p>
+                                    </li>
+                                    <li class="comments-action-item comments-action-item2">
+                                        <p class="comments_rep comments_rep_fix">PHẢN HỒI</p>
+                                    </li>
+                                </ul>
+                                <div class="comments_rep_box comments_rep_box-fix">
+                                    <div class="comments-user comments-user_rep">
+                                        <img src="./image/admin-avatar.png" alt="" class="comments-user-avt comments-user-avt3">
+                                        <div class="comments-user-input comments-user-input2">
+                                            <input type="text" placeholder="Phản hồi công khai...">
+                                            <div class="comments-user-btn">
+                                                <button class="comments_btn-cancel color_main comments_rep_box_cancel">HỦY</button>
+                                                <button class="comments_btn-cmt comments_rep">PHẢN HỒI</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="comments_btn_more tag_link"><i class="fas fa-caret-down"></i></i>Xem 3 câu trả lời</a>
+                                <div class="comments_box-list">
+                                    <div class="comments-user comments-user_rep2">
+                                        <img src="./image/admin-avatar.png" alt="" class="comments-user-avt comments-user-avt3">
+                                        <div class="comments-user-input">
+                                            <a href="#" class="comments-name">Nobody2</a><span class="comments-time">1 tháng trước</span>
+                                            <div class="comments-user_text">
+                                                <p class="comments-user_text_text2">
+                                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa natus harum pariatur nisi sequi quaerat sint velit suscipit unde incidunt!
+                                                </p>
+                                                <i class=' comments-user_text_icon  bx bx-dots-vertical-rounded'></i>
+                                                <div class="comments-report">
+                                                    <li>
+                                                        <i class='bx bxs-flag-alt' ></i>
+                                                        <p>Báo cáo</p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                            <ul class="comments-action">
+                                                <li class="comments-action-item">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <p class="like_number" >34</p>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <i class='fas fa-thumbs-down'></i>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <p class="dislike_number"></p>
+                                                </li>
+                                                <li class="comments-action-item comments-action-item2">
+                                                    <p class="comments_rep">PHẢN HỒI</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="comments-user comments-user_rep2">
+                                        <img src="./image/admin-avatar.png" alt="" class="comments-user-avt comments-user-avt3">
+                                        <div class="comments-user-input">
+                                            <a href="#" class="comments-name">nobody4</a><span class="comments-time">1 tuần trước</span>
+                                            <div class="comments-user_text">
+                                                <p class="comments-user_text_text2">
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo ipsa saepe ea, cum ducimus deserunt rerum totam. Eveniet qui libero error, recusandae suscipit quis labore. Quis enim perspiciatis earum eveniet quod ut provident officia vero veniam eos est impedit sit, iure, reiciendis nemo dolore eaque cum laboriosam beatae. Quisquam, ipsam?
+                                                </p>
+                                                <i class=' comments-user_text_icon  bx bx-dots-vertical-rounded'></i>
+                                                <div class="comments-report">
+                                                    <li>
+                                                        <i class='bx bxs-flag-alt' ></i>
+                                                        <p>Báo cáo</p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                            <ul class="comments-action">
+                                                <li class="comments-action-item">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <p class="like_number" >2</p>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <i class='fas fa-thumbs-down'></i>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <p class="dislike_number">1</p>
+                                                </li>
+                                                <li class="comments-action-item comments-action-item2">
+                                                    <p class="comments_rep">PHẢN HỒI</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="comments-user comments-user_rep2">
+                                        <img src="./Image/hinh-nen-anime-dep-min.jpg" alt="" class="comments-user-avt comments-user-avt3">
+                                        <div class="comments-user-input">
+                                            <a href="#" class="comments-name">Nobody1</a><span class="comments-time">4 tháng trước</span>
+                                            <div class="comments-user_text">
+                                                <p class="comments-user_text_text2">
+                                                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur ea, porro tempore, numquam placeat eveniet voluptate cumque nesciunt, minus doloremque ipsam dolores molestiae aliquid! Illum mollitia deleniti nisi aperiam tempore dicta ut numquam placeat expedita reiciendis. Architecto harum eaque magnam sint voluptas, provident veritatis animi alias in atque pariatur debitis, ullam libero consequatur! Praesentium fugiat dolorem aspernatur fugit ea soluta maxime deleniti omnis non beatae nam quis magni earum, accusantium eum at. Rerum, repellat nostrum eligendi esse obcaecati ullam cum ut ducimus, dolor animi quia consequuntur at eos veritatis temporibus alias pariatur sapiente ipsam quas voluptatem optio fugit sunt! Maiores.
+                                                </p>
+                                                <i class=' comments-user_text_icon  bx bx-dots-vertical-rounded'></i>
+                                                <div class="comments-report">
+                                                    <li>
+                                                        <i class='bx bxs-flag-alt' ></i>
+                                                        <p>Báo cáo</p>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                            <ul class="comments-action">
+                                                <li class="comments-action-item">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <p class="like_number" >100</p>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <i class='fas fa-thumbs-down'></i>
+                                                </li>
+                                                <li class="comments-action-item">
+                                                    <p class="dislike_number">1</p>
+                                                </li>
+                                                <li class="comments-action-item comments-action-item2">
+                                                    <p class="comments_rep">PHẢN HỒI</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-right">
+                    <ul class="video_list">
+                            
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+    </div>
+
+<script src="js/header.js"></script>
+<script src="js/center.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

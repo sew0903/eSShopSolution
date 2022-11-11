@@ -1,0 +1,29 @@
+  .header-list .btn-click::after{
+    content : "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 7px;
+    left: 4.5px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.404);
+    opacity: 0;
+    transition: all 0.8s;
+    z-index: 1;
+}
+.header-list .btn-click:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.active{
+  display: block !important;
+}
+.red-icon{
+  color: red !important;
+}
+.has-border{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}

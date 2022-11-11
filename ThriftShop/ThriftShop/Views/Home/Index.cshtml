@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+<section id="slider">
+    <div class="aspect-ratio-169">
+        <img src=" ~/Content/anh/slider/banner1.jpg">
+        <img src=" ~/Content/anh/slider/banner2.jpg">
+        <img src=" ~/Content/anh/slider/banner3.jpg">
+        <img src=" ~/Content/anh/slider/banner4.jpg">
+    </div>
+    <div class="dot-container">
+        <div class="dot active">
+
+        </div>
+        <div class="dot ">
+
+        </div>
+        <div class="dot ">
+
+        </div>
+        <div class="dot">
+
+        </div>
+    </div>
+</section>
+
+@* Nike *@
+<section class="product-related">
+    <div style="text-align:center" class="product-related-title">
+        <p style="font-size:15px;display:inline-block font-weight:bold">Nike</p>
+    </div>
+    <div>
+        <div class="row product-content container">
+            @foreach (var item in ViewBag.listNike)
+            {
+                <div class="product-content-item ">
+                    @{
+                        var brand = "";
+                        if (item.id_hangsx == 1)
+                        {
+                            brand = "Nike/";
+                        }
+                        else if (item.id_hangsx == 2)
+                        {
+                            brand = "Adidas/";
+                        }
+                        else if (item.id_hangsx == 3)
+                        {
+                            brand = "Converse/";
+                        }
+                        else
+                        {
+                            brand = "NEW BALANCE/";
+                        }
+                    }
+                    <img src=" ~/Content/anh/productList/@brand/@item.anh_sp/big_image.jpg" alt="">
+                    <h1>@item.ten_sp</h1>
+                    <p>@item.luot_xem<sup>đ</sup></p>
+                </div>
+            }
+        </div>
+    </div>
+    <p></p>
+    <div style="text-align:center">
+        <div style="display:inline-block">
+            <a href="@Url.Action("productsList","SanPham")">
+                <button class="button" style="vertical-align:middle"><span>Shopping Now </span></button>
+            </a>
+        </div>
+    </div>
+</section>
+@* Adidas *@
+<section class="product-related">
+    <div style="text-align:center" class="product-related-title">
+        <p style="font-size:15px;display:inline-block font-weight:bold">Nike</p>
+    </div>
+    <div>
+        <div class="row product-content container">
+            @foreach (var item in ViewBag.listAdidas)
+            {
+                <div class="product-content-item ">
+                    @{
+                        var brand = "";
+                        if (item.id_hangsx == 1)
+                        {
+                            brand = "Nike/";
+                        }
+                        else if (item.id_hangsx == 2)
+                        {
+                            brand = "Adidas/";
+                        }
+                        else if (item.id_hangsx == 3)
+                        {
+                            brand = "Converse/";
+                        }
+                        else
+                        {
+                            brand = "NEW BALANCE/";
+                        }
+                    }
+                    <img src=" ~/Content/anh/productList/@brand/@item.anh_sp/big_image.jpg" alt="">
+                    <h1>@item.ten_sp</h1>
+                    <p>@item.luot_xem<sup>đ</sup></p>
+                </div>
+            }
+        </div>
+    </div>
+    <p></p>
+    <div style="text-align:center">
+        <div style="display:inline-block">
+            <a href="@Url.Action("productsList","SanPham")">
+                <button class="button" style="vertical-align:middle"><span>Shopping Now </span></button>
+            </a>
+        </div>
+    </div>
+</section>
+@* Converse *@
+<section class="product-related">
+    <div style="text-align:center" class="product-related-title">
+        <p style="font-size:15px;display:inline-block font-weight:bold">Nike</p>
+    </div>
+    <div>
+        <div class="row product-content container">
+            @foreach (var item in ViewBag.listConverse)
+            {
+                <div class="product-content-item ">
+                    @{
+                        var brand = "";
+                        if (item.id_hangsx == 1)
+                        {
+                            brand = "Nike/";
+                        }
+                        else if (item.id_hangsx == 2)
+                        {
+                            brand = "Adidas/";
+                        }
+                        else if (item.id_hangsx == 3)
+                        {
+                            brand = "Converse/";
+                        }
+                        else
+                        {
+                            brand = "NEW BALANCE/";
+                        }
+                    }
+                    <img src=" ~/Content/anh/productList/@brand/@item.anh_sp/big_image.jpg" alt="">
+                    <h1>@item.ten_sp</h1>
+                    <p>@item.luot_xem<sup>đ</sup></p>
+                </div>
+            }
+        </div>
+    </div>
+    <p></p>
+    <div style="text-align:center">
+        <div style="display:inline-block">
+            <a href="@Url.Action("productsList","SanPham")">
+                <button class="button" style="vertical-align:middle"><span>Shopping Now </span></button>
+            </a>
+        </div>
+    </div>
+</section>
+@* New Balance *@
+<section class="product-related">
+    <div style="text-align:center" class="product-related-title">
+        <p style="font-size:15px;display:inline-block font-weight:bold">Nike</p>
+    </div>
+    <div>
+        <div class="row product-content container">
+            @foreach (var item in ViewBag.listBalance)
+            {
+                <div class="product-content-item ">
+                    @{
+                        var brand = "";
+                        if (item.id_hangsx == 1)
+                        {
+                            brand = "Nike/";
+                        }
+                        else if (item.id_hangsx == 2)
+                        {
+                            brand = "Adidas/";
+                        }
+                        else if (item.id_hangsx == 3)
+                        {
+                            brand = "Converse/";
+                        }
+                        else
+                        {
+                            brand = "NEW BALANCE/";
+                        }
+                    }
+                    <img src=" ~/Content/anh/productList/@brand/@item.anh_sp/big_image.jpg" alt="">
+                    <h1>@item.ten_sp</h1>
+                    <p>@item.luot_xem<sup>đ</sup></p>
+                </div>
+            }
+        </div>
+    </div>
+    <p></p>
+    <div style="text-align:center">
+        <div style="display:inline-block">
+            <a href="@Url.Action("productsList","SanPham")">
+                <button class="button" style="vertical-align:middle"><span>Shopping Now </span></button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+</style>
+
+
+@*<script>$(document).ready(function () { toastr.success('Success'); })</script>*@

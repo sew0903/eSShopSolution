@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> XÁC NHẬN ĐẶT HÀNG TỪ KHÁCH HÀNG: {{customer}}</title>
+</head>
+<body>
+    <p style="font-weight:bold">XÁC NHẬN ĐẶT HÀNG </p>
+    <p>Thông tin khách hàng</p>
+    <p>Tên:{{customer}}</p>
+    <p>Địa chỉ: {{address}}</p>
+    <p>Số điện thoại:{{phonenumber}}</p>
+    <p>Cảm ơn quý khách đã đặt mua sản phẩm bên hệ thống của chúng tôi. </p>
+    <p>ID đơn hàng: {{iddonhang}}</p>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" style="padding-right:20px">ID ĐƠN HÀNG</th>
+                    <th scope="col" style="padding-right:20px">NGÀY TẠO</th>
+                    <th scope="col" style="padding-right:20px">TRẠNG THÁI</th>
+                    <th scope="col" style="padding-right:20px">TỔNG TIỀN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{iddon}}</td>
+                    <td>{{ngaytao}}</td>
+                    <td>{{trangthai}}</td>
+                    <td>{{tongtien}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>Xin cảm ơn quý khách đã đặt sản phẩm bên shop!</p>
+
+    <table style="width: 100%; border-spacing: 0px">
+        <tr>
+            <td style="border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black; width: 153px; padding: 5px;">
+                <img src="https://i.pinimg.com/736x/6c/f0/25/6cf025e3792e27fb12f962f1a3494ed4.jpg" style="width: 153px; height: 153px;" />
+            </td>
+            <td style="border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black; text-align: center; vertical-align: middle; padding: 5px;" colspan="3">
+                <h1 style="color: red;">COCO SNEAKER SHOP</h1>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black; padding: 5px;">
+                Thông tin đơn hàng id:{{iddonhang}}
+            </td>
+        </tr>
+        <tr>
+            <th style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black;text-align: right; padding: 5px;">
+                Tên khách hàng
+            </th>
+            <td style="border-bottom: 1px solid black;border-right: 1px solid black; padding: 5px;">{{customer}}</td>
+
+            <th style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black;text-align: right; padding: 5px;">Thời gian đặt hàng:</th>
+            <td style="border-bottom: 1px solid black;border-right: 1px solid black; padding: 5px;">{{datetime}}</td>
+        </tr>
+        <tr>
+            <th style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black;text-align: right; padding: 5px;">
+                Email
+                khách hàng:
+            </th>
+            <td style="border-bottom: 1px solid black;border-right: 1px solid black; padding: 5px;">{{email}}</td>
+
+            <th style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black;text-align: right; padding: 5px;">Tiền hàng</th>
+            <td style="border-bottom: 1px solid black;border-right: 1px solid black; padding: 5px;">{{tienhang}}</td>
+        </tr>
+        <tr>
+            <th style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black;text-align: right; padding: 5px;">
+                Địa chỉ
+                khách hàng:
+            </th>
+            <td style="border-bottom: 1px solid black;border-right: 1px solid black; padding: 5px;">{{address}}</td>
+
+            <th style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black;text-align: right; padding: 5px;">Thuế:</th>
+            <td style="border-bottom: 1px solid black;border-right: 1px solid black; padding: 5px;">{{thue}}</td>
+        </tr>
+        <tr>
+            <th style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black;text-align: right; padding: 5px;">
+                Số điện thoại
+                khách hàng:
+            </th>
+            <td style="border-bottom: 1px solid black;border-right: 1px solid black; padding: 5px;">{{phonenumber}}</td>
+
+            <th style="border-bottom: 1px solid black;border-right: 1px solid black;border-left: 1px solid black;text-align: right; padding: 5px;">Tổng tiền thanh toán:</th>
+            <td style="border-bottom: 1px solid black;border-right: 1px solid black; padding: 5px;">{{tienthanhtoan}}</td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0%;
+    font-family: 'Poppins' ,sans-serif;
+}
+body{
+    box-sizing: border-box;
+    background-color: #1c1e21;
+    min-height: 1000vh;
+    position: relative;
+}
+.has-index{
+    
+    border-bottom: 3px solid blue; 
+
+}
+.has-index-icon{
+    color: blue;
+}
+.note1{
+   
+    padding-bottom: 0px !important;
+     border-radius: 20px !important;
+ }
+ .note2{
+     padding-left: 13px !important;
+     padding-right: 13px !important;
+ }
+ .note3{
+     margin-top: 3px !important;
+    
+ }
+ .note4{
+     margin-left: 28px !important;
+ }
+ .note5{
+     margin-left: 70px !important;
+ }
+ .show{
+     display: block;
+ }
+ .note6{
+     margin-left:  -10px !important;
+ }
+ .note7{
+     margin-left: 1px;
+ }
+ .dont-read{
+     color:rgb(59, 59, 240);
+ }
+
+ .clear{
+     clear: both;
+ }
+ #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+    border-radius: 20px 20px 0 0;
+     text-align: center;
+  }
+  #mydiv{
+    position: fixed;
+    z-index: 9;
+  }
+.user-name{
+    font-weight: 600;
+    color: #fff !important;
+}
+.note8{
+    margin-top: 25px;
+    margin-left: 500px;
+    position: absolute;
+}

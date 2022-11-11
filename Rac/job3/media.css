@@ -1,0 +1,176 @@
+@media only screen and (max-width:650px){
+    .header1-content{
+        width: 100% !important;
+    }
+    .header2-content-right{
+        display: none;
+    }
+    .header2-content{
+        width: 100%;
+    }
+    .header1-content-right-content1{
+        display: none;
+    }
+    .header2{
+        display: none;
+    }
+    .header1-content-center{
+        width: 70%;
+    }
+    .header1-content-left{
+        display: none;
+    }
+    .header1-content-right-content2{
+        margin-left: 20px;
+    }
+    .header-media-content-left{
+        display: block;
+    }
+    .span{
+        display: block;
+        padding: 10px;
+    }
+    .main-banner{
+        width: 100%;
+        display: block;
+        margin: 0;
+       
+    }
+    .span-dot{
+        margin-top: -40px;
+        margin-left: 48%;
+    }
+    .main-band{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: block;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+    .main-band-item{
+        display: block;
+        float: left;
+        width: 50%;
+        margin-bottom: 40px;
+        
+    }
+    .main-band-item-content{
+     text-align: center;
+    }
+    .main-band-item-img{
+        margin-left: 35%;
+    }
+    .select2{
+        width: 98%!important;
+        margin: 0 auto;
+        margin-top: -40px;
+    }
+    .select3{
+        width: 98%!important;
+        margin: 0 auto;
+        margin-top: -60px;
+    }
+    .select1{
+        width: 98%!important;
+        margin: 0 auto;
+        margin-top: -20px;
+    }
+    .main-band-item2 input{
+        width: 98%!important;
+        margin-left: 0px;
+    }
+    .main-band-item2 button{
+        width: 98%;
+        margin-left: 3px;
+        
+    }
+    .search-button{
+        margin-top: -70px;
+    }
+    .main-band2{
+        width: 100%;
+        display: block;padding-bottom: 20px;
+
+    }
+    .main-band2-title-2{
+        display: none;
+    }
+    .main-band2-title-1{
+        padding:10px
+    }
+    .main-band2-content-item{
+        float: left !important;
+        margin-left: 10px;
+    }
+    .main-band2-content{
+        display: block;
+    }
+    .span-show1{
+        display: block;
+    }
+    .main-band2-banner{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-top:10px;
+    }
+    .main-band1-banner-img img{
+        width: 100%;
+    }
+    .main-band1-banner-img{
+        width: 100%;
+    }
+    .new-content{
+        display: none;
+    }
+    .new-content2{
+        display: block;
+    }
+    .new-content-item{
+        margin: 0 auto;
+    }
+    .footer2-content{
+        width: 100%;
+        display: block;
+    }
+    .col1-contact{
+        margin: 0 auto;
+    }
+    .col-2-ship{
+        display: none;
+    }
+    .ter-5{
+        display: none;
+    }
+    .bell{
+        display: none;
+    }
+    .move-top{
+        display: none;
+    }
+    .custom-select{
+        display: none;
+    }
+    .select-add select{
+        width: 98%;
+        padding: 4px;
+    }
+    .select-add {
+        margin-top: -20px;
+  
+    }
+    .class1{
+        
+        
+    }
+    .class2{
+        margin-top: -40px;
+    }
+    .class3{
+        margin-top: -60px;
+    }
+    .select-add{
+        display: block;
+    }
+}

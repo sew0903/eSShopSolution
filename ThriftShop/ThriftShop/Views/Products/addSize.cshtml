@@ -1,0 +1,46 @@
+﻿@using ThriftShop.Models;
+@model San_pham
+@{
+    ViewBag.Title = "addSize";
+    Layout = "~/Views/Layout/AdminLayoutcshtml.cshtml";
+}
+@using (Html.BeginForm())
+{
+    <div style="padding-left:30%" class="container-fluid">
+
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Update Product</div>
+                        <hr>
+                        <form>
+                            <div class="form-group">
+                                <select class="form-select" id="add_size" name="add_size" style="border: 0px solid #e5eaef;; color: #fff !important; background-color: rgba(255, 255, 255, 0.2); width: 100%; height: 40px ">
+                                    <option id="option_hsx">Chọn size</option>
+                                    <option id="option_hsx">37</option>
+                                    <option id="option_hsx">38</option>
+                                    <option id="option_hsx">39</option>
+                                    <option id="option_hsx">40</option>
+                                    <option id="option_hsx">41</option>
+                                    <option id="option_hsx">42</option>
+                                    <option id="option_hsx">43</option>
+                                    <option id="option_hsx">44</option>
+                                </select>
+                            </div>
+                            <div style="padding-top:10px" class="form-group">
+                                <button type="submit" class="btn btn-light px-5"> Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--End Row-->
+        <!--start overlay-->
+        <div class="overlay toggle-menu"></div>
+        <!--end overlay-->
+
+    </div>
+}
+

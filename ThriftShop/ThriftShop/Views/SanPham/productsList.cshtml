@@ -1,0 +1,159 @@
+﻿@using ThriftShop.Models;
+@model PagedList.IPagedList<San_pham>
+@using PagedList.Mvc;
+@using ThriftShop.Controllers.User;
+@{
+    ViewBag.Title = "productsList";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+
+<section class="cartegory">
+    <div class="container">
+        <div class="cartegory-top row">
+            <p>Trang chủ</p><span>&#8594;</span><p>SanPham</p></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="cartegory-left">
+                <ul>
+                    <li class="cartegory-left-li block">
+                        <a href="#">NIKE</a>
+                        <ul>
+                            <li><a href="">Nike Jordan</a></li>
+                            <li><a href="">Nike Air Force 1</a></li>
+                            <li><a href="">Nike Air Max</a></li>
+                            <li><a href="">Nike Flyknit</a></li>
+                            <li><a href="">Nike Air Huarache</a></li>
+                        </ul>
+                    </li>
+                    <li class="cartegory-left-li ">
+                        <a href="#">Adidas</a>
+                        <ul>
+                            <li><a href="">Adidas Stan Smith</a></li>
+                            <li><a href="">Adidas Superstar</a></li>
+                            <li><a href="">Adidas EQT</a></li>
+                            <li><a href="">Adidas Ultra Boost</a></li>
+                            <li><a href="">Adidas NMD</a></li>
+                            <li><a href="">Yezzy</a></li>
+                        </ul>
+                    </li>
+                    <li class="cartegory-left-li"><a href="">SALE</a></li>
+                    <li class="cartegory-left-li"><a href="">VARSITY</a></li>
+                    <li class="cartegory-left-li"><a href="">2HAND</a></li>
+                </ul>
+            </div>
+            <div class="cartegory-right row">
+                <div class="cartegory-right-top-item">
+                    <p>Jordan</p>
+                </div>
+                <div class="cartegory-right-top-item">
+                    <button><span>Bộ lọc</span><i class="fa-solid fa-sort-down"></i></button>
+                </div>
+                <div class="cartegory-right-top-item">
+                    <select name="" id="">
+                        <option value="">Sắp xếp</option>
+                        <option value="">Giá cao đến thấp</option>
+                        <option value="">Giá thấp đến cao</option>
+                    </select>
+                </div>
+                <div class="cartegory-right-content row">
+                    @{
+                        foreach (var item in Model)
+                        {
+                                        <div class="cartegory-right-content-item">
+                                            <a href="@Url.Action("Chi_tiet_sp", "SanPham", new { @id_sp = item.id_sp })">
+                                                @{ 
+                                                    var brand = "";
+                                                    if (item.id_hangsx == 1)
+                                                    {
+                                                        brand = "Nike/";
+                                                    }
+                                                    else if (item.id_hangsx == 2)
+                                                    {
+                                                        brand = "Adidas/";
+                                                    }
+                                                    else if (item.id_hangsx == 3)
+                                                    {
+                                                        brand = "Converse/";
+                                                    }
+                                                    else
+                                                    {
+                                                        brand = "NEW BALANCE/";
+                                                    }
+                                                }
+                                                <img src=" ~/Content/anh/productList/@brand/@item.anh_sp/big_image.jpg" alt="">
+                                            </a>
+                                            <div class="men-cart-pro">
+                                                <div class="inner-men-cart-pro">
+                                                    <a href="">Xem chi tiết</a>
+                                                </div>
+                                            </div>
+                                            <h1 style="font-size:16px; font-family:'Century Gothic'">@item.ten_sp</h1>
+                                            <p style="font-size:16px; font-family:'Century Gothic'">@item.gia_ban<sup>đ</sup></p>
+                                            <p><span><i style="color:orange" class="fa-solid fa-star"></i></span><span><i style="color:orange" class="fa-solid fa-star"></i></span><span><i style="color:orange" class="fa-solid fa-star"></i></span><span><i style="color:orange" class="fa-solid fa-star"></i></span><span><i style="color:orange" class="fa-solid fa-star"></i></span></p>
+                                            @using (Html.BeginForm("addCart", "GioHang", new { @id_sp = item.id_sp, @url = Request.Url.ToString() }))
+                                            {
+                                                <button style="background-color: #4CAF50; /* Green */; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; " type="submit" class="shoe-cart pshoe-cart">Mua sản phẩm</button>
+                                            }
+                                            <div>
+                                                <!-- HTML !-->
+                                            </div>
+                                        </div>
+                        }
+                    }
+                </div>
+                <div>
+                    @Html.PagedListPager(Model, page => Url.Action("productsList", new { page }))
+                    <br />
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const itemsliderbar = document.querySelectorAll(".cartegory-left-li")
+    itemsliderbar.forEach(function (menu, index) {
+        menu.addEventListener("click", function () {
+            menu.classList.toggle("block")
+        })
+    })
+    const header = document.querySelector("header")
+    window.addEventListener("scroll", function () {
+        x = window.pageYOffset
+        if (x > 0) {
+            header.classList.add("sticky")
+        }
+        else {
+            header.classList.remove("sticky")
+        }
+    })
+    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+    const imgContainer = document.querySelector('.aspect-ratio-169 ')
+    const dotItem = document.querySelectorAll(".dot")
+    let index = 0
+    let imgNumber = imgPosition.length
+    let dotNumber = dotItem.length
+
+
+    imgPosition.forEach(function (image, index) {
+        image.style.left = index * 100 + "%"
+        dotItem[index].addEventListener("click", function () {
+            slider(index)
+        })
+    })
+
+    function imgSlide() {
+        index++
+        if (index >= imgNumber) { index = 0 }
+        slider(index)
+    }
+    function slider(index) {
+        imgContainer.style.left = "-" + index * 100 + "%"
+        const dotActive = document.querySelector(".active")
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+    }
+    setInterval(imgSlide, 5000)
+</script>

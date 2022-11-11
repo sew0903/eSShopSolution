@@ -1,0 +1,247 @@
+@media only screen and (max-width:650px){
+    .header-content{
+        width: 100% !important;
+    }
+    .header-content-left{
+        width: 70px;
+        height: 24px;
+        margin-left: 10px !important;
+    }
+    .header-content-right{
+        display: none;
+    }
+    .banner-content{
+        width: 100%;
+    }
+    .banner-content-title{
+        width: 80%;
+        font-weight: 6700;
+    }
+    .banner-content-box{
+        width: 100%;
+    }
+    .banner-content-box-title{
+        width: 100%;
+    }
+    .banner-content-box-input{
+        width: 100%;
+    }
+    .main-content1-content{
+        display: block !important;
+    }
+    .content-left{
+        width: 100% !important;
+       
+    }
+    .main-content1-item1{
+        display: block;
+        width: 100%;
+    }
+    .main-content1-item1 img{
+        width: 100% !important;
+        border-radius: 8px 8px 0 0;
+    }
+    .main-content1-item2{
+        width: 100% !important;
+    }
+    .content-right{
+        width: 100% !important;
+    }
+    .main-banner{
+        width: 100% !important;
+    }
+    .footer-content{
+        width: 95% !important;
+        display: block;
+    }
+    .footer-right{
+        width: 100% !important;
+
+    }
+    .header-media{
+        display: flex;
+    }
+    .banner{
+        background: #e5e5e5 url('https://mogi.vn/content/images/home/home-bg-425.jpg') center no-repeat;
+        background-size: cover !important;
+    }
+    .banner-content-box{
+        display: none;
+    }
+    .banner-content-box-meida{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .main-content1-item1-text{
+        width: 100%;
+        border-radius: 0px 0px  8px 8px;
+        padding-bottom: 10px;
+        margin-top: -15px;
+    }
+    .content-left-item2{
+        display: block;
+        margin-top: 200px;
+    }
+    .space2{
+        margin-left: 0px;
+        margin-bottom: 10px;
+       
+    }
+    .content-right{
+        margin-left: 0;
+    }
+    .item-space1{
+        border-top: 1px solid #e6ecf0;
+    }
+    .main-content1-list-item{
+       width: 1450px;
+    }
+    .main-content1-list-items{
+        overflow: scroll;
+    }
+    
+    .main-content{
+        width: 93%;
+    }
+    .main-content1-list-item::-webkit-scrollbar-thumb{
+        background-color: #fff;
+        display: none;
+    }
+    .footer{
+        margin-top: 50px;
+    }
+    .footer-right-items{
+        width: 100%;
+        
+    }
+    .footer-media{
+        display: block;
+        margin-bottom: 10px;
+        
+    }
+    .footer{
+        display: none;
+    }
+    .main{
+        padding-bottom: 310px;
+    }
+    .btn-more-list{
+        display: none;
+    }
+    .main-banner{
+        margin-top: 30px;
+    }
+    .brand-list{
+        width: 100% !important;
+    }
+    .item-tienich{
+        width: 45%;
+        margin-top: 10px;
+    }
+    .item-tienich:not(:first-child) {
+        margin-left: 0px;
+    }
+    .brand-lists{
+        
+    }
+    .main-sp-content{
+        width: 95% !important;
+    }
+    .list-bar-sp-input{
+        display: none !important;
+    }
+    .choose2,.choose4{
+        display: none !important;
+        
+    }
+    .choose3{
+        margin-left: 10px !important;
+    }
+    .choose{
+        
+       
+
+    }
+    .list-bar-sp-left{
+        width: 100% !important;
+    }
+    .list-bar-sp-right{
+        display: none !important; 
+    }
+    .itemTT-img{
+        width: 110px !important;
+        height:90px !important;
+    }
+    .itemTT-img img{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .itemTT-content{
+        width: calc(100% - 110px) !important;
+        padding-left: 8px !important;
+        float: left !important;
+    }
+    .itemTT-content .price{
+        font-size: 16px !important;
+    }
+    .itemTT-content h3{
+        font-weight: 500;
+    }
+    .pagination li{
+
+    }
+    .pageing{
+        display: none;
+    }
+    .pageing-media {
+        display: block !important;
+        
+    }
+    .pagination-media{
+        width: 80% !important;
+    }
+    .LT-dropdown{
+        width: 100%;
+       
+    }
+    .LT-dropdown-content{
+        margin-top:50px !important;
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .LT-dropdown-content-close{
+       right: 10px;
+    }
+    .LT-dropdown-content-item1{
+             margin-top: 30px !important;
+             padding: 10px;
+             width: 90% !important;
+    }
+    .LT-dropdown-content-title{
+        text-align: left !important;
+        margin-left: 5px;
+    }
+    .LT-dropdown-content-item1 .select-items{
+        width: 100px !important;
+    }
+    .LT-dropdown-content-btn2 button{
+        width:200px !important ;
+        
+    }
+    .LT-dropdown-content-btn{
+        margin-top: 50px !important;
+    }
+    .LT-dropdown-content-item1 .select-selected:after{
+        right: 10% !important;
+    }
+    .LT-dropdown-content-item1 .select-items{
+        width: 310px !important;
+    }
+
+}
+@media only screen and  (min-width:650px){
+ .item-on-meida{
+     display: none;
+ }
+}

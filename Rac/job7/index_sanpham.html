@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style_sanpham.css">
+    <link rel="stylesheet" href="./css/media1.css">
+    <title>Nội Thất Tuấn Anh</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-top-left">
+                <div class="header-top-left-icon"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                <div class="header-top-left-icon"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                <div class="header-top-left-icon"><a href="#"><i class="fab fa-google-plus-g"></i></a></div>
+                <div class="header-top-left-icon"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                <div class="header-top-left-icon"><a href="#"><i class="fab fa-youtube"></i></a></div>
+            </div>
+            <div class="header-top-right">
+                <div class="header-top-right-item"><a href=""><i class="fas fa-user"></i> Tài Khoản</a></div>
+                <div class="header-top-right-item"><a href=""><i class="fas fa-map-marker-alt"></i> Hệ Thống cửa hàng</a></div>
+            </div>
+        </div>
+        <div class="header-height"></div>
+        <div class="header-media">
+            
+            <div class="btn-media">
+                <div class="btn-media-open" onclick="openNav()"><i class="fas fa-bars"></i></div>
+                <div class="btn-media-open-text" id="mySidenav">
+                   
+                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+                         <div class="btn-media-open-item" onclick="fun11()">Danh Mục Sản Phẩm  <i class="fas fa-plus add2-icon"></i></div>
+                         <div class="fun11" id="fun11">
+                             <div class="fun11-item1" onclick="fun12()">Item1 <i class="fas fa-plus add2-icon"></i></div>
+                             <div class="fun12" id="fun12">
+                                <div class="fun11-item1 fun11-item2 ">Item2</div>
+                                <div class="fun11-item1 fun11-item2">Item3</div>
+                                <div class="fun11-item1 fun11-item2">Item4</div>
+                                <div class="fun11-item1 fun11-item2">Item5</div>
+                             </div>
+                             <div class="fun11-item1">Item2</div>
+                             <div class="fun11-item1">Item3</div>
+                             <div class="fun11-item1">Item4</div>
+                             <div class="fun11-item1">Item5</div>
+                         </div>
+                         <div class="btn-media-open-item">Trang Chủ</div>
+                         <div class="btn-media-open-item">Giới Thiệu</div>
+                         <div class="btn-media-open-item">Sản Phẩm</div>
+                         <div class="btn-media-open-item">Tin Tức</div>
+                         <div class="btn-media-open-item">Liên Hệ</div>
+                         
+                     
+                </div>
+            </div>
+            <div class="header-media-left">
+                <img src="./img/Untitled-2.png" alt="">
+            </div>
+            <a href="" class="header-media-item">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+        <div class="header-top-center">
+            <div class="header-top-center-logo">
+                <img src="./img/Untitled-2.png" alt="">
+            </div>
+            
+            <div class="header-top-center-search">
+                <input type="text" placeholder="Tìm Kiếm Sản Phẩm...">
+                <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="header-top-center-left">
+                <a href="#" class="header-top-center-left-item">
+                    <div class="item-header-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="header-top-center-left-item-content">
+                        <div class="content1-header"> 0123 456 789 </div>
+                        <div class="content1-header2"> Tổng Đài Miễn Phí </div>
+                    </div>
+                    
+                </a>
+                <a href="" class="header-top-center-left-item">
+                    <div class="item-header-icon">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <div class="header-top-center-left-item-content">
+                        <div class="content1-header"> (0) Sản Phẩm </div>
+                        <div class="content1-header-2"> Giỏ Hàng </div>
+                    </div>
+                    
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="menu">
+        <div class="menu-content">
+         <div class="item-has-dropdown">
+           <div class="menu-item item-list-menu"><i class="fas fa-list"></i> Danh Mục Sản Phẩm</div>
+           <div class="dropdown1">
+                <div class="dropdown1-content">
+                    <div class="item-dropdown-lv2">
+                       <div class="dropdown1-content-item">Sản Phẩm 1  <i class="fas fa-chevron-right"></i></div>
+                       <div class="dropdown-lv2">
+                           <div class="dropdown-lv2-content">
+                            <div class="dropdown-lv2-item">Sản Phẩm 2</div>
+                            <div class="dropdown-lv2-item">Sản Phẩm 2</div>
+                            <div class="dropdown-lv2-item">Sản Phẩm 2</div>
+                            <div class="dropdown-lv2-item">Sản Phẩm 2</div>
+                       </div></div>
+                   </div>
+                    <div class="dropdown1-content-item">Sản Phẩm 1 </div>
+                    <div class="dropdown1-content-item">Sản Phẩm 1 </div>
+                    <div class="dropdown1-content-item">Sản Phẩm 1 </div>
+                    <div class="dropdown1-content-item">Sản Phẩm 1 </div>
+                    <div class="dropdown1-content-item">Sản Phẩm 1 </div>
+                    <div class="dropdown1-content-item">Sản Phẩm 1 </div>
+                    <div class="dropdown1-content-item">Sản Phẩm 1 </div>
+                    <div class="dropdown1-content-item">Sản Phẩm 1 </div>
+                    
+                </div>
+           </div>
+        </div>
+         <a href="#" class="menu-item"> Trang Chủ</a>
+         <a href="#" class="menu-item"> Giới Thiệu</a>
+         <a href="#" class="menu-item"> Sản Phẩm</a>
+         <a href="#" class="menu-item"> Tin Tức</a>
+         <a href="#" class="menu-item"> Liên Hệ</a>
+        </div>
+    </div>
+    <div class="page-link">
+         Trang chủ > <span>Nội Thất Gia Đình</span>
+    </div>
+    <div class="sanpham_banner">
+        <a href="">
+        <img src="./img/mainsp/banner1.png" alt=""></a>
+    </div>
+    
+    <div class="main_sanpham">
+        <div class="main_sp-title">Nội Thất Gia Đình</div>
+        <div class="main-sp-list">
+            <a href="#" class="main-sp-list-item is-now" >Combo nội thất</a>
+            <a href=" #" class="main-sp-list-item">Dụng Cụ Gỗ</a>
+            <a href=" #" class="main-sp-list-item">Đèn trang Trí</a>
+            <a href=" #" class="main-sp-list-item">Độc đáo , mới lạ</a>
+            <a href=" #" class="main-sp-list-item">Nội thất xếp gọn</a>
+            <a href=" #" class="main-sp-list-item">Nội Thất Gỗ</a>
+        </div>
+        <div class="main_sanpham-content">
+            <div class="main_sanpham-left">
+                <div class="col_sanpham1">
+                    <div class="col_sanpham1-title" onclick="fun20()" >Danh Mục  <i class="fas fa-bars col-icon" ></i></div>
+                    <ul class="col_sanpham-list" id="danhmuc-down">
+                         <li class="col_sanpham-item" onclick="fun1()">
+                            <i class="fas fa-circle"></i>
+                             <p>Sofa văng</p>
+                             <i class="fas fa-plus add-icon"></i>
+                         </li>
+                           <div class="fun1" id="fun1">
+                               <li>item1</li>
+                               <li>item2</li>
+                               <li>item3</li>
+                           </div>
+                         <li class="col_sanpham-item" onclick="fun2()">
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa Gia đình</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun2">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+                        <li class="col_sanpham-item" onclick="fun3()" >
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa khách sạn</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun3">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+                        <li class="col_sanpham-item" onclick="fun4()">
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa cà phê</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun4">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+                        <li class="col_sanpham-item" onclick="fun5()">
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa nỉ</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun5">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+                        <li class="col_sanpham-item" onclick="fun6()">
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa karaoke</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun6">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+                        <li class="col_sanpham-item" onclick="fun7()">
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa góc</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun7">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+                        <li class="col_sanpham-item" onclick="fun8()">
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa cao cấp</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun8">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+                        <li class="col_sanpham-item" onclick="fun9()">
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa giá rẻ</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun9">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+                        <li class="col_sanpham-item" onclick="fun10()">
+                            <i class="fas fa-circle"></i>
+                            <p>Sofa da</p>
+                            <i class="fas fa-plus add-icon"></i>
+                        </li>
+                        <div class="fun1" id="fun10">
+                            <li>item1</li>
+                            <li>item2</li>
+                            <li>item3</li>
+                        </div>
+
+                    </ul>
+                </div>
+                <div class="col_sanpham2">
+                   <div class="fun21" > <h1 class="col_sanpham2-title"onclick="fun21()">Tìm Theo</h1></div>
+                    <div class="col_sanpham2-title-content" id="fun21">
+                    <div class="col_sanpham2-1">
+                        <h1 class="col_sanpham2-1-title1">Giá Sản Phẩm</h1>
+                        <div class="col_sanpham2-1-content">
+                             <div class="col_sanpham2-1-title"><input type="checkbox"> Giá Dưới 100.000đ</div>
+                             <div class="col_sanpham2-1-title"><input type="checkbox"> 100.000đ - 200.000đ</div>
+                             <div class="col_sanpham2-1-title"><input type="checkbox"> 200.000đ - 300.000đ</div>
+                             <div class="col_sanpham2-1-title"><input type="checkbox"> 300.000đ - 500.000đ</div>
+                             <div class="col_sanpham2-1-title"><input type="checkbox"> 500.000đ - 1.000.000đ</div>
+                             <div class="col_sanpham2-1-title"><input type="checkbox"> Giá trên 1.000.000đ</div>
+                             
+                        </div>
+                    </div>
+                    <div class="col_sanpham2-1">
+                        <h1 class="col_sanpham2-1-title1">Thương Hiệu</h1>
+                        <div class="col_sanpham2-1-node">
+                          <input type="text" placeholder="Tìm Thương Hiệu">
+                          <i class="fas fa-search"></i>
+                        </div>
+                        <div class="col_sanpham2-1-content">
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> Ant Furni</div>
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> Evo Nội Thất</div>
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> IKEA</div>
+                            
+                        </div>
+                    </div>
+                    <div class="col_sanpham2-1">
+                        <h1 class="col_sanpham2-1-title1">loại</h1>
+                        <div class="col_sanpham2-1-node">
+                          <input type="text" placeholder="Tìm Loại">
+                          <i class="fas fa-search"></i>
+                        </div>
+                        <div class="col_sanpham2-1-content">
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> Bàn Cà Phê</div>
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> Ghế mây</div>
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> Giường</div>
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> Giường Ngủ</div>
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> Sofa</div>
+                            <div class="col_sanpham2-1-title"><input type="checkbox"> Tủ Bếp</div>
+                            
+                        </div>
+                    </div></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="main_sanpham-right">
+                
+                <div class="main_sanpham-right-content">
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a> <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    <a href="#" class="main-content1-item item2">
+                        <div class="sale">12%</div>
+                        <div class="main-content1-item-img">
+                            <img src="./img/item3.jpg" alt="">
+                        </div>
+                        <div class="main-content1-item-title">
+                            360 Luxury Furniture Design dw725r (373w-150mm) 
+                        </div>
+                        <div class="main-content1-item-price">1.650.000đ</div>
+                    </a>
+                    
+                </div>
+                <div class="clear"></div>
+                <div class="footer-page">
+                    <button class="now">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>></button>
+                    <button>>></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-sp-view">
+        <div class="main-sp-view-title">Sản Phẩm Đã xem</div>
+        <div class="main-sp-view-content">
+            <a href="#" class="main-content1-item  item3">
+                <div class="sale">12%</div>
+                <div class="main-content1-item-img">
+                    <img src="./img/item3.jpg" alt="">
+                </div>
+                <div class="main-content1-item-title">
+                    360 Luxury Furniture Design dw725r (373w-150mm) 
+                </div>
+                <div class="main-content1-item-price">1.650.000đ</div>
+            </a>
+            <a href="#" class="main-content1-item item3">
+                <div class="sale">12%</div>
+                <div class="main-content1-item-img">
+                    <img src="./img/item3.jpg" alt="">
+                </div>
+                <div class="main-content1-item-title">
+                    360 Luxury Furniture Design dw725r (373w-150mm) 
+                </div>
+                <div class="main-content1-item-price">1.650.000đ</div>
+            </a>
+            <a href="#" class="main-content1-item  item3">
+                <div class="sale">12%</div>
+                <div class="main-content1-item-img">
+                    <img src="./img/item3.jpg" alt="">
+                </div>
+                <div class="main-content1-item-title">
+                    360 Luxury Furniture Design dw725r (373w-150mm) 
+                </div>
+                <div class="main-content1-item-price">1.650.000đ</div>
+            </a>
+            <a href="#" class="main-content1-item  item3">
+                <div class="sale">12%</div>
+                <div class="main-content1-item-img">
+                    <img src="./img/item3.jpg" alt="">
+                </div>
+                <div class="main-content1-item-title">
+                    360 Luxury Furniture Design dw725r (373w-150mm) 
+                </div>
+                <div class="main-content1-item-price">1.650.000đ</div>
+            </a>
+            <a href="#" class="main-content1-item item3">
+                <div class="sale">12%</div>
+                <div class="main-content1-item-img">
+                    <img src="./img/item3.jpg" alt="">
+                </div>
+                <div class="main-content1-item-title">
+                    360 Luxury Furniture Design dw725r (373w-150mm) 
+                </div>
+                <div class="main-content1-item-price">1.650.000đ</div>
+            </a>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer1 footer1-media">
+            <div class="footer1-content">
+                <div class="footer1-content-left">Đăng kí nhận tin</div>
+                <div class="footer1-content-center">
+                    <input type="email" placeholder="Email của bạn">
+                    <i class="fab fa-telegram-plane"></i>
+                </div>
+                <div class="footer1-content-right">
+                    <div class="header-top-left-icon"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                    <div class="header-top-left-icon"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                    <div class="header-top-left-icon"><a href="#"><i class="fab fa-google-plus-g"></i></a></div>
+                    <div class="header-top-left-icon"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                    <div class="header-top-left-icon"><a href="#"><i class="fab fa-youtube"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer2-content">
+            <div class="lop-phu">
+            <div class="footer2-content1">
+                <div class="col1 col1-2">
+                    <div class="col1-title">CÔNG TY TNHH  THƯƠNG MẠI TUẤN ANH </div>
+                    <div class="col1-content">DĐKD: 0200460424 do Sở Kế hoạch và đầu tư Hải Phòng Cấp ngày 11/04/2002</div>
+                    <div class="col1-content"><i class="fas fa-map-marker-alt"></i> Địa chỉ: Km15 Quốc Lộ 5-An Hưng-Hải Dương-Hải Phòng </div>
+                </div>
+                <div class="col1 col1-3">
+                    <div class="col1-title">HOTLINE HỖ TRỢ </div>
+                    <div class="col1-content"><i class="fas fa-phone-alt"></i> HotLine: 1900.6628 Fax: 02254.290.686</div>
+                    <div class="col1-content"> <i class="fas fa-envelope"></i> Email: tuananh@tuananh.vn</div>
+                </div>
+                <div class="col1">
+                    <div class="col1-title">KẾT NỐI VỚI CHÚNG TÔI QUA </div>
+                    <div class="col1-content col1-content-item">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-google-plus-g"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="footer2-content2">
+                <div class="col2">
+                    <div class="col2-title">Tài Khoản của bạn</div>
+                    <ul class="col2-content">
+                        <li>Đăng Nhập</li>
+                        <li>Đăng kí</li>
+                    </ul>
+                </div>
+                <div class="col2">
+                    <div class="col2-title">Về Chúng tôi</div>
+                    <ul class="col2-content">
+                        <li>Giới Thiệu Công ti</li>
+                        <li>Liên Hệ</li>
+                        <li>Bản Đồ địa lí</li>
+                        <li>Tuyển Dụng</li>
+                    </ul>
+                </div>
+                <div class="col2">
+                    <div class="col2-title">Hướng Dẫn & Hỗ trợ</div>
+                    <ul class="col2-content">
+                        <li>Tìm Kiếm</li>
+                        <li>Hướng Dẫn Mua Hàng</li>
+                        <li>Câu Hỏi Thường Gặp</li>
+                        <li>Điều Khoản và Điều kiện</li>
+                        <li>Các Hình thức thanh toán</li>
+                    </ul>
+                </div>
+                <div class="col2">
+                    <div class="col2-title">Dịch Vụ</div>
+                    <ul class="col2-content">
+                        <li>Liên Hệ</li>
+                        <li>Bán Hàng</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="footer2-content3">
+                <div class="col3">
+                    <div class="col3-img"><img src="./img/logo5.png" alt=""></div>
+                    
+                    <div class="col3-content">
+                       <p>Đăng kí nhận Bản tin Shop</p>
+                    </div>
+                </div>
+                <div class="col4">
+                    <p>Cập nhật thông tin khuyến mãi nhanh nhất</p>
+                    <p>Hưởng Quyền Lợi Giảm giá riêng biệt</p>
+                </div>
+                <div class="col5">
+                    <input type="text" placeholder="">
+                    <div>Gửi</div>
+                </div>
+                
+            </div>
+            <div class="footer2-content4">
+                Copyrights © 2020 Tuấn Anh. All Rights Reserved  | Design by QTS
+            </div>
+        </div></div>
+    </footer>
+
+<script src="./js/js.js"></script>
+</body>
+</html>

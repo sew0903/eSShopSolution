@@ -1,0 +1,218 @@
+﻿@using ThriftShop.Models
+@model List<GioHang>
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Layout/UserLayout.cshtml";
+}
+
+<section class="cart">
+    <div class="container">
+        <div class="cart-top-wrap">
+            <div class="cart-top ">
+                <div class="cart-top-status cart-top-item">
+                    <i class="fa-solid fa-cart-shopping "></i>
+                </div>
+                <div class="cart-top-address cart-top-item">
+                    <i class="fa-solid fa-lightbulb "></i>
+                </div>
+                <div class="cart-top-payment cart-top-item">
+                    <i class="fa-solid fa-money-check-dollar "></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="cart-content row">
+            <div class="cart-content-left">
+                <table>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Màu</th>
+                        <th>Size</th>
+                        <th>SL</th>
+                        <th>Đơn giá</th>
+                        <th>Thành tiền</th>
+                        <th>Cập nhập</th>
+                        <th>Xóa</th>
+                    </tr>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            using (Html.BeginForm("CartUpdate", "GioHang", new { @id_sp = item.s_id_sp }))
+                            {
+                                        <tr>
+                                            @{
+                                                var brand = "";
+                                                if (item.s_hangsx == 1)
+                                                {
+                                                    brand = "Nike/";
+                                                }
+                                                else if (item.s_hangsx == 2)
+                                                {
+                                                    brand = "Adidas/";
+                                                }
+                                                else if (item.s_hangsx == 3)
+                                                {
+                                                    brand = "Converse/";
+                                                }
+                                                else
+                                                {
+                                                    brand = "NEW BALANCE/";
+                                                }
+                                            }
+                                            <td><img  src=" ~/Content/anh/productList/@brand/@item.s_anh_sp/big_image.jpg" alt=""></td>
+                                            @*<td><img src=" ~/Content/anh/productList/@item.s_anh_sp/big_image.jpeg" alt=""></td>*@
+                                            <td><p>@item.s_ten_sp</p></td>
+                                            <td><img src=" ~/Content/anh/Red_flag.svg.png" alt=""></td>
+                                            <td>
+                                                <select name="size_p" id="size_p">
+                                                    @{
+                                                        foreach (var x in ViewBag.size)
+                                                        {
+                                                            if (x.id_sp == item.s_id_sp)
+                                                            {
+                                                                <option>@x.size</option>
+                                                            }
+                                                        }
+                                                    }
+                                                </select>
+                                            </td>
+                                            <td><input type="number" value="@item.s_so_luong" min="1" style="width: 30px;" id="cart_sl" name="cart_sl"></td>
+                                            <td><p>@item.s_don_gia</p> <sub>đ</sub></td>
+                                            <td><p>@item.ThanhTien()</p> <sub>đ</sub></td>
+                                            <td>
+                                                <button style="color:forestgreen" type="submit" class="shoe-cart pshoe-cart"><i class="fa-solid fa-pen"></i></button>
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("DeleteCart","GioHang",new {@id_sp=item.s_id_sp})">
+                                                    <i style="color:red" class="fa-solid fa-trash-can"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    
+
+                            }
+                        }
+
+                    }
+                    @*<tr>
+            <td><img src=" ~/Content/anh/SanPham/nike-jordan-1-low-beetroot-black-db6491-600-king-shoes-sneaker-real-hcm-1624271232.jpeg" alt=""></td>
+            <td><p>Jordan 1 Trophyco Room</p></td>
+            <td><img src=" ~/Content/anh/Red_flag.svg.png" alt=""></td>
+            <td><p>39</p></td>
+            <td><input type="number" value="1" min="1" style="width: 30px;"></td>
+            <td><p>60000000</p> <sub>đ</sub></td>
+            <td><p>60000000</p> <sub>đ</sub></td>
+            <td><i class="fa-solid fa-trash-can"></i></td>
+        </tr>
+        <tr>
+            <td><img src=" ~/Content/anh/SanPham/nike-jordan-1-low-beetroot-black-db6491-600-king-shoes-sneaker-real-hcm-1624271232.jpeg" alt=""></td>
+            <td><p>Jordan 1 Trophyco Room</p></td>
+            <td><img src=" ~/Content/anh/Red_flag.svg.png" alt=""></td>
+            <td><p>39</p></td>
+            <td><input type="number" value="1" min="1" style="width: 30px;"></td>
+            <td><p>60000000</p> <sub>đ</sub></td>
+            <td><p>60000000</p> <sub>đ</sub></td>
+            <td><i class="fa-solid fa-trash-can"></i></td>
+        </tr>
+        <tr>
+            <td><img src=" ~/Content/anh/SanPham/nike-jordan-1-low-beetroot-black-db6491-600-king-shoes-sneaker-real-hcm-1624271232.jpeg" alt=""></td>
+            <td><p>Jordan 1 Trophyco Room</p></td>
+            <td><img src=" ~/Content/anh/Red_flag.svg.png" alt=""></td>
+            <td><p>39</p></td>
+            <td><input type="number" value="1" min="1" style="width: 30px;"></td>
+            <td><p>60000000</p> <sub>đ</sub></td>
+            <td><p>60000000</p> <sub>đ</sub></td>
+            <td><i class="fa-solid fa-trash-can"></i></td>
+        </tr>*@
+                </table>
+            </div>
+            <div class="cart-content-right">
+                <table>
+                    <tr>
+                        <th colspan="2">Tổng tiền giỏ hàng</th>
+                    </tr>
+                    <tr>
+                        <td>TỔNG SẢN PHẨM</td>
+                        <td>@ViewBag.SL</td>
+                    </tr>
+                    <tr>
+                        <td>TỔNG TIỀN HÀNG</td>
+                        <td><p>@ViewBag.TT</p><sub>đ</sub></td>
+                    </tr>
+                    <tr>
+                        <td>TẠM TÍNH</td>
+                        <td><p style="font-weight: bold;">@ViewBag.TT</p><sub>đ</sub></td>
+                    </tr>
+                </table>
+                <div class="cart-content-right-text">
+                    <p>Bạn sẽ được giao hàng miễn phí ship khi giá trị đơn hàng lớn hơn 10.000.000 VNĐ</p>
+                    <p style="color: red;font-weight: bold;"> Mua thêm <span style="font-size: 18px;">1300000</span> để được miễn phí Ship</p>
+                </div>
+                <div class="cart-content-right-button">
+                    <a href="@Url.Action("productsList","SanPham")">
+                        <button>TIẾP TỤC MUA SẮM </button>
+                    </a>
+                    <a href="@Url.Action("Payment","ThanhToan")">
+                        <button>THANH TOÁN</button>
+                        </a>
+                </div>
+                <div class="cart-content-right-dang-nhap">
+                    <p>TÀI KHOẢN COCO</p>
+                    <p>Hãy <a style="color: blue;" href="">đăng nhập</a> vào tài khoản tích điểm thành viên</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+        const itemsliderbar= document.querySelectorAll(".cartegory-left-li")
+itemsliderbar.forEach(function(menu, index){
+   menu.addEventListener("click",function(){
+        menu.classList.toggle("block")
+   })
+})
+        const header= document.querySelector("header")
+        window.addEventListener("scroll",function(){
+            x = window.pageYOffset
+            if(x>0){
+                header.classList.add("sticky")
+            }
+            else{
+                header.classList.remove("sticky")
+            }
+        })
+        const imgPosition  = document.querySelectorAll(".aspect-ratio-169 img")
+        const imgContainer  = document.querySelector('.aspect-ratio-169 ')
+        const dotItem  = document.querySelectorAll(".dot")
+        let index=0
+        let imgNumber =imgPosition.length
+        let dotNumber= dotItem.length
+
+
+        imgPosition.forEach(function (image, index){
+            image.style.left = index*100 + "%"
+            dotItem[index].addEventListener("click",function(){
+                slider(index)
+            })
+        })
+
+        function imgSlide(){
+            index++
+            if(index>=imgNumber){index=0}
+            slider(index)
+        }
+        function slider(index){
+            imgContainer.style.left="-" + index*100 + "%"
+           const dotActive = document.querySelector(".active")
+           dotActive.classList.remove("active")
+           dotItem[index].classList.add("active")
+        }
+        setInterval(imgSlide,5000)
+</script>
+</html>
+
+
+

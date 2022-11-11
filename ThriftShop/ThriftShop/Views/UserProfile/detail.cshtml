@@ -1,0 +1,254 @@
+﻿@using ThriftShop.Models;
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Web;
+@using System.Web.Mvc;
+@using ThriftShop.Controllers.User;
+@using PagedList;
+@model List<Chi_tiet_don_hang>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Settings UI Design</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/CSS/UserProfile/css/style.css">
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ">
+    @{ 
+        SneakerThriffEntities db = new SneakerThriffEntities();
+        var user = db.Nguoi_dung.SingleOrDefault(x => x.id_user == LoginRegisterController.id_user);
+    }
+    <section class="py-5 my-5">
+        <div class="container">
+            <h1 class="mb-5" style="color:aliceblue">Account Settings</h1>
+            <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+                <div class="profile-tab-nav border-right">
+                    <div class="p-4">
+                        <div class="img-circle text-center mb-3">
+                            <img src="~/Content/anh/images.png" alt="Image" class="shadow">
+                        </div>
+                        <h4 class="text-center">@user.ho_ten</h4>
+                    </div>
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link " id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="false">
+                            <i class="fa fa-home text-center mr-1"></i>
+                            Thông tin cá nhân
+                        </a>
+                        <a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false">
+                            <i class="fa fa-key text-center mr-1"></i>
+                            Đổi mật khẩu
+                        </a>
+                        <a class="nav-link active" id="security-tab" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
+                            <i class="fa fa-user text-center mr-1"></i>
+                            Quản lý đơn hàng
+                        </a>
+                        <a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false">
+                            <i class="fa fa-tv text-center mr-1"></i>
+                            Thống kê
+                        </a>
+                        <a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false">
+                            <i class="fa-solid fa-backward"></i>
+                            Back
+                        </a>
+                    </div>
+                </div>
+                <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+                    <div class="tab-pane " id="account" role="tabpanel" aria-labelledby="account-tab">
+                        <h3 class="mb-4">Account Settings</h3>
+                        <div class="row">
+                            @{
+                                string str = user.ho_ten;
+                                string[] arrList = str.Split(' ');
+                            }
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" class="form-control" value="@arrList[0]">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    @{
+                                        string lasname = "";
+                                        for (int i = 1; i < arrList.Length; i++)
+                                        {
+                                            lasname = lasname + " " + arrList[i];
+                                        }
+                                        <input type="text" class="form-control" value="@lasname">
+                                    }
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" value="@user.email">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Phone number</label>
+                                    <input type="text" class="form-control" value="@user.so_dien_thoai">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" value="@user.dia_chi">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Designation</label>
+                                    <input type="text" class="form-control" value="UI Developer">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Bio</label>
+                                    <textarea class="form-control" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore vero enim error similique quia numquam ullam corporis officia odio repellendus aperiam consequatur laudantium porro voluptatibus, itaque laboriosam veritatis voluptatum distinctio!</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Update</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+                        <h3 class="mb-4">Password Settings</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Old password</label>
+                                    <input type="password" id="password" name="password" value="@user.mat_khau" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>New password</label>
+                                    <input type="password" id="new-password" name="new-password" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Confirm new password</label>
+                                    <input type="password" id="confirm-new-password" name="confirm-new-password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Update</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="security" role="tabpanel" aria-labelledby="security-tab">
+                        <h3 class="mb-4">Security Settings</h3>
+                        <div class="row">
+                            @* Quản lý đơn hàng *@
+                            <table id="table" class="table">
+                                <thead>
+                                    <tr style="text-align:center">
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Tên</th>
+                                        <th scope="col">Ảnh</th>
+                                        <th scope="col">Số lượng</th>
+                                        <th scope="col">Đơn giá</th>
+                                        <th scope="col">Thành tiền</th>
+   
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr style="text-align:center">
+                                            <th scope="row">@item.id_don_hang</th>
+                                            <td>@item.ten_sp</td>
+                                            <td>@item.anh_sp</td>
+                                            <td>@item.so_luong</td>
+                                            <td>@item.don_gia</td>
+                                            <td>@item.thanh_tien</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
+                        <h3 class="mb-4">Application Settings</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="app-check">
+                                        <label class="form-check-label" for="app-check">
+                                            a
+                                            App check
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                        <label class="form-check-label" for="defaultCheck2">
+                                            Lorem ipsum dolor sit.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Update</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
+                        <h3 class="mb-4">Notification Settings</h3>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="notification1">
+                                <label class="form-check-label" for="notification1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusantium accusamus, neque cupiditate quis
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="notification2">
+                                <label class="form-check-label" for="notification2">
+                                    hic nesciunt repellat perferendis voluptatum totam porro eligendi.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="notification3">
+                                <label class="form-check-label" for="notification3">
+                                    commodi fugiat molestiae tempora corporis. Sed dignissimos suscipit
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Update</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

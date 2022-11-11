@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/News.css">
+    <link rel="stylesheet" href="./font/Nimbus-Sans-D-OT-Ultra-Light_32757.ttf">
+    <link rel="stylesheet" href="./font/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./js/news.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/media_new.css">
+    <script src="./js/index.js"></script>
+   
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header11">
+        <div class="header-content11">
+            <div class="list-header">
+                <li> <a href="#">Tìm mua</a></li>
+                <li> <a href="#">Tìm Thuê</a></li>
+                <li> <a href="#">Môi Giới</a></li>
+                <li> <a href="#">Tin Tức</a></li>
+                <li> <a href="#">Video</a></li>
+                <li> <a href="#">Đăng Tin</a></li>
+
+            </div>
+        </div>
+        </div>
+        <div class="header11-media">
+          <div class="header11-media-item">
+            <i class="fas fa-bars" onclick="open_news()"></i>
+            <div class="bar-news-dow">
+              <div class="bar-news-dow-item-close" onclick="close_news()"><i class="fas fa-times"></i></div>
+              <a href="#" class="bar-news-dow-item">Đăng Nhập</a>
+              <a href="" class="bar-news-dow-item">Đăng kí</a>
+            </div>
+          </div>
+          <div class="header11-media-item2">
+            <img src="./news-img/Logo-Mogi-copy-2.png" alt="">
+          </div>
+          <div class="header11-media-item">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      <div class="logo-header">
+           <a href="#" class="logo-header-img"><img src="./news-img/logo.png" alt="logo"></a>
+          
+      </div>
+      <div class="menu" id="menu">
+          <div class="menu-content">
+              <div class="list-menu-content">
+             
+             <div class="item-has-dropdown1">
+             <a href="#" class="menu-content-item  menu-content-item1">Tin bất động sản <i class="fas fa-chevron-down"></i></a>
+             <div class="dropdown-content1">
+                 <div class="dropdown-content1-item"> <a href="">Thị trường nhà đất</a> </div>
+                 <div class="dropdown-content1-item"> <a href="">Phân tích - nhận định</a> </div>
+                 <div class="dropdown-content1-item" > <a href="">Thông tin quy hoạch</a> </div>
+                 <div class="dropdown-content1-item"> <a href="">Thông tin dự án BDS</a> </div>
+
+             </div>
+            
+            </div>
+              <a href="#" class="menu-content-item">Chung cư </a>
+              <div class="item-has-dropdown2">
+              <a href="#" class="menu-content-item">Nhà Đẹp <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content2">
+                <div class="dropdown-content1-item"> <a href="">Xây Dựng</a> </div>
+                <div class="dropdown-content1-item"> <a href="">Kiến Trúc </a> </div>
+                <div class="dropdown-content1-item" > <a href="">Phong Thủy</a> </div>
+                <div class="dropdown-content1-item"> <a href="">Nhà Của Sao</a> </div>
+                <div class="dropdown-content1-item"> <a href="">Nhà M</a> </div>
+              </div>
+             </div>
+             <div class="item-has-dropdown3">
+              <a href="#" class="menu-content-item">Lời Khuyên <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content3">
+                <div class="dropdown-content1-item"> <a href="">Góc môi giới</a> </div>
+                <div class="dropdown-content1-item"> <a href="">Góc đầu tư </a> </div>
+                <div class="dropdown-content1-item" > <a href="">Góc người mua</a> </div>
+                <div class="dropdown-content1-item"> <a href="">Góc người thuê</a> </div>
+                
+              </div>
+            </div>
+              <a href="#" class="menu-content-item">Luật nhà đất </a>
+              <a href="#" class="menu-content-item">Tài Chính BĐS </a>
+              <div class="item-has-dropdown4">
+              <a href="#" class="menu-content-item">Mogi <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content4">
+                <div class="dropdown-content1-item"> <a href="">Tin công tin</a> </div>
+                <div class="dropdown-content1-item"> <a href="">Góc báo chí</a> </div>
+                <div class="dropdown-content1-item" > <a href="">10 bước mua nhà</a> </div>
+                <div class="dropdown-content1-item"> <a href="">Phòng trọ gần trường</a> </div>
+                <div class="dropdown-content1-item"> <a href="">Phòng trọ gần KCN</a> </div>
+            </div>
+            </div>
+
+              </div>
+              <div class="icon-search11">
+                <i class="fas fa-search"></i>
+              </div>
+              
+          </div>
+      </div>
+      <div class="main-news">
+        <div class="main-news-link">
+         <a href="#">Home > </a> <a href="#">Tin Bất Động Sản > </a> <a href="">Tin dự án > </a> <a href=""> De La Sol – Biểu tượng cho một cuộc sống thăng...</a>
+        </div>
+        <div class="main-news-link2">
+           <p><a href="">Tin Bất động sản</a></p>
+           <p><a href="">Tin dự án</a></p>
+        </div>
+        <div class="main-news-content">
+        <div class="main-new-left">
+          <h1 class="main-new-left-title">
+            De La Sol – Biểu tượng cho một cuộc sống thăng hoa
+          </h1>
+          <div class="user-and-see">
+            <p>By <span>Vân Thái</span></p>
+            <div class="see"><i class="fas fa-eye"></i> 51 </div>
+          </div>
+          <div class="list-social">
+            <div class="list-social-item-gg list-social-item-gg-media-face" ><a href=""><i class="fab fa-facebook-f"></i></a></div>
+            <div class="list-social-item-gg list-social-item-gg-media-tw"><a href=""><i class="fab fa-twitter"></i></a></div>
+            <div class="list-social-item-facebook"> <a href="#"><i class="fab fa-facebook-f"></i> share on facebook</a></div>
+            <div class="list-social-item-twiiter"><a href="#"><i class="fab fa-twitter"></i> Tweet on Twiiter</a>  </div>
+            <div class="list-social-item-gg"><a href=""><i class="fab fa-google-plus-g"></i></a></div>
+            <div class="list-social-item-printer"><a href=""><i class="fab fa-pinterest-p"></i></a></div>
+            
+          </div>
+          <div class="main-new-left-content">
+            <div class="main-new-left-content-img">
+              <img src="./news-img/delasol.jpg" alt="item1" sizes="(max-width: 600px) 100vw, 600px">
+              <figcaption class="wp-caption-text">De La Sol  - Biểu tượng cho một cuộc sống thăng hoa</figcaption>
+            </div>
+            <p style="margin-top: 50px;"><strong>De La Sol </strong> được biết đến là dự án khu căn hộ hạng sang, được các chủ đầu tư bất động sản đánh giá khá cao về tiềm năng ở thời điểm hiện tại. Các căn hộ tại dự án mang phong cách hiện đại, trẻ trung. Theo đó, đây được kỳ vọng sẽ là nơi để mỗi cư dân có thể tận hưởng những giây phút sống trọn vẹn, thăng hoa nhất. Vậy, có những điểm nổi bật nào tại mô hình dự án này?</p>
+            <div class="box-content-left">
+                <div class="box-content-left-title">Nội dung bài Viết</div>
+                <ul class="box-content-left-content">
+                     <li class="box-content-left-content1"><a href="#"> <span class="numtext">1</span> Tổng quan về dự án De La Sol</a></li>
+                     <li class="box-content-left-content1"><a href="#"> <span class="numtext">2</span>  Vị trí De La Sol – Lợi thế hàng đầu, mang đến tiềm năng lớn cho dự án</a></li>
+                      <ul>
+                        <li class="box-content-left-content1-1"> <a href="#"><span class="numtext">2.1</span> Đảm bảo tính kết nối cao từ dự án</a></li>
+                        <li class="box-content-left-content1-1"> <a href="#"><span class="numtext">2.2</span> Sở hữu view sông thoáng đãng</a></li>
+                      </ul>
+                      <li class="box-content-left-content1"> <a href="#"><span class="numtext">3</span> Mặt bằng và thiết kế tại dự án De La Sol</a></li>
+                      <li class="box-content-left-content1"><a href="#"><span class="numtext">4</span> Tiện ích tại dự án De La Sol</a></li>
+                      <li class="box-content-left-content1"><a href="#"><span class="numtext">5</span> Đánh giá chung về ưu – nhược điểm của dự án De La Sol</a></li>
+                      <ul>
+                        <li class="box-content-left-content1-1"><a href="#"><span class="numtext">5.1</span> Ưu điểm của dự án</a></li>
+                        <li class="box-content-left-content1-1"><a href="#"><span class="numtext">5.2</span> Nhược điểm</a></li>
+                      </ul>
+                      <li class="box-content-left-content1"><a href="#"><span class="numtext">6</span> Cập nhật tiến độ dự án tháng 9/2021</a></li>
+                      
+                </ul>
+            </div>
+            <h1 class="title-p">
+              Tổng quan về dự án De La Sol
+            </h1>
+            <ul class="content-left-list-1">
+                 <li class="content-left-list-1-item">Tên dự án: De La Sol</li>
+                 <li class="content-left-list-1-item">Vị trí dự án: Số 1, đường Tôn Thất Thuyết, P.1, Q.4, TP. Hồ Chí Minh</li>
+                 <li class="content-left-list-1-item">Chủ đầu tư dự án: Công ty CapitaLand Việt Nam</li>
+                 <li class="content-left-list-1-item">Đơn vị phát triển dự án: Công ty CP ĐT KD Bất Động Sản Việt Hưng Phú</li>
+                 <li class="content-left-list-1-item">Đơn vị quản lý vận hành: Ascott Limied</li>
+                 <li class="content-left-list-1-item">Loại hình sản phẩm: Căn hộ cao cấp</li>
+                 <li class="content-left-list-1-item">Diện tích đất xây dựng dự án: 1.45 ha</li>
+                 <li class="content-left-list-1-item">Mật độ xây dựng: 29%</li>
+                 <li class="content-left-list-1-item">Số tòa tháp: 3</li>
+                 <li class="content-left-list-1-item">Số tầng: 24</li>
+                 <li class="content-left-list-1-item">Số lượng căn hộ: 870 căn</li>
+                 <li class="content-left-list-1-item">Mô hình các căn hộ: Gồm các căn 1PN, 2PN, 3PN và Penthouse</li>
+                 <li class="content-left-list-1-item">Diện tích các căn hộ: Trong khoảng 60 – 72 – 73 – 84 – 86 – 93 – 100m2</li>
+                 <li class="content-left-list-1-item">Thời hạn sở hữu: Lâu dài (người Việt Nam) và 50 năm (người nước ngoài) </l>
+
+            </ul>
+            <h1 class="title-p">Vị trí De La Sol – Lợi thế hàng đầu, mang đến tiềm năng lớn cho dự án</h1>
+            <p><strong>De La Sol</strong>là mô hình dự án đầu tiên của Capitaland tại khu vực quận 4. Theo đó, khu căn hộ này được phát triển và xây dựng tại vị trí số 1, đường Tôn Thất Thuyết, P.1 Quận 4. </p>
+            <p style="margin-top: 20px;">Trên thực tế, quận 4 vốn được biết đến là nơi có mật độ dân cư vô cùng đông đúc. Quỹ đất để xây dựng các dự án do vậy đang dần trở nên khan hiếm hơn hẳn. Chính vì thế, vị trí của <strong>De La Sol</strong> được xem là khu vực kim cương, đắc địa bậc nhất trên địa bàn quận.</p>
+            <a href="" class="sparow-link">>> Sunshine Horizon – Biểu tượng tháp đôi của quận 4</a>
+            <h1 class="title-p">Đảm bảo tính kết nối cao từ dự án</h1>
+            <p style="margin-top: 20px;">Với định hướng phát triển riêng, đường Tôn Tất Thuyết ở thời điểm hiện tại đã được mở rộng, đồng bộ khá chỉn chu. Đây là điểm giúp hạn chế tối đa tình trạng xe cộ đông đúc, ùn tắc vào các khung giờ cao điểm.</p>
+            <p style="margin-top: 20px;">Đặc biệt, được biết đến như 1 trong những tuyến đường huyết mạch tại quận 4, từ dự án, cư dân về cơ bản có thể nói là vô cùng thuận tiện trong việc giao thông, đi lại. Trong đó:</p>
+            <li class="content-left-list-1-item" style="margin-top: 20px;">Để di chuyển đến khu trung tâm quận 1, bạn chỉ mất khoảng 5 phút đi xe. </l>
+              <li class="content-left-list-1-item">Kết nối với khu vực quận 3, quận 5 hoặc quận 8 chỉ mất khoảng 5 phút di chuyển. </l>
+                <li class="content-left-list-1-item">Để đến khu đô thị Thủ Thiêm, bạn chỉ mất khoảng 10 phút đi xe. </l>
+                  <li class="content-left-list-1-item">Mất khoảng 15 phút để có thể di chuyển đến khu đô thị Phú Mỹ Hưng, Quận 7. </l>
+                    <li class="content-left-list-1-item">Mất khoảng 30 phút để di chuyển đến sân bay quốc tế Tân Sơn Nhất. </l>
+             <div class="main-new-left-content-img " style="margin-top: 20px;">
+              <img src="./news-img/delasol1.jpg" alt="item1" sizes="(max-width: 600px) 100vw, 600px">
+              <figcaption class="wp-caption-text">Vị trí của De La Sol được xem là khu vực kim cương, đắc địa bậc nhất trên địa bàn quận</figcaption>
+            </div>
+            <h1 class="title-p">Sở hữu view sông thoáng đãng</h1>
+            <p>Vị trí dự án cũng được hưởng lợi lớn với view sông Kênh Tẻ trong lành.</p>
+            <p>Như vậy, từ trên cao, cư dân có thể ngắm nhìn khung cảnh với tầm nhìn đầy thoáng đãng, thơ mộng. Yếu tố này cũng là điểm tạo nên sức hút riêng. Giúp <strong>De La Sol</strong> nâng tầm giá trị đáng kể trong tương lai.</p>
+            <h1 class="title-p">Mặt bằng và thiết kế tại dự án De La Sol</h1>
+            <p>Dự án với tổng thể 3 tòa tháp. Các phân khu với các tên gọi tương ứng là Alto, Cello và Bass.</p>
+            <p>Mật độ xây dựng của dự án cũng dao động ở mức thấp. Điều này giúp nâng cao chất lượng ở mỗi không gian bên trong dự án.</p>
+            <p>Các căn hộ được xây dựng với định hướng tạo nên 1 tác phẩm hội tụ rõ yếu tố nghệ thuật. Lấy cảm hứng từ thành phố trừu tượng – The City Fabric, các căn hộ tại dự án mang đậm chất hiện đại, phóng khoáng.</p>
+            <p>Mỗi căn hộ đều có ban công riêng. Phân bổ không gian bên trong các căn hộ cũng đảm bảo khoa học. Phòng khách chú trọng nhiều đến sự sang trọng, lịch thiệp. Trong khi đó, phòng ngủ tập trung vào tính trang nhã, hài hòa.</p>
+            <p>Khu bếp được thiết kế kín, giúp tăng tính thẩm mỹ cho tổng thể không gian.</p>
+            <div class="main-new-left-content-img " style="margin-top: 20px;">
+              <img src="./news-img/delasol7.jpg" alt="item1" sizes="(max-width: 600px) 100vw, 600px">
+              <figcaption class="wp-caption-text">Lấy cảm hứng từ thành phố trừu tượng – The City Fabric, các căn hộ tại dự án mang đậm chất hiện đại, phóng khoáng</figcaption>
+            </div>
+            <p>Các căn hộ bên trong <strong>De La Sol</strong> cũng cho khả năng đón nắng, đón gió tốt. Qua đó, duy trì độ thông thoáng tự nhiên cho các cư dân sinh sống bên trong.</p>
+            <p>Chủ đầu tư định hướng rằng, tại <strong>De La Sol</strong>, các cư dân đều sẽ được trải nghiệm tuyệt vời với những bản hòa ca cuộc sống đầy thăng hoa.</p>
+            <div class="main-new-left-content-img " style="margin-top: 20px;">
+              <img src="./news-img/delasol3.jpg" alt="item1" sizes="(max-width: 600px) 100vw, 600px">
+              <figcaption class="wp-caption-text">Các căn hộ bên trong De La Sol cũng cho khả năng đón nắng, đón gió tốt</figcaption>
+            </div>
+            <h1 class="title-p">Tiện ích tại dự án De La Sol</h1>
+            <p><strong>De La Sol</strong> đi theo mô hình căn hộ hạng sang. Chính vì thế, các tiện ích được chủ đầu tư tích hợp khá đầy đủ, hiện đại. Cụ thể, có đến hơn  tiện ích nội khu được bố trí. Điển hình có thể kể đến như:</p>
+            <li class="content-left-list-1-item" style="margin-top: 20px;">Hồ bơi tràn bờ với đường bơi rộng đến 50m.</li>
+            <li class="content-left-list-1-item">Khu phòng gym hiện đại với đầy đủ các thiết bị, máy móc</li>
+            <li class="content-left-list-1-item">Khu spa thư giãn cao cấp</li>
+            <li class="content-left-list-1-item">Rạp chiếu phim hiện đại</li>
+            <li class="content-left-list-1-item">Khu thư viện</li>
+            <li class="content-left-list-1-item">Vườn tiểu cảnh</li>
+            <li class="content-left-list-1-item">Sảnh tiếp tân với thiết kế sang trọng.</li>
+            <li class="content-left-list-1-item">Khu vui chơi trẻ em</li>
+            <div class="main-new-left-content-img main-new-left-content-img1" style="margin-top: 20px;margin-left: 20px;">
+              <img src="./news-img/delasol6.jpg " alt="item1" sizes="(max-width: 1200px) 100vw, 600px">
+              <figcaption class="wp-caption-text">Hồ bơi tràn bờ với đường bơi rộng đến 50m tại dự án</figcaption>
+            </div>
+            <div class="main-new-left-content-img main-new-left-content-img1" style="margin-top: 20px;margin-left: 20px;">
+              <img src="./news-img/delasol5.jpg" alt="item1" sizes="(max-width: 1200px) 100vw, 600px">
+              <figcaption class="wp-caption-text">Khu vui chơi trẻ em</figcaption>
+            </div>
+           <h1 class="name-writer">Hồng Vân – Content Writer</h1>
+            
+          </div>
+          <div class="list-share-socity">
+            <div class="list-share-socity-content">
+            <div class="list-share-socity-item1">
+              SHARE
+            </div>
+            <div class="list-social">
+              <div class="list-social-item-facebook"> <a href="#"><i class="fab fa-facebook-f"></i> share on facebook</a></div>
+              <div class="list-social-item-twiiter"><a href="#"><i class="fab fa-twitter"></i> Tweet on Twiiter</a>  </div>
+              <div class="list-social-item-gg"><a href=""><i class="fab fa-google-plus-g"></i></a></div>
+              <div class="list-social-item-printer"><a href=""><i class="fab fa-pinterest-p"></i></a></div>
+            </div>
+            <div class="list-share-socity-item2"><i class="fas fa-thumbs-up"></i> Thích 0</div>
+            <div class="list-share-socity-item2"><i class="fab fa-twitter"></i> Twiiter</div>
+          </div>
+          </div>
+          <div class="next-prev">
+            <div class="next-prev-title">
+              <p>Previous article</p>
+              <p>Next article</p>
+            </div>
+            <div class="next-prev-content">
+              <div class="next-prev-content-content1"> <a href="">Gateway Thảo Điền – Nâng tầm cuộc sống thượng lưu</a> </div>
+              <div class="next-prev-content-content2"><a href="">Carillon 7 – Thiết kế độc đáo và nhiều tiện ích hiện đại!</a> </div>
+            </div>
+          </div>
+          <div class="writer">
+            <div class="writer-content">
+              <img src="./news-img/7be356c3d7873b2d65cc3097c9f4cb46.png" alt="">
+              <div class="writer-content-text">
+                <h1 class="writer-name">Vân Thái</h1>
+                <p>Hồng Vân – hiện là Content Writer. Nhờ yêu thích viết lách, mình đã tìm hiểu thêm về các kiến thức liên quan trong lĩnh vực Content, đồng thời chọn công việc này để phát triển bản thân. Mình vẫn đang trên đường tìm tòi những điều mới mẻ trong nghề với hy vọng mở rộng thêm về những kỹ năng khác.</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="read">
+            <div class="read-content">
+              <div class="read-content-header">
+                <a href="#" class="read-content-header-item1">RELATED ARTICLE</a>
+                <a href="#" class="read-content-header-item2">MORE FROM AUTHOR</a>
+              </div>
+              <div class="read-content-list">
+                <a href="" class="read-content-item">
+                  <img src="./news-img/du-an-palm-city-quan-2-218x150.jpg" alt="tex1" sizes="(max-width: 218px) 100vw, 218px">
+                  <h1 class="read-content-item-text">
+                    Hoàng Anh Gold House – Điểm an cư bền vững cho mọi gia đình
+                  </h1>
+                </a>
+                <a href="" class="read-content-item">
+                  <img src="./news-img/happyvalley-218x150.jpg" alt="tex1" sizes="(max-width: 218px) 100vw, 218px">
+                  <h1 class="read-content-item-text">
+                    Hoàng Anh Gold House – Điểm an cư bền vững cho mọi gia đình
+                  </h1>
+                </a>
+                <a href="" class="read-content-item">
+                  <img src="./news-img/hoanganhgoldhouse-218x150.jpg" alt="tex1" sizes="(max-width: 218px) 100vw, 218px">
+                  <h1 class="read-content-item-text">
+                    Hoàng Anh Gold House – Điểm an cư bền vững cho mọi gia đình
+                  </h1>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-new-right">
+          <div class="main-new-right-item1">
+            <img src="./news-img/thong-tin-du-an-mogivn.png" alt="">
+          </div>
+          <div class="main-new-right-news">
+            <div class="main-new-right-news-title">
+              <h1>Tin nổi bật</h1>
+            </div>
+            <div class="main-new-right-new-content">
+              <a href class="main-new-right-new-item">
+                <img src="./news-img/right1.jpg" alt="item1" sizes="(max-width: 218px) 100vw, 218px">
+                <h1 class="main-new-right-new-item-content">
+                  10 gợi ý thiết kế phòng ngủ tuyệt đẹp theo phong...
+                </h1> 
+              </a>
+              <a href class="main-new-right-new-item">
+                <img src="./news-img/right2.png" alt="item1" sizes="(max-width: 218px) 100vw, 218px">
+                <h1 class="main-new-right-new-item-content">
+                  How to look for an apartment in Ho Chi Minh City?
+                </h1> 
+              </a>
+              <a href class="main-new-right-new-item">
+                <img src="./news-img/right3.jpg" alt="item1" sizes="(max-width: 218px) 100vw, 218px">
+                <h1 class="main-new-right-new-item-content">
+                  “Ngộp thở” khám phá nhà đẹp toàn đồ hiệu của “mẹ chồng” Thanh Hằng
+                </h1> 
+              </a>
+              <a href class="main-new-right-new-item">
+                <img src="./news-img/rigth4.jpg" alt="item1" sizes="(max-width: 218px) 100vw, 218px">
+                <h1 class="main-new-right-new-item-content">
+                  Những lưu ý phải ghi nhớ khi thuê nhà nguyên căn
+                </h1> 
+              </a>
+              
+            </div>
+          </div>
+          <div class="main-new-right-item2 " >
+            <img src="./news-img/banner1.png" alt="" >
+          </div>
+          <div class="main-new-right-news">
+            <div class="main-new-right-news-title">
+              <h1>Thông tin quy hoạch</h1>
+            </div>
+            <div class="main-new-right-news-content">
+              <a href="" class="main-new-right-news-content-item2">
+                <img src="./news-img/TT1.jpg" alt="TT1">
+                 <h1 class="main-new-right-news-content-text2">
+                Điểm tin sáng 3-4: Chính phủ yêu cầu Đà Nẵng ổn...
+              </h1>
+              </a>
+              <a href="" class="main-new-right-news-content-item2">
+                <img src="./news-img/tra-cuu-thong-tin-quy-hoach-binh-duong-100x70.jpg" alt="TT1">
+                 <h1 class="main-new-right-news-content-text2">
+                Điểm tin sáng 3-4: Chính phủ yêu cầu Đà Nẵng ổn...
+              </h1>
+              </a>
+              <a href="" class="main-new-right-news-content-item2">
+                <img src="./news-img/condotel-1-100x70.jpg" alt="TT1">
+                 <h1 class="main-new-right-news-content-text2">
+                Điểm tin sáng 3-4: Chính phủ yêu cầu Đà Nẵng ổn...
+              </h1>
+              </a>
+              <a href="" class="main-new-right-news-content-item2">
+                <img src="./news-img/hinh-1-100x70.jpg" alt="TT1">
+                 <h1 class="main-new-right-news-content-text2">
+                Điểm tin sáng 3-4: Chính phủ yêu cầu Đà Nẵng ổn...
+              </h1>
+              </a>
+             
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      </div>
+      <!-- <div class="footer">
+        <div class="footer-content">
+          <div class="footer-content-item">
+            <div class="footer-content-item-logo">
+              <img src="./news-img/logovip.png" alt="logovip">
+            </div>
+            <div class="footer-content-item-content">
+              CÔNG TY CỔ PHẦN ĐỊNH ANH Trụ sở chính: 28-30 đường số 2, Hưng Gia 5, P.Tân Phong, Quận 7, TP. Hồ Chí Minh Chịu trách nhiệm chính: Ông Phạm Chu Hi Giấy phép số: 429/GP-BTTTT do Bộ TTTT cấp ngày 11/10/2019. News.mogi.vn có trách nhiệm chuyển tải thông tin. Chúng tôi không chịu bất kỳ trách nhiệm nào từ các tin này
+            </div>
+            <p class="contact-p">Contact us: <a href="#" class="contac">trogiup@mogi.vn</a></p>
+          </div>
+        </div>
+      </div> -->
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-left">
+              <div class="footer-left-item1">
+                  <img src="./img/logo.svg" alt="logo">
+              </div>
+              <div class="footer-left-item2">
+                  <p><i class="fas fa-phone-alt"></i> (028) 730 1234 </p>
+                  <p><i class="far fa-envelope"></i> trogiup@mogi.vn</p>
+              </div>
+              <div class="footer-left-item-link">
+                    <a href="#" class="link-facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="link-youtube"><i class="fab fa-youtube"></i></a>
+                   
+                      
+              </div>
+              <div class="footer-left-item3">
+                  <h3>Công ti cổ phần định anh</h3>
+                  <p>Trụ sở chính: 28-30 đường số 2, Hưng Gia 5, P.Tân Phong, Quận 7, TP. Hồ Chí Minh
+                   Chịu trách nhiệm chính: Ông Phạm Chu Hi
+                   Giấy phép số: 429/GP-BTTTT do Bộ TTTT cấp ngày 11/10/2019</p>
+              </div>
+              <div class="footer-left-item4">
+                  <img src="./img/bocongthuong.png" alt="chungchi">
+              </div>
+              <div class="footer-left-item3">
+                  <p>Mogi.vn có trách nhiệm chuyển tải thông tin. Chúng tôi không chịu bất kỳ trách nhiệm nào từ các tin này.</p>
+              </div>
+
+          </div>
+          <div class="footer-right">
+              <div class="footer-right-items">
+                  <h3 class="footer-right-item-title">Bất động sản TPHCM</h3>
+                  <a href="#" class="footer-right-item">Mua bán nhà đất TPHCM</a>
+                  <a href="#" class="footer-right-item">Bán nhà quận 7</a>
+                  <a href="#" class="footer-right-item">Căn hộ quận 7</a>
+                  <a href="#" class="footer-right-item">Bán đất quận 7</a>
+                  <a href="#" class="footer-right-item">Phòng trọ quận 10</a>
+                  <a href="#" class="footer-right-item">Cho thuê nhà quân 8</a>
+
+              </div>
+              <div class="footer-right-items">
+               <h3 class="footer-right-item-title">Bất động sản Hà Nội</h3>
+               <a href="#" class="footer-right-item">Bán đất Hà Nội</a>
+               <a href="#" class="footer-right-item">Bán nhà Hà Nội</a>
+               <a href="#" class="footer-right-item">Căn hộ Cho thuê nhà Hà Nội</a>
+               <a href="#" class="footer-right-item">Chung cư Hà Nội</a>
+               <a href="#" class="footer-right-item">Nhà đất Hà Nội</a>
+               <a href="#" class="footer-right-item">Phòng Trọ Hà Nội</a>
+
+           </div>
+           <div class="footer-right-items">
+               <h3 class="footer-right-item-title">Mua Bán bất động sản</h3>
+               <a href="#" class="footer-right-item">Bán đất Bình Dương</a>
+               <a href="#" class="footer-right-item">Bất động Sản Đà Nẵng</a>
+               <a href="#" class="footer-right-item">Căn hộ chung cư</a>
+               <a href="#" class="footer-right-item">Mua bán nhà đất</a>
+               <a href="#" class="footer-right-item">Nhà Đất Hải Phòng</a>
+               <a href="#" class="footer-right-item">Sang Quán Cafe</a>
+
+           </div>
+           <div class="footer-right-items">
+               <h3 class="footer-right-item-title">Cho Thuê Nhà đất</h3>
+               <a href="#" class="footer-right-item">Cho thuê căn hộ</a>
+               <a href="#" class="footer-right-item">Cho thuê mặt bằng</a>
+               <a href="#" class="footer-right-item">Cho thuê nhà xưởng</a>
+               <a href="#" class="footer-right-item">Cho thuê phòng trọ</a>
+               <a href="#" class="footer-right-item">Cho thuê nhà nguyên căn</a>
+               <a href="#" class="footer-right-item">Cho thuê văn phòng</a>
+
+           </div>
+           <div class="footer-right-items">
+               <h3 class="footer-right-item-title">Về Mogi</h3>
+               <a href="#" class="footer-right-item">Về chúng tôi</a>
+               <a href="#" class="footer-right-item">Điều khoản sử dụng</a>
+               <a href="#" class="footer-right-item">Quy Chế Hoạt động</a>
+               <a href="#" class="footer-right-item">Thỏa thuận mạng XH</a>
+               <a href="#" class="footer-right-item">Liên Hệ</a>
+               
+
+           </div>
+           <div class="footer-right-items">
+               <h3 class="footer-right-item-title">Đối Tác - Thông Tin</h3>
+               <a href="#" class="footer-right-item">Tin tức bất đống sản</a>
+               <a href="#" class="footer-right-item">Muaban.net-mua bán rao vặt</a>
+               <a href="#" class="footer-right-item">Tìm việc làm thêm nhanh</a>
+               <a href="#" class="footer-right-item">TopCV.vn</a>
+               <a href="#" class="footer-right-item">Góc báo chí</a>
+           </div>
+           <div class="footer-right-items">
+                  <h3 class="footer-right-item-title">Công cụ - Tiện ích</h3>
+                  <a href="#" class="footer-right-item">Phòng trọ gần KCN</a>
+                  <a href="#" class="footer-right-item">Phòng trọ gần trường</a>
+                  <a href="#" class="footer-right-item">10 bước mua nhà</a>
+                  <a href="#" class="footer-right-item">Môi giới bất động sản TPHCM</a>
+                  <a href="#" class="footer-right-item">Môi giới bất động sản Hà Nội</a>
+                  
+
+              </div>
+              <div class="footer-right-items">
+               <h3 class="footer-right-item-title">Dịch Vụ - Quảng Cáo</h3>
+               <a href="#" class="footer-right-item">Chương Trình - Khuyến mãi</a>
+               <a href="#" class="footer-right-item">Phí Thành Viên</a>
+               <a href="#" class="footer-right-item">Phí dịch vụ TOP/UP</a>
+               <a href="#" class="footer-right-item">Hướng dẫn đăng tin</a>
+               <a href="#" class="footer-right-item">Hướng dẫn thanh toán</a>
+               
+
+           </div>
+          </div>
+       </div>
+      </div>
+      <div class="footer-media">
+       <div class="footer-content">
+           
+           <div class="footer-right">
+               <div class="footer-right-items">
+                   <h3 class="footer-right-item-title" onclick="btn1()">Bất động sản TPHCM <i class="fas fa-caret-down"></i></h3>
+               <div class="dropdown-btn">
+                   <a href="#" class="footer-right-item">Mua bán nhà đất TPHCM</a>
+                   <a href="#" class="footer-right-item">Bán nhà quận 7</a>
+                   <a href="#" class="footer-right-item">Căn hộ quận 7</a>
+                   <a href="#" class="footer-right-item">Bán đất quận 7</a>
+                   <a href="#" class="footer-right-item">Phòng trọ quận 10</a>
+                   <a href="#" class="footer-right-item">Cho thuê nhà quân 8</a>
+                </div>
+
+               </div>
+               <div class="footer-right-items">
+                <h3 class="footer-right-item-title" onclick="btn2()">Bất động sản Hà Nội<i class="fas fa-caret-down"></i></h3>
+                <div class="dropdown-btn2">
+                <a href="#" class="footer-right-item">Bán đất Hà Nội</a>
+                <a href="#" class="footer-right-item">Bán nhà Hà Nội</a>
+                <a href="#" class="footer-right-item">Căn hộ Cho thuê nhà Hà Nội</a>
+                <a href="#" class="footer-right-item">Chung cư Hà Nội</a>
+                <a href="#" class="footer-right-item">Nhà đất Hà Nội</a>
+                <a href="#" class="footer-right-item">Phòng Trọ Hà Nội</a></div>
+
+            </div>
+            <div class="footer-right-items">
+                <h3 class="footer-right-item-title" onclick="btn3()">Mua Bán bất động sản<i class="fas fa-caret-down"></i></h3>
+                <div class="dropdown-btn3">
+                <a href="#" class="footer-right-item">Bán đất Bình Dương</a>
+                <a href="#" class="footer-right-item">Bất động Sản Đà Nẵng</a>
+                <a href="#" class="footer-right-item">Căn hộ chung cư</a>
+                <a href="#" class="footer-right-item">Mua bán nhà đất</a>
+                <a href="#" class="footer-right-item">Nhà Đất Hải Phòng</a>
+                <a href="#" class="footer-right-item">Sang Quán Cafe</a></div>
+
+            </div>
+            <div class="footer-right-items">
+                <h3 class="footer-right-item-title">Cho Thuê Nhà đất<i class="fas fa-caret-down"></i></h3>
+                <div class="dropdown-btn4" onclick="btn4()">
+                <a href="#" class="footer-right-item">Cho thuê căn hộ</a>
+                <a href="#" class="footer-right-item">Cho thuê mặt bằng</a>
+                <a href="#" class="footer-right-item">Cho thuê nhà xưởng</a>
+                <a href="#" class="footer-right-item">Cho thuê phòng trọ</a>
+                <a href="#" class="footer-right-item">Cho thuê nhà nguyên căn</a>
+                <a href="#" class="footer-right-item">Cho thuê văn phòng</a></div>
+
+            </div>
+            <div class="footer-right-items">
+                <h3 class="footer-right-item-title" onclick="btn5()">Về Mogi<i class="fas fa-caret-down"></i></h3>
+                <div class="dropdown-btn5" >
+                <a href="#" class="footer-right-item">Về chúng tôi</a>
+                <a href="#" class="footer-right-item">Điều khoản sử dụng</a>
+                <a href="#" class="footer-right-item">Quy Chế Hoạt động</a>
+                <a href="#" class="footer-right-item">Thỏa thuận mạng XH</a>
+                <a href="#" class="footer-right-item">Liên Hệ</a></div>
+                
+
+            </div>
+            <div class="footer-right-items">
+                <h3 class="footer-right-item-title" onclick="btn6()">Đối Tác - Thông Tin<i class="fas fa-caret-down"></i></h3>
+                <div class="dropdown-btn6">
+                <a href="#" class="footer-right-item">Tin tức bất đống sản</a>
+                <a href="#" class="footer-right-item">Muaban.net-mua bán rao vặt</a>
+                <a href="#" class="footer-right-item">Tìm việc làm thêm nhanh</a>
+                <a href="#" class="footer-right-item">TopCV.vn</a>
+                <a href="#" class="footer-right-item">Góc báo chí</a></div>
+            </div>
+            <div class="footer-right-items">
+                   <h3 class="footer-right-item-title" onclick="btn7()">Công cụ - Tiện ích<i class="fas fa-caret-down"></i></h3>
+                   <div class="dropdown-btn7">
+                   <a href="#" class="footer-right-item">Phòng trọ gần KCN</a>
+                   <a href="#" class="footer-right-item">Phòng trọ gần trường</a>
+                   <a href="#" class="footer-right-item">10 bước mua nhà</a>
+                   <a href="#" class="footer-right-item">Môi giới bất động sản TPHCM</a>
+                   <a href="#" class="footer-right-item">Môi giới bất động sản Hà Nội</a>
+                   </div>
+
+               </div>
+               <div class="footer-right-items">
+                <h3 class="footer-right-item-title" onclick="btn8()">Dịch Vụ - Quảng Cáo<i class="fas fa-caret-down"></i></h3>
+                <div class="dropdown-btn8">
+                <a href="#" class="footer-right-item">Chương Trình - Khuyến mãi</a>
+                <a href="#" class="footer-right-item">Phí Thành Viên</a>
+                <a href="#" class="footer-right-item">Phí dịch vụ TOP/UP</a>
+                <a href="#" class="footer-right-item">Hướng dẫn đăng tin</a>
+                <a href="#" class="footer-right-item">Hướng dẫn thanh toán</a>
+                </div>
+
+            </div>
+           </div>
+           <div class="footer-left">
+               <div class="footer-left-item1">
+                   <img src="./img/logo.svg" alt="logo">
+               </div>
+               <div class="footer-left-item2">
+                   <p><i class="fas fa-phone-alt"></i> (028) 730 1234 </p>
+                   <p><i class="far fa-envelope"></i> trogiup@mogi.vn</p>
+               </div>
+               <div class="footer-left-item-link">
+                     <a href="#" class="link-facebook"><i class="fab fa-facebook-square"></i></a>
+                     <a href="#" class="link-youtube"><i class="fab fa-youtube"></i></a>
+                    
+                       
+               </div>
+               <div class="footer-left-item3">
+                   <h3>Công ti cổ phần định anh</h3>
+                   <p>Trụ sở chính: 28-30 đường số 2, Hưng Gia 5, P.Tân Phong, Quận 7, TP. Hồ Chí Minh
+                    Chịu trách nhiệm chính: Ông Phạm Chu Hi
+                    Giấy phép số: 429/GP-BTTTT do Bộ TTTT cấp ngày 11/10/2019</p>
+               </div>
+               <div class="footer-left-item4">
+                   <img src="./img/bocongthuong.png" alt="chungchi">
+               </div>
+               <div class="footer-left-item3">
+                   <p>Mogi.vn có trách nhiệm chuyển tải thông tin. Chúng tôi không chịu bất kỳ trách nhiệm nào từ các tin này.</p>
+               </div>
+
+           </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

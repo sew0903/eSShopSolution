@@ -1,0 +1,55 @@
+﻿@using ThriftShop.Models;
+@model Kho_hang
+@{
+    ViewBag.Title = "updateInventory";
+    Layout = "~/Views/Layout/AdminLayoutcshtml.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div style="padding-left:30%" class="container-fluid">
+
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Update Inventory</div>
+                        <hr>
+                        <form>
+                            <div class="form-group">
+                                <label for="input-1">Name</label>
+                                <input disabled value="@Model.ten_sp" type="text" class="form-control" id="input-1" placeholder="Tên sản phẩm">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-2">Numbers</label>
+                                <input value="@Model.so_luong" type="text" class="form-control" name="up_number" id="up_number" placeholder="Số lượng">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-3">PurchasePrice</label>
+                                <input disabled value="@Model.gia_nhap" type="text" class="form-control" id="input-3" placeholder="Giá nhập">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-4">Price</label>
+                                <input value="@Model.gia_ban" type="text" class="form-control" name="price" id="price" placeholder="Mô tả">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-4">SaleOff</label>
+                                <input value="@Model.saleOf" type="text" class="form-control" name="sale" id="sale" placeholder="Mô tả">
+                            </div>
+                            <div style="padding-top:10px" class="form-group">
+                                <button type="submit" class="btn btn-light px-5"> Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--End Row-->
+        <!--start overlay-->
+        <div class="overlay toggle-menu"></div>
+        <!--end overlay-->
+
+    </div>
+}
+
+

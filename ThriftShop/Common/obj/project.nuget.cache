@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "o0dOZigFdyZBVsEfOC7PNRiHG2vZdD5KuPr2Osk+XCyX0sM3XXkDWIMlFg98q+fsuMPRWIA+cW8Lc/lQoSqoTw==",
+  "success": true,
+  "projectFilePath": "D:\\TLCN\\ThriftShop\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\xue_meii\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\xue_meii\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\xue_meii\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\xue_meii\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\xue_meii\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\xue_meii\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\xue_meii\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
